@@ -1,0 +1,26 @@
+/* 1) Overlay sits on top and intercepts *all* pointer events */
+.intro-overlay {
+    position: fixed;
+    inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+    z-index: 9999; /* above everything */
+    background: transparent; /* can be your background color if you want a fade */
+    /* intercept pointer events until the animation finishes */
+    pointer-events: all;
+    /* sync with your logoAnimation: 3s delay + 1s duration = 4s total */
+    animation: fadeOverlay 4s forwards;
+
+}
+
+/* 2) Keyframes keep it opaque (and intercepting) until the very end */
+@keyframes fadeOverlay {
+    0%, 99.99% {
+        opacity: 1;
+        pointer-events: all; /* still blocking everything */
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none; /* let events (hover, scroll, click) through */
+        visibility: hidden; /* optional: remove it from assistive technology */
+    }
+}

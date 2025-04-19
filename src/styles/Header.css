@@ -1,0 +1,153 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+/* Overall wrapper; position relative so children can be positioned using z-index */
+.HeaderWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.Header, .NavBarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+
+    width: 100%;
+}
+/* Fixed blurred header background bar */
+.Header {
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+/* Navigation container for centered nav buttons */
+.NavBarContainer {
+
+    display: flex;
+    margin-left: 10%;
+    justify-content: center; /* Center nav items horizontally */
+    align-items: center; /* Vertically center nav items */
+    z-index: 11; /* Ensures the nav is above the Header */
+}
+
+/* Navigation list styling */
+.NavBar {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center nav items horizontally */
+    align-items: center; /* Vertically center nav items */
+}
+.NavBar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    z-index: 11;
+}
+
+    /* Space between nav items */
+    .NavBar ul li {
+        margin: 0 1rem;
+    }
+
+        /* Navigation links using Comfortaa and bold appearance */
+        .NavBar ul li a {
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #6D4C41;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            /* Optional: ensure text is centered if a gets a wider width */
+            text-align: center;
+        }
+
+            /* Hover and active states */
+            .NavBar ul li a:hover {
+                color: #A3C586;
+            }
+
+            .NavBar ul li a.active {
+                color: #D35400;
+            }
+
+
+
+/*tablet*/
+@media (max-width: 1200px) {
+
+    .NavBarContainer {
+        margin-left: 15%;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  
+    /* 1) push nav under the logo (adjust 6rem to match your logo/header height) */
+    .Header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 14rem;
+        width: 100%;
+    }
+    .NavBarContainer {
+        margin-left: 0;
+        margin-top: 8rem;
+        padding: 0 1rem; /* keep your existing padding */
+    }
+
+    /* 2) two‑by‑two layout for the links */
+    .NavBar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; /* space between rows/cols */
+        padding: 0;
+        margin: 0 auto;
+    }
+
+        .NavBar ul li {
+            margin: 0; /* reset any horizontal li margins */
+            text-align: center;
+        }
+
+            .NavBar ul li a {
+                display: block;
+                width: 100%;
+            }
+}
+
+
+
+/* Optional: If you have a separate container for buttons elsewhere */
+.HeaderButtons {
+    width: 100%; /* Ensure it takes up full available width */
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    height: 3rem; /* Adjust height as needed */
+}
+
+
+.DropdownBox {
+    position: fixed; /* or absolute if within a relatively positioned parent */
+    transform: translate(0, 0); /* JS sets this later */
+    background-color: #fff8ee;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 1000;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: auto;
+    white-space: nowrap;
+}
+
