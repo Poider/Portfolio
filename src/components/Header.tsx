@@ -8,6 +8,7 @@ const NavBar: React.FC = () => {
     const buttonRef = useRef<HTMLAnchorElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
+    // Close dropdown if clicking outside
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
             if (
@@ -24,67 +25,80 @@ const NavBar: React.FC = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    // Reposition dropdown on window resize
     useEffect(() => {
-        let timeoutId: NodeJS.Timeout;
+        const updateDropdownPosition = () => {
+            if (!buttonRef.current || !dropdownRef.current) return;
+
+            const rect = buttonRef.current.getBoundingClientRect();
+            const dropdown = dropdownRef.current;
+
+            dropdown.style.left = `calc(${rect.left}px - 7rem)`;
+            dropdown.style.top = `${rect.bottom}px`;
+
+        };
 
         const handleResize = () => {
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                if (!buttonRef.current || !dropdownRef.current) return;
-
-                const rect = buttonRef.current.getBoundingClientRect();
-                const dropdown = dropdownRef.current;
-                dropdown.style.transform = `translate(${rect.left}px, ${rect.top + 10}px)`;
-                console.log(rect)
-            }, 150);
+            // Debounce resize to avoid too many calls
+            clearTimeout((handleResize as any)._timeout);
+            (handleResize as any)._timeout = setTimeout(updateDropdownPosition, 100);
         };
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Position dropdown when it opens
     useEffect(() => {
-        if (!buttonRef.current || !dropdownRef.current) return;
-        const rect = buttonRef.current.getBoundingClientRect();
-        console.log(rect)
-        dropdownRef.current.style.transform = `translate(${rect.left}px, ${rect.top + 10}px)`;
+        if (dropdownOpen) {
+            const rect = buttonRef.current?.getBoundingClientRect();
+            const dropdown = dropdownRef.current;
+
+            if (rect && dropdown) {
+                dropdown.style.left = `calc(${rect.left}px - 7rem)`;
+                dropdown.style.top = `${rect.bottom}px`;
+            }
+        }
     }, [dropdownOpen]);
 
     return (
-        <div className="HeaderWrapper">
-            <div className="Header fadeInAfterLogo" />
-            <Logo />
+        <>
+            <div className="HeaderWrapper">
+                <Logo />
 
-            <div className="NavBarContainer fadeTranslateAfterLogo">
-                <nav className="NavBar">
-                    <ul>
-                        <li>
-                            <a
-                                className="HeaderButtons"
-                                href="#portfolio"
-                                ref={buttonRef}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setDropdownOpen(!dropdownOpen);
-                                }}
-                            >
-                                Portfolio ⌄
-                            </a>
-                            {dropdownOpen && (
-                                <div ref={dropdownRef} className="DropdownBox">
-                                    <a href="#projects">⭐ Featured Projects</a>
-                                    <a href="#all-projects">🧪 All Projects</a>
-                                    <a href="#outcomes">📈 Outcomes</a>
-                                </div>
-                            )}
-                        </li>
-                        <li><a className="HeaderButtons" href="#skills">Skills</a></li>
-                        <li><a className="HeaderButtons" href="#about_me">About me</a></li>
-                        <li><a className="HeaderButtons" href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+                <div className="NavBarContainer fadeInAfterLogo">
+                    <nav className="NavBar">
+                        <ul>
+                            <li className="fadeTranslateAfterLogo" style={{ position: 'relative' }}>
+                                <a
+                                    className="HeaderButtons"
+                                    href="#portfolio"
+                                    ref={buttonRef}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setDropdownOpen(!dropdownOpen);
+                                    }}
+                                >
+                                    Portfolio ⌄
+                                </a>
+                            </li>
+                            <li className="fadeTranslateAfterLogo"><a className="HeaderButtons" href="#skills">Skills</a></li>
+                            <li className="fadeTranslateAfterLogo"><a className="HeaderButtons" href="#about_me">About me</a></li>
+                            <li className="fadeTranslateAfterLogo"><a className="HeaderButtons" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div
+                    ref={dropdownRef}
+                    className={`DropdownBox ${dropdownOpen ? 'visible' : ''}`}
+                >
+                    <a href="#projects">⭐ Featured Projects</a>
+                    <a href="#all-projects">🧪 All Projects</a>
+                    <a href="#outcomes">📈 Outcomes</a>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
