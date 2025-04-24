@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import '../../styles/Divider1.css';
+import '../../styles/Divider.css';
 const Divider1: React.FC = () => {
     return (
         <div className="divider-1">

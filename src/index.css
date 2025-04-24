@@ -1,5 +1,14 @@
 :root {
+    /* Core Palette */
+    --color-base:       #F1E7D0;  /* Hero / Intro BG */
+    --color-alt-white:  #F9F8F4;  /* Secondary neutral */
+    --color-projects:   #E6F0DD;  /* Light Sage for Projects BG */
+    --color-card-bg:    #F9F8F4;  /* Card/Flex‐box BG */
+    --color-text:       #6D4C41;  /* Deep Brown */
+    --color-accent:     #D35400;  /* Terracotta */
+    --color-sage:       #A3C586;  /* Sage Green */
 
+    --color-grey-neutral:  #fffdff;  /* Neutral Grey */
 }
 html, body {
     margin: 0;

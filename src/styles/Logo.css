@@ -18,6 +18,7 @@
 
 /* Inner element: handles the scaling animation */
 .LogoInner {
+    will-change:transform;
     position: fixed;
     transform-origin: 0 0;
     animation: logoAnimation 1s ease both;
@@ -91,6 +92,18 @@
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+/* Safari-only override */
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+        #M_path,
+        #O_path,
+        #U_path,
+        #A_path,
+        #D_path {
+            animation-timing-function: ease-in-out; /* or linear, or custom Safari-safe bezier */
+        }
+    }
+}
 
 
 /* Separator line animation */

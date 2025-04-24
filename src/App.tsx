@@ -4,7 +4,9 @@ import Logo from './components/Logo';
 import Hero from './sections/Hero';
 import Projects from './sections/Projects';
 import Divider1 from './components/common/Divider1';
+import Divider2 from './components/common/Divider2';
 import NavBar from './components/Header';
+import About from './sections/About';
 import IntroOverlay from './components/IntroOverlay';
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
             <NavBar />
             <Hero />    
             <Divider1 />
+            <About/>
+            <Divider2 />
             <Projects />
 
         </div>

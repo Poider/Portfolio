@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/logo.css';
 
+function setSafariStrokeTiming(refs) {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (isSafari) {
+        refs.forEach(ref => {
+            if (ref.current) {
+                ref.current.style.animationTimingFunction = 'ease-in-out';
+            }
+        });
+    }
+}
 
 const Logo = () => {
 
@@ -45,6 +55,8 @@ const Logo = () => {
 
         if (allRefsAvailable) {
             setIsRefAvailable(true);
+            // 🧭 Safari detection + override of the animation timing function
+            setSafariStrokeTiming(refsToCalculate);
         }
     }, [isRefAvailable]);
 

@@ -1,0 +1,7 @@
+.AboutMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    background-color: #F9F8F4;
+}
