@@ -6,7 +6,7 @@
 
 .HeroWrapper {
     position:relative;  
-    background-color: #F1E7D0;
+    background-color: var(--color-hero-bg); /* Hero / Intro BG */
 }
 
 

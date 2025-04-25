@@ -50,17 +50,17 @@
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
     font-size: 1rem;
-    color: #6D4C41;
+    color: var(--text-chocolate);
     text-decoration: none;
     padding: 0.5rem 1rem;
     text-align: center;
     transition: color 0.3s ease;
 }
 .NavBar ul li a:hover {
-    color: #A3C586;
+    color: var(--nav-hover-color);
 }
 .NavBar ul li a.active {
-    color: #D35400;
+    color: var(--warm-teracotta);
 }
 
 /* ==================================
@@ -79,14 +79,14 @@
     transition: transform 0.3s ease;
 }
 .arrow path {
-    stroke: #6D4C41;
+    stroke: var(--text-chocolate);
     transition: stroke 0.3s ease;
 }
 .arrow.rotated {
     transform: rotate(180deg);
 }
 .HeaderButtons:hover .arrow path {
-    stroke: #A3C586;
+    stroke: var(--nav-hover-color);
 }
 #portfolio-down {
     margin-left: 0.2rem;
@@ -183,12 +183,12 @@
     font-family: 'Comfortaa', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
-    color: #6f4d3c;
+    color: var(--text-chocolate);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 .DropdownGrid a:hover {
-    color: #a9765d;
+    color: var(--dropdown-hover-color);
 }
 .DropdownGrid a img {
     display: inline-block;
@@ -221,7 +221,7 @@
         margin-left: 30%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 870px) {
     .Header {
         position: fixed;
         top: 0;

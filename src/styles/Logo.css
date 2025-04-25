@@ -245,7 +245,7 @@
 
 
 /*address here no animation and phone pos*/
-@media (max-width: 768px) {
+@media (max-width: 870px) {
     .LogoInner > .svgWiggler > svg {
         min-width: calc(281px / var(--finalScale));
     }

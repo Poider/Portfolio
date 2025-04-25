@@ -3,5 +3,5 @@
     flex-direction: column;
     align-items: center;
     height: 95vh;
-    background-color: #F9F8F4;
+    background-color: var(--color-about-bg);
 }
