@@ -1,5 +1,5 @@
 .HeroMain {
-    height: 92vh;
+ height:  var(--standard-height);
   
     
 }
