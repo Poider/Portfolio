@@ -7,11 +7,13 @@ import pingpong from "../assets/project-icons/pingpong.png";
 import raytracing from "../assets/project-icons/raytracing.png";
 import webserver from "../assets/project-icons/web-server.png";
 
+import RayTracerHover from "../components/projectsHover/RayTracerHoverTop";
+
 const projectsData = [
-    { title: "RealTime WebApp",     slug: "RealTimeWebApp",     image: pingpong,     codeUrl: "https://github.com/your/project1" },
-    { title: "Ray Tracing Reality", slug: "RayTracingReality",  image: raytracing,   codeUrl: "https://github.com/your/project2" },
-    { title: "HTTP/TCP Server",     slug: "HTTPTCPServer",      image: webserver,    codeUrl: "https://github.com/your/project3" },
-    { title: "Dock Orchestrator",   slug: "DockOrchestrator",   image: compose,      codeUrl: "https://github.com/your/project4" }
+    { title: "RealTime WebApp", slug: "RealTimeWebApp", image: pingpong, codeUrl: "https://github.com/your/project1", detailsUpper: null, detailsBottom: null },
+    { title: "Ray Tracing Reality", slug: "RayTracingReality", image: raytracing, codeUrl: "https://github.com/your/project2", detailsUpper: RayTracerHover, detailsBottom: null },
+    { title: "HTTP/TCP Server", slug: "HTTPTCPServer", image: webserver, codeUrl: "https://github.com/your/project3", detailsUpper: null, detailsBottom: null },
+    { title: "Dock Orchestrator", slug: "DockOrchestrator", image: compose, codeUrl: "https://github.com/your/project4", detailsUpper: null, detailsBottom: null }
 ];
 
 const Projects = () => {
@@ -33,8 +35,8 @@ const Projects = () => {
             {/* only show these on desktop widths */}
             {isWide && hovered && (
                 <div className={`${hovered.slug}_details1 detailswrapper upperProjectDetails`}>
-                    <h4>{hovered.title} Details</h4>
-                    <p>— some extra info or buttons</p>
+                   
+                    {hovered.detailsUpper && <hovered.detailsUpper />}
                 </div>
             )}
 
@@ -94,8 +96,8 @@ const Projects = () => {
 
             {isWide && hovered && (
                 <div className={`${hovered.slug}_details2 detailswrapper bottomProjectDetails`}>
-                    <h4>{hovered.title} Details</h4>
-                    <p>— some extra info or buttons</p>
+                    {hovered.detailsBottom && <hovered.detailsBottom />}
+                    
                 </div>
             )}
         </div>

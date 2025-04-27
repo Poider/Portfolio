@@ -1,0 +1,30 @@
+
+.RayTracerHoverImage {
+    mix-blend-mode: darken;
+    animation: fadeIn 0.3s ease-out forwards;
+    z-index: 2;
+}
+
+
+#RT {
+    transform: rotate(3.52deg);
+    position: absolute;
+    left: 5%;
+   
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#squaresCornel {
+    position:absolute;
+    right:5%;
+    transform: rotate(-8deg);
+}

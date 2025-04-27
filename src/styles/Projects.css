@@ -180,28 +180,23 @@
 /* common fade-in wrapper */
 .detailswrapper {
     position: absolute;
-    opacity: 0;
-    transition: opacity 23s ease;
+    border: 1px solid red;
     pointer-events: none; /* so it doesn’t block underlying hover */
 }
-.ProjectBox:hover ~ .detailswrapper,
-.detailswrapper { /* triggers opacity:1 only when mounted */
-    opacity: 1;
-    pointer-events: auto;
-    border: 1px solid red;
-}
+
 
 .bottomProjectDetails{
     bottom: 3.3%;
-    left: 10%;
-    width:80%;
+
+    width:90%;
     height: 18rem;
 }
 
 .upperProjectDetails{
+
     top: 4.3%;
-    left: 10%;
-    width:80%;
+
+    width:90%;
     height: 18rem;
 }
 
