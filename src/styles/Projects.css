@@ -178,14 +178,14 @@
 /* the animated details */
 
 /* common fade-in wrapper */
-.wrapper {
+.detailswrapper {
     position: absolute;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 23s ease;
     pointer-events: none; /* so it doesn’t block underlying hover */
 }
-.ProjectBox:hover ~ .wrapper,
-.wrapper { /* triggers opacity:1 only when mounted */
+.ProjectBox:hover ~ .detailswrapper,
+.detailswrapper { /* triggers opacity:1 only when mounted */
     opacity: 1;
     pointer-events: auto;
     border: 1px solid red;

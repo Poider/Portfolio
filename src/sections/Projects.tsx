@@ -32,7 +32,7 @@ const Projects = () => {
         <div className="ProjectsMain">
             {/* only show these on desktop widths */}
             {isWide && hovered && (
-                <div className={`${hovered.slug}_details1 wrapper upperProjectDetails`}>
+                <div className={`${hovered.slug}_details1 detailswrapper upperProjectDetails`}>
                     <h4>{hovered.title} Details</h4>
                     <p>— some extra info or buttons</p>
                 </div>
@@ -93,7 +93,7 @@ const Projects = () => {
             </a>
 
             {isWide && hovered && (
-                <div className={`${hovered.slug}_details2 wrapper bottomProjectDetails`}>
+                <div className={`${hovered.slug}_details2 detailswrapper bottomProjectDetails`}>
                     <h4>{hovered.title} Details</h4>
                     <p>— some extra info or buttons</p>
                 </div>
