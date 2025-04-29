@@ -1,8 +1,8 @@
 import squaresCornel from "../../assets/project-images/raytracer/SquaresCornel.png"
 import RT from "../../assets/project-images/raytracer/RT.png"
 import React from "react";
-import "./RayTracerHoverTop.css"
-function RayTracerHover() {
+import "./RayTracerHover.css"
+function RayTracerHoverTop() {
   return (
       <>
           <img src={RT} alt="Ray Tracer" className="RayTracerHoverImage" id="RT" />
@@ -13,4 +13,4 @@ function RayTracerHover() {
   );
 }
 
-export default RayTracerHover;
+export default RayTracerHoverTop;

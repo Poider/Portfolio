@@ -1,25 +1,28 @@
 :root {
+    font-family: 'Comfortaa', cursive;
     font-size: 16px;
+    font-color: var(--text-chocolate);
     /* Core Palette */
-    --color-base:       #F1E7D0;  /* Hero / Intro BG */
-    --color-earthy-white:  #F9F8F4;  /* Secondary neutral */
-    --blush-white:  #fffdff;   /* */
+    --color-base: #F1E7D0; /* Hero / Intro BG */
+    --color-earthy-white: #F9F8F4; /* Secondary neutral */
+    --blush-white: #fffdff; /* */
     --warm-teracotta: #D35400; /* Terracotta */
-    --color-sage:       #A3C586;  /* Sage Green */
-    --text-chocolate : #6D4C41;  /* Deep Brown */
-    --text-clay : #a9765d;  /* Clay Brown, orangy clay on dropdown hover*/
+    --color-sage: #A3C586; /* Sage Green */
+    --text-chocolate: #6D4C41; /* Deep Brown */
+    --text-clay: #a9765d; /* Clay Brown, orangy clay on dropdown hover*/
     --text-warmer-cocoa: #988576;
-    --ivory-dust : #F3EEE3;
+    --ivory-dust: #F3EEE3;
     --bare-linen: #F4F2EB;
     --dropdown-hover-color: var(--text-clay); /* lighter brown */
     --color-hero-bg: var(--color-base); /* Hero / Intro BG */
-    --color-about-bg:    var(--color-earthy-white);  /* Card/Flex‐box BG */
+    --color-about-bg: var(--color-earthy-white); /* Card/Flex‐box BG */
     --nav-hover-color: var(--color-sage); /* sage green */
     /* projects page */
-    --color-projects: var(--ivory-dust);  /* Light Sage for Projects BG */
-    --color-project-box:var(--bare-linen); /* Light Sage */
+    --color-projects: var(--ivory-dust); /* Light Sage for Projects BG */
+    --color-project-box: var(--bare-linen); /* Light Sage */
 
-    --standard-height : 890px;
+    --standard-height: 90vh;
+    scroll-behavior: smooth;
 }
 html, body {
     margin: 0;

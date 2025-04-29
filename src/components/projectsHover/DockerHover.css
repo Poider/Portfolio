@@ -1,0 +1,63 @@
+.DockerHoverDivs {
+    height: 2.31rem;
+    border-radius: 16px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(109,76,65,0.2);
+    position: absolute;
+    animation: fadeIn 0.3s ease-out both;
+
+}
+
+.DockerHoverWrapper{
+    position:relative;
+    width:100%;
+    height: 100%;
+}
+
+#docker1 {
+    background-color: var(--text-warmer-cocoa);
+    width: 18.06rem;
+    transform: translate(-50%) rotate(-2.07deg);
+    top: 8rem;
+    left: 22%;
+    animation-delay: 0s;
+}
+
+#docker2 {
+    background-color: var(--color-sage);
+    width: 9.32rem;
+    transform: translate(-70%) rotate(-6.97deg);
+    top: 10.5rem;
+    left: 70%;
+    animation-delay: 0.1s;
+}
+
+#docker3 {
+    background-color: var(--text-clay);
+    width: 14.15rem;
+    transform: translate(-50%) rotate(-5.89deg);
+    top: 1.9rem;
+    left: 50%;
+    animation-delay: 0.2s;
+}
+
+#docker4 {
+    background-color: var(--color-base);
+    width: 18.06rem;
+    transform: translate(-50%) rotate(0deg);
+    top: 5rem;
+    left: 50%;
+    animation-delay: 0.3s;
+}
+
+#docker5 {
+    background-color: var(--color-sage);
+    width: 9.32rem;
+    transform: translate(-70%) rotate(2.95deg);
+    top: 7.6rem;
+    left: 50%;
+    animation-delay: 0.4s;
+}

@@ -7,23 +7,27 @@ import pingpong from "../assets/project-icons/pingpong.png";
 import raytracing from "../assets/project-icons/raytracing.png";
 import webserver from "../assets/project-icons/web-server.png";
 
-import RayTracerHover from "../components/projectsHover/RayTracerHoverTop";
-
+import RayTracerHoverTop from "../components/projectsHover/RayTracerHoverTop";
+import RayTracerHoverBottom from "../components/projectsHover/RayTracerHoverBottom";
+import webAppHover from "../components/projectsHover/WebAppHover";
+import HttpHover from "../components/projectsHover/HttpHover";
+import DockerHoverBottom from "../components/projectsHover/DockerHoverBottom";
+import DockerHoverUpper from "../components/projectsHover/DockerHoverUpper";
 const projectsData = [
-    { title: "RealTime WebApp", slug: "RealTimeWebApp", image: pingpong, codeUrl: "https://github.com/your/project1", detailsUpper: null, detailsBottom: null },
-    { title: "Ray Tracing Reality", slug: "RayTracingReality", image: raytracing, codeUrl: "https://github.com/your/project2", detailsUpper: RayTracerHover, detailsBottom: null },
-    { title: "HTTP/TCP Server", slug: "HTTPTCPServer", image: webserver, codeUrl: "https://github.com/your/project3", detailsUpper: null, detailsBottom: null },
-    { title: "Dock Orchestrator", slug: "DockOrchestrator", image: compose, codeUrl: "https://github.com/your/project4", detailsUpper: null, detailsBottom: null }
+    { title: "RealTime WebApp", slug: "RealTimeWebApp", image: pingpong, codeUrl: "https://github.com/your/project1", detailsUpper: null, detailsBottom: webAppHover },
+    { title: "Ray Tracing Reality", slug: "RayTracingReality", image: raytracing, codeUrl: "https://github.com/your/project2", detailsUpper: RayTracerHoverTop, detailsBottom: RayTracerHoverBottom },
+    { title: "HTTP/TCP Server", slug: "HTTPTCPServer", image: webserver, codeUrl: "https://github.com/your/project3", detailsUpper: null, detailsBottom: HttpHover },
+    { title: "Dock Orchestrator", slug: "DockOrchestrator", image: compose, codeUrl: "https://github.com/your/project4", detailsUpper: DockerHoverUpper, detailsBottom: DockerHoverBottom }
 ];
 
 const Projects = () => {
     const [openProject, setOpenProject] = useState(null);
     const [hoveredIdx, setHoveredIdx] = useState(null);
-    const [isWide, setIsWide] = useState(window.innerWidth > 870);
+    const [isWide, setIsWide] = useState(window.innerWidth > 1008);
 
     // track window width
     useEffect(() => {
-        const onResize = () => setIsWide(window.innerWidth > 870);
+        const onResize = () => setIsWide(window.innerWidth > 1008);
         window.addEventListener('resize', onResize);
         return () => window.removeEventListener('resize', onResize);
     }, []);
@@ -31,7 +35,10 @@ const Projects = () => {
     const hovered = hoveredIdx !== null ? projectsData[hoveredIdx] : null;
 
     return (
-        <div className="ProjectsMain">
+        <>
+        <div id="projects"/>
+        
+        <div className="ProjectsMain" >
             {/* only show these on desktop widths */}
             {isWide && hovered && (
                 <div className={`${hovered.slug}_details1 detailswrapper upperProjectDetails`}>
@@ -100,7 +107,8 @@ const Projects = () => {
                     
                 </div>
             )}
-        </div>
+            </div>
+        </>
     );
 };
 

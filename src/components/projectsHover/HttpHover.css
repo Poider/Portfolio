@@ -1,0 +1,119 @@
+﻿
+
+/* 1) Make the wrapper position:relative so children stack in normal flow */
+.HttpHoverWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* or flex-start / space-around as you like */
+    align-items: center;
+    /* you can give this a fixed width if you never want it to shrink/grow */
+    width: 100%; /* example */
+ 
+}
+
+/* 2) Change each hover‐div to position:relative and size them */
+.HttpHoverDivs {
+    position: relative;
+    background: #F4F2EB;
+    border-radius: 1rem;
+    border: 1px solid rgba(109,76,65,0.3);
+    flex-shrink: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* individual sizes (no left/right needed) */
+#http1 {
+    width: 17.25rem;
+    height: 22.5rem;
+    z-index: 2;
+    left: 12rem;
+
+
+}
+
+#http2 {
+    width: 26.43rem;
+    height: 13.68rem;
+    z-index: 1;
+    left:6rem;
+    top:4rem;
+  
+}
+
+#http3 {
+    width: 27.09rem;
+    height: 21.75rem;
+    z-index: 3;
+ 
+}
+
+#http4 {
+    width: 15rem;
+    height: 16.28rem;
+    z-index: 1;
+
+    left: -3rem;
+    top: -6rem;
+}
+
+#http5 {
+    width: 16.87rem;
+    height: 17.9rem;
+    z-index: 2;
+    left:-8rem;
+    top:4rem;
+
+}
+
+/* 3) Overlap by pulling each one left a bit */
+
+
+/* if you want non‐uniform overlaps you can target each one: */
+
+/* 4) Define fadeIn & slideIn keyframes */
+
+@keyframes slideIn {
+  from { transform: translate(var(--start-x), var(--start-y)); }
+  to   { transform: translate(0, 0); }
+}
+
+/* 5) Layer slideIn onto your existing fadeIn */
+.HttpHoverDivs {
+  /* keeps your original fadeIn, then runs slideIn with per-card delay */
+  animation:
+    fadeIn 0.3s ease-out forwards,
+    slideIn 0.5s ease-out var(--anim-delay, 0s) both;
+}
+
+/* 6) Per-card start-offsets & delays */
+#http1 {
+  /* slide in from same left/top you already set */
+  --start-x: 12rem;
+  --start-y: 0;
+  --anim-delay: 0s;
+}
+
+#http2 {
+  --start-x: 6rem;
+  --start-y: 4rem;
+  --anim-delay: 0.3s;
+}
+
+#http3 {
+  /* if you want it to drop in from below, tweak these */
+  --start-x: 0;
+  --start-y: 6rem;
+  --anim-delay: 0s;
+}
+
+#http4 {
+  --start-x: -3rem;
+  --start-y: -6rem;
+  --anim-delay: 0.3s;
+}
+
+#http5 {
+  --start-x: -8rem;
+  --start-y: 4rem;
+  --anim-delay: 0.2s;
+}

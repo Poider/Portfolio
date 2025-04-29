@@ -19,6 +19,7 @@ const App = () => {
             <About/>
             <Divider2 />
             <Projects />
+            <About />
 
         </div>
     )
