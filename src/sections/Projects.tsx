@@ -36,9 +36,9 @@ const Projects = () => {
 
     return (
         <>
-        <div id="projects"/>
+
         
-        <div className="ProjectsMain" >
+            <div className="ProjectsMain"  >
             {/* only show these on desktop widths */}
             {isWide && hovered && (
                 <div className={`${hovered.slug}_details1 detailswrapper upperProjectDetails`}>

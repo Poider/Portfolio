@@ -27,42 +27,51 @@
     height: 22.5rem;
     z-index: 2;
     left: 12rem;
-
-
+    --start-x: 12rem;
+    --start-y: 0;
+    --anim-delay: 0s;
 }
 
 #http2 {
     width: 26.43rem;
     height: 13.68rem;
     z-index: 1;
-    left:6rem;
-    top:4rem;
-  
+    left: 6rem;
+    top: 6.05rem;
+    --start-x: 6rem;
+    --start-y: 4rem;
+    --anim-delay: 0.3s;
 }
 
 #http3 {
     width: 27.09rem;
     height: 21.75rem;
     z-index: 3;
- 
+    --start-x: 0;
+    --start-y: 6rem;
+    --anim-delay: 0s;
 }
 
 #http4 {
     width: 15rem;
     height: 16.28rem;
     z-index: 1;
-
     left: -3rem;
     top: -6rem;
+    --start-x: -3rem;
+    --start-y: -6rem;
+    --anim-delay: 0.3s;
 }
 
 #http5 {
     width: 16.87rem;
     height: 17.9rem;
     z-index: 2;
-    left:-8rem;
-    top:4rem;
-
+    left: -8rem;
+    top: 4rem;
+    --start-x: -8rem;
+    --start-y: 4rem;
+    --anim-delay: 0.2s;
 }
 
 /* 3) Overlap by pulling each one left a bit */
@@ -86,34 +95,19 @@
 }
 
 /* 6) Per-card start-offsets & delays */
-#http1 {
-  /* slide in from same left/top you already set */
-  --start-x: 12rem;
-  --start-y: 0;
-  --anim-delay: 0s;
+
+
+
+/* hover specifics ------------------------------------------------------------------------ */
+
+
+
+.preserveWhiteSpace {
+    white-space: pre;
+}
+#ReactorPattern {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark-chocolate);
 }
 
-#http2 {
-  --start-x: 6rem;
-  --start-y: 4rem;
-  --anim-delay: 0.3s;
-}
-
-#http3 {
-  /* if you want it to drop in from below, tweak these */
-  --start-x: 0;
-  --start-y: 6rem;
-  --anim-delay: 0s;
-}
-
-#http4 {
-  --start-x: -3rem;
-  --start-y: -6rem;
-  --anim-delay: 0.3s;
-}
-
-#http5 {
-  --start-x: -8rem;
-  --start-y: 4rem;
-  --anim-delay: 0.2s;
-}

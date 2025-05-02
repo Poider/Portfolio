@@ -1,7 +1,7 @@
 :root {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
-    font-color: var(--text-chocolate);
+    color: var(--text-chocolate);
     /* Core Palette */
     --color-base: #F1E7D0; /* Hero / Intro BG */
     --color-earthy-white: #F9F8F4; /* Secondary neutral */
@@ -13,6 +13,8 @@
     --text-warmer-cocoa: #988576;
     --ivory-dust: #F3EEE3;
     --bare-linen: #F4F2EB;
+    --light-ivory: #FBF8F0;
+    --text-dark-chocolate: #573326;
     --dropdown-hover-color: var(--text-clay); /* lighter brown */
     --color-hero-bg: var(--color-base); /* Hero / Intro BG */
     --color-about-bg: var(--color-earthy-white); /* Card/Flex‐box BG */

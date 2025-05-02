@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/Divider.css';
 const Divider2: React.FC = () => {
     return (
-        <div className="divider-2" >
+        <div className="divider-2" id="projects">
                 <svg  viewBox="0 0 1200 120"
                      preserveAspectRatio="none">
                     <path
