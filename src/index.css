@@ -15,6 +15,7 @@
     --bare-linen: #F4F2EB;
     --light-ivory: #FBF8F0;
     --text-dark-chocolate: #573326;
+    --chocolate-http-hover: #6C4F3F;
     --dropdown-hover-color: var(--text-clay); /* lighter brown */
     --color-hero-bg: var(--color-base); /* Hero / Intro BG */
     --color-about-bg: var(--color-earthy-white); /* Card/Flex‐box BG */
@@ -30,3 +31,4 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
