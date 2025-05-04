@@ -16,7 +16,7 @@ function WebAppPreview() {
                 <img
                     src={pingpongGIF}
                     alt="Ping pong animation"
-                    width={480} 
+                    width={400} 
                     height={"auto"}
                     loading="lazy"             // optional: lazy-load the GIF
                     style={{ display: 'block' }}

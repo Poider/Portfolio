@@ -32,12 +32,13 @@
     background: var(--bare-linen);
     border-radius: 8px;
     width: 80%;
+    max-width: 61rem;
     height: 90%;
     padding: 2rem;
     position: relative;
     overflow-y: auto;
     overscroll-behavior: contain;
-    opacity: 0;                             /* start invisible/scaled */
+    opacity: 0; /* start invisible/scaled */
     animation: fadeInContent 0.3s ease-out forwards;
 }
 
