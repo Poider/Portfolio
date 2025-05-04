@@ -7,6 +7,7 @@ import small_arrow from '../../assets/project-images/http/small_arrow.png'
 import configfile from '../../assets/project-images/http/configfile.png'
 import ScrewNuts from '../../assets/project-images/http/ScrewNuts.png'
 import Nginx from '../../assets/project-images/http/Nginx.png'
+import network from '../../assets/project-images/http/network.png'
 function HttpHover() {
     const ReactorPattern = `Reactor\nPattern`
   return (
@@ -27,10 +28,25 @@ function HttpHover() {
               </div>
           </div>
          
-          <img className="HttpHoverDivs" id="http2"  src={configfile}></img>
+          <img className="HttpHoverDivs" id="http2" src={configfile}></img>
+
           <div className="HttpHoverDivs" id="http3">
-               
+              <span className="preserveWhiteSpace">{"Massive\nUploads\nHandled"}</span>
+              <img src={network} alt="network" />
+              <div id="TerminalClients">
+                  <span className="TerminalText preserveWhiteSpace">{ "[4:50:4]   Client 53:  Connected"}</span>
+                  <span className="TerminalText preserveWhiteSpace">{ "[4:52:2]   Client 50:  Upload/f.dat"}</span>
+                  <span className="TerminalText preserveWhiteSpace">{ "[4:56:8]   Client  71:  Handling"}</span>
+                  <span className="TerminalText preserveWhiteSpace">{"[4:57:3]   Client 53:  Requesting"}</span>
+                  <div className="spacer"></div>
+                  <span className="TerminalText preserveWhiteSpace alignEnd">{"Done receiving file, 524MB\nreceived"}</span>
+
+              </div>
+              <span className="preserveWhiteSpace">{`1000+\nClients,\nNo Sweat`}</span>
+              <span>{ "tested by siege" }</span>
+
           </div>
+
           <div className="HttpHoverDivs" id="http4">
               <span>C++11</span>
               <img src={ScrewNuts} />

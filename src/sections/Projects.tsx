@@ -1,5 +1,5 @@
 // src/components/Projects.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import "../styles/Projects.css";
 import Modal from "../components/ProjectsModal.tsx";
 import compose from "../assets/project-icons/compose.png";
@@ -13,12 +13,54 @@ import webAppHover from "../components/projectsHover/WebAppHover";
 import HttpHover from "../components/projectsHover/HttpHover";
 import DockerHoverBottom from "../components/projectsHover/DockerHoverBottom";
 import DockerHoverUpper from "../components/projectsHover/DockerHoverUpper";
+
+
+
+// lazy imports of your preview modules (they must default-export a component)
+const WebAppPreview = lazy(() => import('../components/projectsPreview/WebAppPreview'))
+const RayTracingPreview = lazy(() => import('../components/projectsPreview/RayTracingPreview'))
+const HTTPPreview = lazy(() => import('../components/projectsPreview/HTTPPreview'))
+const DockerPreview = lazy(() => import('../components/projectsPreview/DockerPreview'))
+
 const projectsData = [
-    { title: "RealTime WebApp", slug: "RealTimeWebApp", image: pingpong, codeUrl: "https://github.com/your/project1", detailsUpper: null, detailsBottom: webAppHover },
-    { title: "Ray Tracing Reality", slug: "RayTracingReality", image: raytracing, codeUrl: "https://github.com/your/project2", detailsUpper: RayTracerHoverTop, detailsBottom: RayTracerHoverBottom },
-    { title: "HTTP/TCP Server", slug: "HTTPTCPServer", image: webserver, codeUrl: "https://github.com/your/project3", detailsUpper: null, detailsBottom: HttpHover },
-    { title: "Dock Orchestrator", slug: "DockOrchestrator", image: compose, codeUrl: "https://github.com/your/project4", detailsUpper: DockerHoverUpper, detailsBottom: DockerHoverBottom }
-];
+    {
+        title: "RealTime WebApp",
+        slug: "RealTimeWebApp",
+        image: pingpong,
+        codeUrl: "https://github.com/Poider/PingPong-Web-App",
+        detailsUpper: null,
+        detailsBottom: webAppHover,
+        preview: WebAppPreview,
+    },
+    {
+        title: "Ray Tracing Reality",
+        slug: "RayTracingReality",
+        image: raytracing,
+        codeUrl: "https://github.com/Poider/3D-RayTracer-Engine",
+        detailsUpper: RayTracerHoverTop,
+        detailsBottom: RayTracerHoverBottom,
+        preview: RayTracingPreview,
+    },
+    {
+        title: "HTTP/TCP Server",
+        slug: "HTTPTCPServer",
+        image: webserver,
+        codeUrl: "https://github.com/Poider/High-Performance-Cpp-Web-Server-Inspired-by-Nginx",
+        detailsUpper: null,
+        detailsBottom: HttpHover,
+        preview: HTTPPreview,
+    },
+    {
+        title: "Dock Orchestrator",
+        slug: "DockOrchestrator",
+        image: compose,
+        codeUrl: "https://github.com/Poider/Inception-Dockerized-Solutions",
+        detailsUpper: DockerHoverUpper,
+        detailsBottom: DockerHoverBottom,
+        preview: DockerPreview,
+    },
+]
+
 
 const Projects = () => {
     const [openProject, setOpenProject] = useState(null);
@@ -79,17 +121,13 @@ const Projects = () => {
             </div>
 
             <Modal isOpen={!!openProject} onClose={() => setOpenProject(null)}>
-                {openProject && (
-                    <>
-                        <h2>{openProject.title}</h2>
-                        <img
-                            src={openProject.image}
-                            alt={openProject.title}
-                            style={{ maxWidth: "100%", borderRadius: "4px" }}
-                        />
-                        <p style={{ marginTop: "1rem" }}>{openProject.details}</p>
-                    </>
-                )}
+                    {openProject && (
+                        <Suspense >
+                         
+                            {/* grab the lazy-loaded component and render it */}
+                            {React.createElement(openProject.preview)}
+                        </Suspense>
+                    )}
             </Modal>
 
             <a

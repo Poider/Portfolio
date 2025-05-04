@@ -1,1 +1,13 @@
 // 📌 JSON data for projects
+import { useState, useEffect } from "react";
+
+export function useFadeIn(delay = 20) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return visible ? "fadeIn" : "";
+}

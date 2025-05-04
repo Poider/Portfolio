@@ -19,6 +19,7 @@
     border: 1px solid rgba(109,76,65,0.3);
     flex-shrink: 0;
     animation: fadeIn 0.3s ease-out forwards;
+
 }
 
 /* individual sizes (no left/right needed) */
@@ -259,4 +260,73 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-dark-chocolate);
+}
+
+
+#TerminalClients {
+    width: 14.75rem;
+    height: 8.25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #463630;
+    border-radius: 1rem;
+    gap: 0.3rem;
+    padding: 0.7rem;
+    box-sizing: border-box;
+}
+
+
+
+.TerminalText {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #FFFAED;
+    margin: 0;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+
+#http3 > *:nth-child(1) {
+    position: absolute;
+    top: 2.5625rem;
+    left: 1.625rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5C453A;
+
+}
+
+#http3 > *:nth-child(2) {
+
+    position: absolute;
+    top: 9rem;
+    left: 0.5rem;
+}
+
+#http3 > *:nth-child(3) {
+    position: absolute;
+    top: 1.25rem;
+    left: 11.0625rem;
+}
+#http3 > *:nth-child(4) {
+    position: absolute;
+    top: 12.5625rem;
+    left: 16.3125rem;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #5C453A;
+    text-align:right;
+}
+
+#http3 > *:nth-child(5) {
+    position: absolute;
+    top: 18.125rem;
+    left: 20.3125rem;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #5C453A;
+    text-decoration:underline;
 }

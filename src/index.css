@@ -32,3 +32,14 @@ html, body {
     padding: 0;
 }
 
+.fadeInBeforeLoaded {
+    opacity: 0;
+    transform: translateY(0.2rem);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.fadeInOnceLoaded {
+    opacity: 1;
+    transform: translateY(0);
+}

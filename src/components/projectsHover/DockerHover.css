@@ -11,10 +11,15 @@
 
 }
 
-.DockerHoverWrapper{
-    position:relative;
-    width:100%;
+.DockerHoverWrapper {
+    position: relative;
+    width: 100%;
     height: 100%;
+    color: var(--color-projects);
+    font-weight:700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #docker1 {
@@ -28,7 +33,7 @@
 
 #docker2 {
     background-color: var(--color-sage);
-    width: 9.32rem;
+    width: 17.32rem;
     transform: translate(-70%) rotate(-6.97deg);
     top: 10.5rem;
     left: 70%;
@@ -37,27 +42,30 @@
 
 #docker3 {
     background-color: var(--text-clay);
-    width: 14.15rem;
+    width: 17.15rem;
     transform: translate(-50%) rotate(-5.89deg);
-    top: 1.9rem;
-    left: 50%;
+    top: 1.7rem;
+    left: 51.5%;
     animation-delay: 0.2s;
+    
 }
 
 #docker4 {
     background-color: var(--color-base);
-    width: 18.06rem;
+    width: 25.06rem;
     transform: translate(-50%) rotate(0deg);
     top: 5rem;
-    left: 50%;
+    left: 52%;
     animation-delay: 0.3s;
+    color:var(--text-chocolate);
 }
 
 #docker5 {
     background-color: var(--color-sage);
     width: 9.32rem;
     transform: translate(-70%) rotate(2.95deg);
-    top: 7.6rem;
+    top: 7.7rem;
     left: 50%;
     animation-delay: 0.4s;
+    color: var(--text-chocolate);
 }
