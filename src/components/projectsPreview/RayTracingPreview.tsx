@@ -12,11 +12,11 @@ function RayTracingPreview() {
         <div className={`RayTracerModalContentInner ${fadeClass}`}>
 
             <div className="gridTitle">
-                <h2 className="webAppModalTitle">Ray Tracing Reality</h2>
+                <h2 className="ModalTitle">Ray Tracing Reality</h2>
             </div>
 
             <div className="gridSubtitle">
-                <p className="webAppModalSubtitle">One of My Most Complex Creations</p>
+                <p className="ModalSubtitle">One of My Most Complex Creations</p>
             </div>
 
             <section className="ModalSection gridFeatures">
@@ -24,7 +24,7 @@ function RayTracingPreview() {
                     <span className="icon">✨</span>
                     Key Features
                 </h3>
-                <ul className="webAppModalFeatureList">
+                <ul className="ModalFeatureList">
                     <li>
                         <span className="featureIcon">💎</span>
                         <strong>Reflection & Refraction</strong> — Accurate light bending & mirror effects via recursive rays
@@ -68,8 +68,8 @@ function RayTracingPreview() {
                     <span className="icon">📸</span>
                     Renders & Outputs
                 </h3>
-                <img src={reflectiveImgs} alt="Refraction Preview" className="webAppModalGroupedImage" />
-                <p className="webAppModalCaption">Example: Index of Refraction from 1.0 to 2.0</p>
+                <img src={reflectiveImgs} alt="Refraction Preview" className="ModalGroupedImage" />
+                <p className="ModalCaption">Example: Index of Refraction from 1.0 to 2.0</p>
             </section>
 
             <section className="ModalSection gridTech">
@@ -77,7 +77,7 @@ function RayTracingPreview() {
                     <span className="icon">🧰</span>
                     Tech Stack
                 </h3>
-                <div className="webAppModalTechTags">
+                <div className="ModalTechTags">
                     <span>C</span>
                     <span>MiniLibX (X11)</span>
                     <span>Manual Memory Management</span>
@@ -91,7 +91,7 @@ function RayTracingPreview() {
                     <span className="icon">⚙️</span>
                     How to Run
                 </h3>
-                <pre className="webAppModalCode">
+                <pre className="ModalCode">
                     <code>
                         git clone https://github.com/yourname/project
                         ./init.sh
@@ -105,19 +105,15 @@ function RayTracingPreview() {
                     <span className="icon">📚</span>
                     Project Background
                 </h3>
-                <p className="webAppModalParagraph">
+                <p className="ModalParagraph">
                     Developed as part of the 42 Network’s miniRT project, this engine was built from scratch without external frameworks — handling raw math, pixel rendering, recursive logic, and light simulation. It remains one of my most complex and rewarding low-level projects.
                 </p>
             </section>
 
             <div className="ModalActions">
-                <a href="https://github.com/yourname/project" className="webAppModalBtn">
+                <a href="https://github.com/yourname/project" className="ModalBtn">
                     <span className="icon">🔗</span>
                     GitHub
-                </a>
-                <a href="https://your-demo-link.com" className="webAppModalBtn">
-                    <span className="icon">▶️</span>
-                    Demo
                 </a>
             </div>
         </div>

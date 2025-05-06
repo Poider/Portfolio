@@ -15,9 +15,9 @@ function WebAppPreview() {
 
     return (
         <div className={`webAppModalContentInner ${fadeClass}`}>
-            <h2 className="webAppModalTitle">Ping Pong Web App</h2>
+            <h2 className="ModalTitle">Ping Pong Web App</h2>
    
-            <p className="webAppModalSubtitle"
+            <p className="ModalSubtitle"
      
             >
                 A Real-Time Multiplayer Experience Built with NestJS & Three.js
@@ -34,7 +34,8 @@ function WebAppPreview() {
                     width={400}
                     height="auto"
                     loading="lazy"
-                    style={{ display: 'block' }}
+                    
+                    style={{ display: 'block', marginLeft: '0.2rem' }}
                 />
             </section>
 
@@ -43,7 +44,7 @@ function WebAppPreview() {
                     <span className="icon">✨</span>
                     Key Features
                 </h3>
-                <ul className="webAppModalFeatureList">
+                <ul className="ModalFeatureList">
                     <li>
                         <span className="featureIcon">🧠</span>
                         <strong>Matchmaking</strong> – Real-time player pairing
@@ -76,7 +77,7 @@ function WebAppPreview() {
                     <span className="icon">🧰</span>
                     Tech Stack
                 </h3>
-                <div className="webAppModalTechTags">
+                <div className="ModalTechTags">
                     <span>NestJS</span>
                     <span>React</span>
                     <span>Socket.IO</span>
@@ -95,19 +96,19 @@ function WebAppPreview() {
                 </h3>
                 <div className="webAppModalScreenshots">
                     <figure>
-                        <img src={loginPage} alt="Login Page" />
+                        <img className="webAppPreviewSS" src={loginPage} alt="Login Page" />
                         <figcaption>Login Page</figcaption>
                     </figure>
                     <figure>
-                        <img src={chatInterface} alt="Chat Interface" />
+                        <img className="webAppPreviewSS"  src={chatInterface} alt="Chat Interface" />
                         <figcaption>Chat Interface</figcaption>
                     </figure>
                     <figure>
-                        <img src={channelsInterface} alt="Channels Interface" />
+                        <img className="webAppPreviewSS"  src={channelsInterface} alt="Channels Interface" />
                         <figcaption>Channels Interface</figcaption>
                     </figure>
                     <figure>
-                        <img src={leaderBoard} alt="Leaderboard" />
+                        <img className="webAppPreviewSS"  src={leaderBoard} alt="Leaderboard" />
                         <figcaption>Leaderboard</figcaption>
                     </figure>
                 </div>
@@ -132,7 +133,7 @@ function WebAppPreview() {
                     <span className="icon">⚙️</span>
                     How to Run
                 </h3>
-                <pre className="webAppModalCode">
+                <pre className="ModalCode">
                     <code>
                         git clone https://github.com/yourname/project
                         ./init_docker.sh
@@ -147,20 +148,17 @@ function WebAppPreview() {
                     <span className="icon">📖</span>
                     Project Background
                 </h3>
-                <p className="webAppModalParagraph">
+                <p className="ModalParagraph">
                     Built during the ft_transcendence challenge, this full-stack app combines secure authentication, multiplayer gameplay, real-time chat, and containerized deployment — all built from scratch.
                 </p>
             </section>
 
             <div className="ModalActions">
-                <a href="https://github.com/yourname/project" className="webAppModalBtn">
+                <a href="https://github.com/yourname/project" className="ModalBtn">
                     <span className="icon">🔗</span>
                     GitHub
                 </a>
-                <a href="https://your-demo-link.com" className="webAppModalBtn">
-                    <span className="icon">▶️</span>
-                    Demo
-                </a>
+               
             </div>
         </div>
     );

@@ -36,7 +36,7 @@
 }
 
 /* Header areas */
-.webAppModalTitle {
+.ModalTitle {
     grid-area: title;
     margin: 0;
     font-size: 2rem;
@@ -45,7 +45,7 @@
 
 }
 
-.webAppModalSubtitle {
+.ModalSubtitle {
     grid-area: subtitle;
     margin: -1rem 0 2rem;
     font-size: 1rem;
@@ -102,7 +102,7 @@
 
 /* Lists */
 
-.webAppModalFeatureList {
+.ModalFeatureList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -112,7 +112,7 @@
     margin-left: -1rem;
 }
 
-    .webAppModalFeatureList li,
+    .ModalFeatureList li,
     .webAppModalSecurityList li {
         margin-bottom: 0.5rem;
         line-height: 1.6;
@@ -120,19 +120,19 @@
     }
 
 
-        .webAppModalFeatureList li strong,
+        .ModalFeatureList li strong,
         .webAppModalSecurityList li strong {
             color: var(--accent);
         }
 
 /* Tech tags */
-.webAppModalTechTags {
+.ModalTechTags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-    .webAppModalTechTags span {
+    .ModalTechTags span {
         background: var(--tag-bg);
         border: 1px solid var(--tag-border);
         padding: 0.25rem 0.75rem;
@@ -175,8 +175,8 @@
 }
 
 /* Code block */
-.webAppModalCode {
-    background: var(--code-bg);
+.ModalCode {
+    background: var(--ivory-dust);
     padding: 1rem;
     border-radius: 0.5rem;
     font-family: Menlo, Monaco, monospace;
@@ -185,14 +185,14 @@
 }
 
 /* Paragraphs */
-.webAppModalParagraph {
+.ModalParagraph {
     margin: 0;
     line-height: 1.6;
     font-size: 0.9rem;
 }
 
 /* Buttons */
-.webAppModalBtn {
+.ModalBtn {
     background: #333;
     color: white;
     padding: 0.75rem 1.5rem;
@@ -227,3 +227,38 @@ strong {
     vertical-align: bottom; /* align the span itself with the text line */
     margin-right:0.3rem;
 }
+
+.webAppModalScreenshots figure {
+  position: relative;
+}
+
+.webAppModalScreenshots figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(244, 242, 235, 0.15);      /* light cream wash */
+  pointer-events: none;
+}
+
+    .webAppModalScreenshots figure img {
+        display: block;
+        width: 12.75rem;
+        height: 9.75rem;
+    }
+
+.webAppModalScreenshots figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6f5e4e;                            /* a darker cocoa for contrast */
+}
+
+/* Just the extra bits not already in Previews.css */
+
+.DockerArchitectureImage {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
