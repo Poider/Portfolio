@@ -1,43 +1,81 @@
 ﻿import React from 'react';
 import { useState, useEffect } from "react";
-import "./WebAppPreview.css";
-import pingpongGIF from "../../assets/project-images/webapp/pingpongGIF.gif"
-import { useFadeInOnceLoaded } from "../../hooks/useFadeInOnceLoaded"; 
+import "./Previews.css";
+import pingpongGIF from "../../assets/project-images/preview/pingpongGIF.gif";
+import channelsInterface from "../../assets/project-images/preview/channelsInterface.png";
+import loginPage from "../../assets/project-images/preview/loginPage.png";
+import leaderBoard from "../../assets/project-images/preview/leaderBoard.png";
+import chatInterface from "../../assets/project-images/preview/chatInterface.png";
+
+
+import { useFadeInOnceLoaded } from "../../hooks/useFadeInOnceLoaded";
+
 function WebAppPreview() {
-  
-    const fadeClass = useFadeInOnceLoaded(10); //10ms then fade in (so it first render at 0)
+    const fadeClass = useFadeInOnceLoaded(10);
+
     return (
         <div className={`webAppModalContentInner ${fadeClass}`}>
             <h2 className="webAppModalTitle">Ping Pong Web App</h2>
-            <p className="webAppModalSubtitle">A Real-Time Multiplayer Experience Built with NestJS & Three.js</p>
+   
+            <p className="webAppModalSubtitle"
+     
+            >
+                A Real-Time Multiplayer Experience Built with NestJS & Three.js
+            </p>
 
-            <section className="webAppModalSection">
-                <h3>🎮 Live Gameplay Preview</h3>
+            <section className="ModalSection gridPreview">
+                <h3>
+                    <span className="icon">🎮</span>
+                    Live Gameplay Preview
+                </h3>
                 <img
                     src={pingpongGIF}
                     alt="Ping pong animation"
-                    width={400} 
-                    height={"auto"}
-                    loading="lazy"             // optional: lazy-load the GIF
+                    width={400}
+                    height="auto"
+                    loading="lazy"
                     style={{ display: 'block' }}
                 />
-
             </section>
 
-            <section className="webAppModalSection">
-                <h3>✨ Key Features</h3>
+            <section className="ModalSection gridFeatures">
+                <h3>
+                    <span className="icon">✨</span>
+                    Key Features
+                </h3>
                 <ul className="webAppModalFeatureList">
-                    <li>🧠 <strong>Matchmaking</strong> – Real-time player pairing</li>
-                    <li>🔐 <strong>OAuth2 + 2FA</strong> – Secure login with optional 2FA</li>
-                    <li>💬 <strong>Advanced Chat</strong> – Public/private rooms, DMs, mute/ban</li>
-                    <li>🏆 <strong>Leaderboards</strong> – Track wins, losses, ladder ranks</li>
-                    <li>🎨 <strong>3D Gameplay</strong> – Rendered with Three.js & Blender</li>
-                    <li>🐳 <strong>Dockerized Setup</strong> – One-liner deployment</li>
+                    <li>
+                        <span className="featureIcon">🧠</span>
+                        <strong>Matchmaking</strong> – Real-time player pairing
+                    </li>
+                    <li>
+                        <span className="featureIcon">🔐</span>
+                        <strong>OAuth2 + 2FA</strong> – Secure login with optional 2FA
+                    </li>
+                    <li>
+                        <span className="featureIcon">💬</span>
+                        <strong>Advanced Chat</strong> – Public/private rooms, DMs, mute/ban
+                    </li>
+                    <li>
+                        <span className="featureIcon">🏆</span>
+                        <strong>Leaderboards</strong> – Track wins, losses, ladder ranks
+                    </li>
+                    <li>
+                        <span className="featureIcon">🎨</span>
+                        <strong>3D Gameplay</strong> – Rendered with Three.js & Blender
+                    </li>
+                    <li>
+                        <span className="featureIcon">🐳</span>
+                        <strong>Dockerized Setup</strong> – One-liner deployment
+                    </li>
                 </ul>
             </section>
 
-            <section className="webAppModalSection">
-                <h3>🧰 Tech Stack</h3>
+            <section className="ModalSection gridTech">
+                <h3>
+                    <span className="icon">🧰</span>
+                    Tech Stack
+                </h3>
                 <div className="webAppModalTechTags">
                     <span>NestJS</span>
                     <span>React</span>
@@ -50,18 +88,37 @@ function WebAppPreview() {
                 </div>
             </section>
 
-            <section className="webAppModalSection">
-                <h3>📸 Screenshots</h3>
+            <section className="ModalSection gridScreenshots">
+                <h3>
+                    <span className="icon">📸</span>
+                    Screenshots
+                </h3>
                 <div className="webAppModalScreenshots">
-                    <img src="screenshot1.png" alt="Login Page" />
-                    <img src="screenshot2.png" alt="Chat Interface" />
-                    <img src="screenshot3.png" alt="Leaderboard" />
-                    <img src="screenshot4.png" alt="Game History" />
+                    <figure>
+                        <img src={loginPage} alt="Login Page" />
+                        <figcaption>Login Page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={chatInterface} alt="Chat Interface" />
+                        <figcaption>Chat Interface</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={channelsInterface} alt="Channels Interface" />
+                        <figcaption>Channels Interface</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={leaderBoard} alt="Leaderboard" />
+                        <figcaption>Leaderboard</figcaption>
+                    </figure>
                 </div>
+
             </section>
 
-            <section className="webAppModalSection">
-                <h3>🔒 Security & Architecture</h3>
+            <section className="ModalSection gridSecurity">
+                <h3>
+                    <span className="icon">🔒</span>
+                    Security & Architecture
+                </h3>
                 <ul className="webAppModalSecurityList">
                     <li>Passwords hashed with bcrypt</li>
                     <li>JWT for token-based authentication</li>
@@ -70,31 +127,43 @@ function WebAppPreview() {
                 </ul>
             </section>
 
-            <section className="webAppModalSection">
-                <h3>⚙️ How to Run</h3>
-                <pre className="webAppModalCode"><code>
-                    git clone https://github.com/yourname/project
-                    ./init_docker.sh
-                    cd postgresql && docker-compose up -d
-                    npm run start:dev
-                </code></pre>
+            <section className="ModalSection gridRun">
+                <h3>
+                    <span className="icon">⚙️</span>
+                    How to Run
+                </h3>
+                <pre className="webAppModalCode">
+                    <code>
+                        git clone https://github.com/yourname/project
+                        ./init_docker.sh
+                        cd postgresql && docker-compose up -d
+                        npm run start:dev
+                    </code>
+                </pre>
             </section>
 
-            <section className="webAppModalSection">
-                <h3>📖 Project Background</h3>
+            <section className="ModalSection gridBackground">
+                <h3>
+                    <span className="icon">📖</span>
+                    Project Background
+                </h3>
                 <p className="webAppModalParagraph">
                     Built during the ft_transcendence challenge, this full-stack app combines secure authentication, multiplayer gameplay, real-time chat, and containerized deployment — all built from scratch.
                 </p>
             </section>
 
-            <div className="webAppModalActions">
-                <a href="https://github.com/yourname/project" className="webAppModalBtn">🔗 GitHub</a>
-                <a href="https://your-demo-link.com" className="webAppModalBtn">▶️ Demo</a>
+            <div className="ModalActions">
+                <a href="https://github.com/yourname/project" className="webAppModalBtn">
+                    <span className="icon">🔗</span>
+                    GitHub
+                </a>
+                <a href="https://your-demo-link.com" className="webAppModalBtn">
+                    <span className="icon">▶️</span>
+                    Demo
+                </a>
             </div>
         </div>
-
-
-  );
+    );
 }
 
 export default WebAppPreview;

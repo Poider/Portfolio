@@ -1,6 +1,5 @@
 ﻿/* WebAppPreview.css */
 
-/* 1) color palette & fonts */
 :root {
     --bg: #F4F2EB;
     --text: #624A3B;
@@ -21,7 +20,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
-    gap: 2.5rem;
+    gap: 2rem;
     grid-template-areas:
         "title    title"
         "subtitle subtitle"
@@ -36,54 +35,55 @@
     margin: 0 auto;
 }
 
-/* 2) Header areas */
+/* Header areas */
 .webAppModalTitle {
     grid-area: title;
     margin: 0;
     font-size: 2rem;
     text-align: center;
-    font-weight:500;
+    font-weight: 400;
+
 }
 
 .webAppModalSubtitle {
     grid-area: subtitle;
-    margin: 0rem 0 2rem;
+    margin: -1rem 0 2rem;
     font-size: 1rem;
     text-align: center;
     color: var(--text-light);
+
 }
 
-/* 3) Place each <section> into a grid‐area by its index */
-.webAppModalSection:nth-of-type(2) {
-    grid-area: features;
-}
-/* Key Features */
-.webAppModalSection:nth-of-type(1) {
+/* Grid area assignments */
+.gridPreview {
     grid-area: preview;
 }
-/* Live Gameplay */
-.webAppModalSection:nth-of-type(3) {
+
+.gridFeatures {
+    grid-area: features;
+}
+
+.gridTech {
     grid-area: tech;
 }
-/* Tech Stack */
-.webAppModalSection:nth-of-type(4) {
+
+.gridScreenshots {
     grid-area: screenshots;
 }
-/* Screenshots */
-.webAppModalSection:nth-of-type(5) {
+
+.gridSecurity {
     grid-area: security;
 }
-/* Security & Architecture */
-.webAppModalSection:nth-of-type(6) {
+
+.gridRun {
     grid-area: run;
 }
-/* How to Run */
-.webAppModalSection:nth-of-type(7) {
+
+.gridBackground {
     grid-area: background;
 }
-/* Project Background */
 
-.webAppModalActions {
+.ModalActions {
     grid-area: actions;
     display: flex;
     gap: 1rem;
@@ -91,33 +91,33 @@
     margin-top: 1rem;
 }
 
-/* 4) Section headings */
-.webAppModalSection h3 {
+/* Section headings */
+.ModalSection h3 {
     margin: 0 0 1.25rem;
     font-size: 1.25rem;
-    
     color: var(--accent);
-    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
-/* 5) Feature & security lists */
-.webAppModalFeatureList
- {
+/* Lists */
+
+.webAppModalFeatureList {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .webAppModalSecurityList {
-   
-    margin: 0;
+    margin-left: -1rem;
 }
 
-.webAppModalFeatureList li,
-.webAppModalSecurityList li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-    font-size: 1rem;
-}
+    .webAppModalFeatureList li,
+    .webAppModalSecurityList li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
 
 
         .webAppModalFeatureList li strong,
@@ -125,12 +125,12 @@
             color: var(--accent);
         }
 
-    /* 6) Tech tags */
-    .webAppModalTechTags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
+/* Tech tags */
+.webAppModalTechTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
 
     .webAppModalTechTags span {
         background: var(--tag-bg);
@@ -138,25 +138,43 @@
         padding: 0.25rem 0.75rem;
         border-radius: 0.5rem;
         font-size: 0.875rem;
-        font-weight:500;
+        font-weight: 500;
     }
 
-/* 7) Screenshots grid */
+/* Screenshots */
 .webAppModalScreenshots {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding-right: 1rem;
+    align-content: center;
+    justify-items: center;
+    margin-left: -0.5rem;
+    margin-top: 1.5rem;
 }
 
     .webAppModalScreenshots img {
-        width: 100%;
+        width: 180px;
         border-radius: 0.5rem;
         object-fit: cover;
+        display: block;
+   
+    }
+    .webAppModalScreenshots figure {
+      margin: 0;
     }
 
 
+.webAppModalScreenshots figcaption {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
 
-/* 8) Code block */
+/* Code block */
 .webAppModalCode {
     background: var(--code-bg);
     padding: 1rem;
@@ -166,14 +184,14 @@
     overflow-x: auto;
 }
 
-/* 9) Paragraph text */
+/* Paragraphs */
 .webAppModalParagraph {
     margin: 0;
     line-height: 1.6;
     font-size: 0.9rem;
 }
 
-/* 10) Action buttons */
+/* Buttons */
 .webAppModalBtn {
     background: #333;
     color: white;
@@ -184,15 +202,28 @@
     transition: background 0.2s ease;
 }
 
-/* 11) Fade-in animation (hook class) */
+/* Fade-in */
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.5s ease-out forwards;
-    animation-delay: 0.01s; /* your hook’s delay */
+    animation-delay: 0.01s;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+strong {
+    font-weight: 700;
+}
+.icon {
+    display: inline-block; /* ensure vertical-align applies */
+    vertical-align: middle;
+    font-size: 1em; /* make icon same size as text */
+    margin-right: 0.3em; /* small spacing */
+    margin-bottom:0.5rem;
+}
+.featureIcon {
+    display: inline-flex; /* make it a flex‐container */
+    align-items: center; /* vertically center the emoji inside the padding */
+    justify-content: center; /* horizontally center (if you ever have wider content) */
+    padding: 0.05rem;
+    vertical-align: bottom; /* align the span itself with the text line */
+    margin-right:0.3rem;
 }

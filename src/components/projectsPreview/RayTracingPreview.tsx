@@ -1,29 +1,125 @@
-import React from 'react';
-import { useFadeInOnceLoaded } from "../../hooks/useFadeInOnceLoaded"; 
-import "./WebAppPreview.css";
+﻿import React from "react";
+import { useFadeInOnceLoaded } from "../../hooks/useFadeInOnceLoaded";
+import diagram from "../../assets/project-images/preview/rayTracingDiagram.png";
+import reflectiveImgs from "../../assets/project-images/preview/reflective.png";
+import "./Previews.css";
+import "./RayTracingPreview.css";
 
 function RayTracingPreview() {
-    const fadeClass = useFadeInOnceLoaded(20); //10ms then fade in (so it first render at 0)
+    const fadeClass = useFadeInOnceLoaded(20);
 
     return (
-        <div className={`${fadeClass}`}>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-            <p>Hello world! b</p>
-           
+        <div className={`RayTracerModalContentInner ${fadeClass}`}>
+
+            <div className="gridTitle">
+                <h2 className="webAppModalTitle">Ray Tracing Reality</h2>
+            </div>
+
+            <div className="gridSubtitle">
+                <p className="webAppModalSubtitle">One of My Most Complex Creations</p>
+            </div>
+
+            <section className="ModalSection gridFeatures">
+                <h3>
+                    <span className="icon">✨</span>
+                    Key Features
+                </h3>
+                <ul className="webAppModalFeatureList">
+                    <li>
+                        <span className="featureIcon">💎</span>
+                        <strong>Reflection & Refraction</strong> — Accurate light bending & mirror effects via recursive rays
+                    </li>
+                    <li>
+                        <span className="featureIcon">📷</span>
+                        <strong>Depth of Field</strong> — Simulated camera blur for photorealistic focus
+                    </li>
+                    <li>
+                        <span className="featureIcon">😎</span>
+                        <strong>Shadows</strong> — Ray-traced occlusion shadows
+                    </li>
+                    <li>
+                        <span className="featureIcon">🖍️</span>
+                        <strong>Anti-Aliasing</strong> — Smooth edge rendering using supersampling
+                    </li>
+                    <li>
+                        <span className="featureIcon">◼️</span>
+                        <strong>Pattern Mapping</strong> — Checkerboards, rings, stripes, gradients
+                    </li>
+                    <li>
+                        <span className="featureIcon">✏️</span>
+                        <strong>Custom Scene Files</strong> — Define objects, materials, and lighting with .rt configs
+                    </li>
+                </ul>
+            </section>
+
+            <section className="ModalSection gridExplanation">
+                <h3>
+                    <span className="icon">🔍</span>
+                    What is Ray Tracing?
+                </h3>
+                <p className="RayTracerParagraph">
+                    Ray tracing is a rendering technique that simulates how light behaves in the real world. It works by casting rays from a camera into a 3D scene and calculating how they bounce off surfaces, pass through transparent materials, or get blocked to create shadows. This method produces highly realistic images with effects like reflection, refraction, soft lighting, and accurate shadows — all based on the physics of light.
+                </p>
+                <img src={diagram} alt="Ray Tracing Diagram" className="RayTracerImage" id="diagram" />
+            </section>
+
+            <section className="ModalSection gridScreenshots">
+                <h3>
+                    <span className="icon">📸</span>
+                    Renders & Outputs
+                </h3>
+                <img src={reflectiveImgs} alt="Refraction Preview" className="webAppModalGroupedImage" />
+                <p className="webAppModalCaption">Example: Index of Refraction from 1.0 to 2.0</p>
+            </section>
+
+            <section className="ModalSection gridTech">
+                <h3>
+                    <span className="icon">🧰</span>
+                    Tech Stack
+                </h3>
+                <div className="webAppModalTechTags">
+                    <span>C</span>
+                    <span>MiniLibX (X11)</span>
+                    <span>Manual Memory Management</span>
+                    <span>Raw Ray Tracing</span>
+                    <span>Multistage Renderer</span>
+                </div>
+            </section>
+
+            <section className="ModalSection gridRun">
+                <h3>
+                    <span className="icon">⚙️</span>
+                    How to Run
+                </h3>
+                <pre className="webAppModalCode">
+                    <code>
+                        git clone https://github.com/yourname/project
+                        ./init.sh
+                        make run
+                    </code>
+                </pre>
+            </section>
+
+            <section className="ModalSection gridBackground">
+                <h3>
+                    <span className="icon">📚</span>
+                    Project Background
+                </h3>
+                <p className="webAppModalParagraph">
+                    Developed as part of the 42 Network’s miniRT project, this engine was built from scratch without external frameworks — handling raw math, pixel rendering, recursive logic, and light simulation. It remains one of my most complex and rewarding low-level projects.
+                </p>
+            </section>
+
+            <div className="ModalActions">
+                <a href="https://github.com/yourname/project" className="webAppModalBtn">
+                    <span className="icon">🔗</span>
+                    GitHub
+                </a>
+                <a href="https://your-demo-link.com" className="webAppModalBtn">
+                    <span className="icon">▶️</span>
+                    Demo
+                </a>
+            </div>
         </div>
     );
 }
