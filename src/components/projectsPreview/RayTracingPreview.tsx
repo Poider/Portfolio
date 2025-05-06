@@ -54,7 +54,9 @@ function RayTracingPreview() {
 
             <section className="ModalSection gridExplanation">
                 <h3>
-                    <span className="icon">🔍</span>
+                    <span className="icon"
+                        style={{ marginBottom: "0.4rem" }}
+                    >🔍</span>
                     What is Ray Tracing?
                 </h3>
                 <p className="RayTracerParagraph">
@@ -69,7 +71,7 @@ function RayTracingPreview() {
                     Renders & Outputs
                 </h3>
                 <img src={reflectiveImgs} alt="Refraction Preview" className="ModalGroupedImage" />
-                <p className="ModalCaption">Example: Index of Refraction from 1.0 to 2.0</p>
+                <p id="RefractionCaption" className="ModalCaption">Example: Index of Refraction from 1.0 to 2.0</p>
             </section>
 
             <section className="ModalSection gridTech">

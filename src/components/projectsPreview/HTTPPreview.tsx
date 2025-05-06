@@ -36,8 +36,11 @@ function WebServerPreview() {
             </section>
 
             <section className="ModalSection gridExplanation">
-                <h3>
-                    <span className="icon">🔍</span>
+                <h3      
+                >
+                    <span className="icon" 
+                        style={{ marginBottom: "0.4rem" }}
+                    >🔍</span>
                     What is an HTTP Server?
                 </h3>
                 <p className="ModalParagraph">
