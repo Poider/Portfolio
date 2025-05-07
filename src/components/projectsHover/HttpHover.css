@@ -91,7 +91,7 @@
 .HttpHoverDivs {
   /* keeps your original fadeIn, then runs slideIn with per-card delay */
   animation:
-    fadeIn 0.3s ease-out forwards,
+    fadeIn 0.3s ease-out both,
     slideIn 0.5s ease-out var(--anim-delay, 0s) both;
 }
 

@@ -15,12 +15,15 @@ function WebAppPreview() {
 
     return (
         <div className={`webAppModalContentInner ${fadeClass}`}>
-            <h2 className="ModalTitle">Ping Pong Web App</h2>
-   
+
+            <h2 className="ModalTitle">Ping Pong Web App </h2>
+      
             <p className="ModalSubtitle"
      
             >
                 A Real-Time Multiplayer Experience Built with NestJS & Three.js
+              
+                <p className="Approximation">Approx 350h</p>
             </p>
 
             <section className="ModalSection gridPreview">
@@ -158,11 +161,11 @@ function WebAppPreview() {
 
             <section className="ModalSection gridBackground">
                 <h3>
-                    <span className="icon">📖</span>
+                    <span className="icon" style={{ marginBottom: "0.4rem" }}>✒️</span>
                     Project Background
                 </h3>
-                <p className="ModalParagraph">
-                    Built during the ft_transcendence challenge, this full-stack app combines secure authentication, multiplayer gameplay, real-time chat, and containerized deployment — all built from scratch.
+                <p className="ModalParagraph ParagraphBoxShadowing">
+                    Built during the ft_transcendence challenge, most of this project was already in place when the final deadline hit: I had just two days to finish the last features and submit my paperwork before starting my internship. My beloved team—three fellow developers—and I pulled 48-hour all-nighters until we crossed the finish line (and promptly collapsed). This full-stack app combines secure authentication, real-time multiplayer gameplay, integrated chat, and containerized deployment — all built from scratch.
                 </p>
             </section>
 

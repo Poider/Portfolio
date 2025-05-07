@@ -16,7 +16,10 @@ function WebServerPreview() {
             </div>
 
             <div className="gridSubtitle">
-                <p className="ModalSubtitle">Inspired by Nginx — Built From Scratch</p>
+                <p
+                    className="ModalSubtitle">Inspired by Nginx — Built From Scratch
+                    <p className="Approximation">Approx 300h</p>
+                </p>
             </div>
 
             <section className="ModalSection gridFeatures">
@@ -115,10 +118,10 @@ function WebServerPreview() {
 
             <section className="ModalSection gridBackground">
                 <h3>
-                    <span className="icon">📚</span>
+                    <span className="icon" style={{ marginBottom: "0.4rem" }}>✒️</span>
                     Project Background
                 </h3>
-                <p className="ModalParagraph">
+                <p className="ModalParagraph ParagraphBoxShadowing">
                     Developed during the 42 Network’s “webserv” project, this server required implementing nearly every part of a production-ready HTTP server — from parsing and routing to sockets and threads. The goal was resilience under pressure: no memory leaks, no crashes, no blocking I/O.
                 </p>
             </section>

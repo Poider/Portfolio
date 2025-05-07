@@ -16,7 +16,10 @@ function RayTracingPreview() {
             </div>
 
             <div className="gridSubtitle">
-                <p className="ModalSubtitle">One of My Most Complex Creations</p>
+                <p className="ModalSubtitle">
+                    One of My Most Complex Creations
+                    <p className="Approximation">Approx 400h</p>
+                </p>
             </div>
 
             <section className="ModalSection gridFeatures">
@@ -116,11 +119,11 @@ function RayTracingPreview() {
 
             <section className="ModalSection gridBackground">
                 <h3>
-                    <span className="icon">📚</span>
+                    <span className="icon " style={{ marginBottom: "0.4rem" }}>✒️</span>
                     Project Background
                 </h3>
-                <p className="ModalParagraph">
-                    Developed as part of the 42 Network’s miniRT project, this engine was built from scratch without external frameworks — handling raw math, pixel rendering, recursive logic, and light simulation. It remains one of my most complex and rewarding low-level projects.
+                <p className="ModalParagraph ParagraphBoxShadowing">
+                    This ray-tracing engine is one of my proudest creations—its output feels majestic even before you dig into the code. I gravitate toward visual projects because they resonate: people appreciate something beautiful they can see. Fueled by extensive math and physics (my strong suits), I built this engine entirely from scratch—no external frameworks—handling raw mathematical calculations, pixel-by-pixel rendering, recursive ray logic, and realistic light simulation. It remains one of my most complex and rewarding low-level projects.
                 </p>
             </section>
 

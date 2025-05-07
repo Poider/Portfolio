@@ -16,6 +16,7 @@ function DockerPreview() {
             <div className="gridSubtitle">
                 <p className="ModalSubtitle">
                     Multi-Service Infrastructure with NGINX, MariaDB, Redis & More
+                    <p className="Approximation">Approx 210h</p>
                 </p>
             </div>
 
@@ -111,10 +112,10 @@ function DockerPreview() {
             </section>
             <section className="ModalSection gridBackground">
                 <h3>
-                    <span className="icon">📚</span>Project Background
+                    <span className="icon" style={{ marginBottom: "0.4rem" }}>✒️</span>Project Background
                 </h3>
-                <p className="ModalParagraph">
-                    Developed under tight system-level constraints—no premade images, no exposed passwords, and full manual config per service. Demonstrates a complete Docker-based infrastructure from scratch, with secure communication, modular architecture, and real-world DevOps practices.
+                <p className="ModalParagraph ParagraphBoxShadowing">
+                    Back in time docker orchestration felt like black magic (DevOps wasn’t my turf), but I rolled up my sleeves, learned the ropes, and got it deployed end-to-end. The project served as a crash-course in infrastructure that came in clutch when I later launched Transcendence.
                 </p>
             
             </section>
