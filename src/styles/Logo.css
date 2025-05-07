@@ -86,6 +86,7 @@
     will-change: stroke-dashoffset;
     stroke-dasharray: var(--path-length);
     stroke-dashoffset: var(--path-length);
+
     animation: drawPositive var(--duration) both;
     /* All letters start together after group 2; set a uniform delay (e.g., 1.5s) */
     animation-delay: 1.5s;

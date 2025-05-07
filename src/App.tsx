@@ -12,6 +12,7 @@ import IntroOverlay from './components/IntroOverlay';
 const App = () => {
     return ( 
         <div className="BackgroundDiv">
+            <div className="navSpacer"/>
             <IntroOverlay />
             <NavBar />
             <Hero />    

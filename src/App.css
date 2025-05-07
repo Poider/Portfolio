@@ -46,3 +46,13 @@
     animation: fadeInTranslate 1s forwards; /* Animate over 2 seconds */
     animation-delay: 3.5s; /* Delay starts 3.5 seconds in to sync with logo animation */
 }
+
+
+.navSpacer{
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-base);
+    position: relative;
+    z-index: 2;
+
+}
