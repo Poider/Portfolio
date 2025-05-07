@@ -43,7 +43,7 @@ function WebServerPreview() {
                     >🔍</span>
                     What is an HTTP Server?
                 </h3>
-                <p className="ModalParagraph">
+                <p className="ModalParagraph HTTPModalParagraph">
                     An HTTP server is the backbone of the web — it listens for incoming browser requests and serves files or executes scripts in response. This project implements core HTTP/1.1 behavior, mimicking the resilience and flexibility of Nginx while staying fully hand-coded in C++.
                 </p>
             </section>
@@ -93,13 +93,24 @@ function WebServerPreview() {
                     How to Run
                 </h3>
                 <pre className="ModalCode">
-                    <code>
-                        git clone https://github.com/yourname/project
-                        ./init_docker.sh
-                        cd postgresql && docker-compose up -d
-                        npm run start:dev
+                    <code className="preserveWhiteSpaces">
+                        git clone https://github.com/Poider/High-Performance-Cpp-Web-Server-Inspired-by-Nginx.git
+                        && cd High-Performance-Cpp-Web-Server-Inspired-by-Nginx
+                        && make
                     </code>
                 </pre>
+                <div className="ModalHint">
+                    For a comprehensive guide, check my&nbsp;
+                    <a
+                        href="https://github.com/Poider/Inception-Dockerized-Solutions"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                    &nbsp;for a step-by-step walkthrough, or&nbsp;
+                    <a href="https://www.linkedin.com/in/mouadelammari/" target="_blank">contact me</a>&nbsp;for any questions.
+                </div>
             </section>
 
             <section className="ModalSection gridBackground">
@@ -113,7 +124,7 @@ function WebServerPreview() {
             </section>
 
             <div className="ModalActions">
-                <a href="https://github.com/yourname/project" className="ModalBtn">
+                <a href="https://github.com/Poider/High-Performance-Cpp-Web-Server-Inspired-by-Nginx" target="_blank" className="ModalBtn">
                     <span className="icon">🔗</span>
                     GitHub
                 </a>

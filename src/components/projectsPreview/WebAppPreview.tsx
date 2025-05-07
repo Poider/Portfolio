@@ -134,13 +134,26 @@ function WebAppPreview() {
                     How to Run
                 </h3>
                 <pre className="ModalCode">
-                    <code>
-                        git clone https://github.com/yourname/project
-                        ./init_docker.sh
-                        cd postgresql && docker-compose up -d
-                        npm run start:dev
+                    <code classname="preserveWhiteSpace">
+                        git clone https://github.com/Poider/pingpong-web-app.git
+                        && npm install
+                        && ./init_docker.sh
+                        && cd postgresql && docker-compose up -d
+                        && npm run start:dev
                     </code>
                 </pre>
+                <div className="ModalHint">
+                    For a comprehensive guide, check my&nbsp;
+                    <a
+                        href="https://github.com/Poider/Inception-Dockerized-Solutions"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                    &nbsp;for a step-by-step walkthrough, or&nbsp;
+                    <a href="https://www.linkedin.com/in/mouadelammari/" target="_blank">contact me</a>&nbsp;for any questions.
+                </div>
             </section>
 
             <section className="ModalSection gridBackground">
@@ -154,7 +167,7 @@ function WebAppPreview() {
             </section>
 
             <div className="ModalActions">
-                <a href="https://github.com/yourname/project" className="ModalBtn">
+                <a href="https://github.com/Poider/PingPong-Web-App" target="_blank" className="ModalBtn">
                     <span className="icon">🔗</span>
                     GitHub
                 </a>

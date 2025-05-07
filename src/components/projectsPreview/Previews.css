@@ -195,7 +195,7 @@
 .ModalBtn {
     background: #333;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.7rem 1rem 0.7rem 0.3rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bold;
@@ -259,6 +259,18 @@ strong {
     width: 100%;
     border-radius: 0.5rem;
     object-fit: contain;
-    margin-top: 1rem;
 }
 
+.ModalHint {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    font-size: 0.875rem; /* a bit smaller */
+    line-height: 1.4;
+    color: #6c7a89; /* lighter, “hint” color */
+}
+
+    .ModalHint a {
+        color: #3498db; /* match your theme’s link color */
+        text-decoration: underline;
+    }
