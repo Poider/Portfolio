@@ -7,7 +7,11 @@ import Divider1 from './components/common/Divider1';
 import Divider2 from './components/common/Divider2';
 import NavBar from './components/Header';
 import About from './sections/About';
+import Skills from './sections/Skills';
+import Contact from './sections/Contact';
+import Testimonials from './sections/Testimonials';
 import IntroOverlay from './components/IntroOverlay';
+import Divider3 from './components/common/Divider3';
 
 const App = () => {
     return ( 
@@ -20,7 +24,10 @@ const App = () => {
             <About/>
             <Divider2 />
             <Projects />
-            <About />
+            <Divider3 />
+            <Skills />
+            <Contact />
+            <Testimonials />
 
         </div>
     )

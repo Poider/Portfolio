@@ -40,3 +40,24 @@
 .divider-2 .shape-fill {
     fill: var(--color-about-bg);
 }
+
+.divider-3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-skills);
+}
+
+.divider-3 svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1000.3px);
+    height: 64px;
+}
+
+.divider-3 .shape-fill {
+    fill: #F3EEE3;
+}

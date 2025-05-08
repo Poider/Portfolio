@@ -1,0 +1,23 @@
+.SkillsMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 1000px;
+    padding-top:12rem;
+    background-color: var(--color-skills);
+    /*border: 2px solid saddlebrown;*/
+
+}
+
+
+.SkillsBox {
+    height: 612.049px;
+    width: min(1834px,85%);
+    background: var(--color-skills-box);
+    border-radius: 8px;
+}
+
+.SkillsBox p{
+    font-size: 30px;
+}

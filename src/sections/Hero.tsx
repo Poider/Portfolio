@@ -31,17 +31,17 @@ const Hero = () => {
                     </div>
 
                     {/* 4. Grid placeholder */}
-                    <div className="hero-grid">
-                        <div><strong>Placeholder 1aaaaaaaaaaaaaaaaaaaa</strong></div>
-                        <div><strong>Placeholder aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2</strong></div>
-                        <div><strong>Placeholder 3</strong></div>
-                        <div><strong>Placeholder 4</strong></div>
-                        <div><strong>Placeholder 5</strong></div>
-                        <div><strong>Placeholder 6</strong></div>
-                        <div><strong>Placeholder 7</strong></div>
-                        <div><strong>Placeholder 8</strong></div>
+                    <ul className="hero-grid">
+                        <li><strong>Placeholder 1aaaaaaaaa</strong></li>
+                        <li><strong>Placeholder aaaaaaaaaaaaaa2</strong></li>
+                        <li><strong>Placeholder 3</strong></li>
+                        <li><strong>Placeholder 4</strong></li>
+                        <li><strong>Placeholder 5</strong></li>
+                        <li><strong>Placeholder 6</strong></li>
+                        <li><strong>Placeholder 7</strong></li>
+                        <li><strong>Placeholder 8</strong></li>
                     
-                    </div>
+                    </ul>
 
                     {/* 5. Currently working at label */}
                     <div className="hero-working-label">

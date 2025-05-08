@@ -1,0 +1,115 @@
+
+/* src/styles/Contact.css */
+.ContactWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0; /* top & bottom padding */
+    background-color: var(--color-skills);
+    height: 2000px;
+}
+.ContactMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    width: min(1654px,87%);
+}
+
+/* ——— 1st block ——— */
+.contact-top {
+    padding-bottom: 7rem; /* give some breathing room */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .contact-top h2 {
+        font-size: 0.775rem; /* 14px */
+        margin: 0;
+        text-align:center;
+    }
+
+    .contact-top h3 {
+        /* fluid from 49px (3.0625rem) up to 170px (10.625rem) */
+        font-size: clamp(3.0625rem, 5.5vw, 10.625rem);
+        line-height: clamp(3.0625rem, 8vw, 10.625rem);
+        margin: 0.5rem 0;
+        padding:0 3rem 0 3rem;
+        text-align: center;
+    }
+
+    .contact-top span {
+        display: block;
+        font-size: 1rem; /* 22px */
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+/* ——— 2nd block ——— */
+.contact-bottom {
+    padding:3rem;
+    background-color: var(--color-skills-box);
+    display: flex;
+    flex-wrap: wrap-reverse; /* right column will wrap underneath on narrow */
+    gap: 1rem;
+}
+
+/* left column */
+.contact-left {
+    flex: 1 1 300px; /* grow/shrink, base 300px */
+}
+
+    .contact-left h3 {
+        margin: 0 0 1rem;
+    }
+
+    .contact-left p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+/* right column */
+.contact-right {
+    flex: 1 1 300px;
+}
+
+.contact-right-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem 0; /* top & bottom margin */
+}
+
+    /* placeholder img */
+    .contact-right-inner img {
+        flex: 1 1 150px;
+        max-width: 100%;
+        height: auto;
+    }
+
+/* the p, p, button block */
+.contact-right-text {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .contact-right-text p {
+        margin: 0;
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .contact-right-text button {
+        align-self: flex-start;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        border: none;
+        background: var(--color-primary);
+        color: #fff;
+        cursor: pointer;
+    }

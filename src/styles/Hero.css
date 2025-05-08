@@ -43,7 +43,7 @@
 
 /* 3. Small text (“Architected by” and “Coded by”) */
 .hero-small-text {
-    font-size :14px;
+    font-size :13px;
     font-weight :300;
     height :56px;
     line-height :28px;
@@ -60,10 +60,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding-left:0;
 }
-
-    .hero-grid > * {
-        font-size: 0.875rem; /* 14px */
+    .hero-grid > li, .hero-working, .HeroLinks {
+        font-size: 13px;
+        list-style:  none;
     }
 
 /* 5. “Currently working at:” label */
@@ -73,16 +74,14 @@
 }
 
 /* 6. Working details (OCPA → since date) */
-.hero-working {
-    font-size: 0.875rem; /* 14px */
-}
+
 
 .hero-intro-text {
-    box-sizing :border-box ;
-    font-size :57.3775px;
+    box-sizing: border-box;
+    font-size: 57.3775px;
     font-weight: 600;
     height: 172.125px;
     line-height: 57.3775px;
-    text-rendering:optimizeLegibility;
+    text-rendering: optimizeLegibility;
 }
 
