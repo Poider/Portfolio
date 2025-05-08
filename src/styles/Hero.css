@@ -18,7 +18,7 @@
 /**------------*/
 .HeroMain {
     padding-top: 8rem;
-    width: min(1834px,92%);
+    width: min(1834px,87%);
     height: 58rem;
     display: flex;
     gap: clamp(40px, 4vw, 80px); /* space between columns */

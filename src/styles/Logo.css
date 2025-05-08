@@ -8,9 +8,9 @@
     --finalScale: 0.17;
 }
 
-.LogoInner >.svgWiggler > svg {
+.LogoInner > .svgWiggler > svg {
     width: 100%;
-    
+    shape-rendering:  geometricPrecision;
 }
 
 
@@ -86,11 +86,11 @@
     will-change: stroke-dashoffset;
     stroke-dasharray: var(--path-length);
     stroke-dashoffset: var(--path-length);
-
     animation: drawPositive var(--duration) both;
     /* All letters start together after group 2; set a uniform delay (e.g., 1.5s) */
     animation-delay: 1.5s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
 }
 
 /* Safari-only override */

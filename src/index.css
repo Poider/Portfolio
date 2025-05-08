@@ -24,7 +24,7 @@
     --color-projects: var(--ivory-dust); /* Light Sage for Projects BG */
     --color-project-box: var(--bare-linen); /* Light Sage */
 
-    --standard-height: 90vh;
+    --standard-height: clamp(1000px,90vh,1200px);
     scroll-behavior: smooth;
 }
 html, body {
