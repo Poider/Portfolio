@@ -171,7 +171,7 @@ function WebAppPreview() {
 
             <div className="ModalActions">
                 <a href="https://github.com/Poider/PingPong-Web-App" target="_blank" className="ModalBtn">
-                    <span className="icon">🔗</span>
+                    <span >🔗 </span>
                     GitHub
                 </a>
                

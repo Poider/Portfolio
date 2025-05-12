@@ -8,14 +8,16 @@
     padding: 2rem 0; /* top & bottom padding */
     background-color: var(--color-skills);
     height: 2000px;
+
 }
 .ContactMain {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    width: min(1650px,92%);
+    
 
-    width: min(1654px,87%);
 }
 
 /* ——— 1st block ——— */
@@ -30,6 +32,7 @@
         font-size: 0.775rem; /* 14px */
         margin: 0;
         text-align:center;
+        font-weight:500;
     }
 
     .contact-top h3 {
@@ -39,6 +42,7 @@
         margin: 0.5rem 0;
         padding:0 3rem 0 3rem;
         text-align: center;
+        font-weight: 700;
     }
 
     .contact-top span {
@@ -46,24 +50,29 @@
         font-size: 1rem; /* 22px */
         margin-top: 0.5rem;
         text-align: center;
+        font-weight: 500;
     }
 
 /* ——— 2nd block ——— */
 .contact-bottom {
+    width:100%;
     padding:3rem;
     background-color: var(--color-skills-box);
     display: flex;
     flex-wrap: wrap-reverse; /* right column will wrap underneath on narrow */
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 /* left column */
 .contact-left {
-    flex: 1 1 300px; /* grow/shrink, base 300px */
+    
 }
 
     .contact-left h3 {
         margin: 0 0 1rem;
+        font-size: clamp(26px, 17.5492957746px + 1.6901408451vw, 40px);
+        font-weight: 700;
+        padding-right:3vw;
     }
 
     .contact-left p {
@@ -73,8 +82,12 @@
 
 /* right column */
 .contact-right {
-    flex: 1 1 300px;
-}
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
 
 .contact-right-inner {
     display: flex;

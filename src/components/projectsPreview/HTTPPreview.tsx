@@ -128,7 +128,7 @@ function WebServerPreview() {
 
             <div className="ModalActions">
                 <a href="https://github.com/Poider/High-Performance-Cpp-Web-Server-Inspired-by-Nginx" target="_blank" className="ModalBtn">
-                    <span className="icon">🔗</span>
+                    <span >🔗 </span>
                     GitHub
                 </a>
 

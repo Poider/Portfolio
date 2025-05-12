@@ -11,17 +11,17 @@ function Contact() {
                 <div className="contact-top">
                     <h2>Get in Touch</h2>
                     <h3>Let’s build something amazing together</h3>
-                    <span>Drop me a line anytime 👋</span>
+                    <span>Drop me a line anytime </span>
                 </div>
 
                 {/* 2nd div: two-column flex, wraps in reverse */}
                 <div className="contact-bottom">
                     {/* Left side */}
                     <div className="contact-left">
-                        <h3>Say Hello</h3>
-                        <p>
-                            I’m always up for a chat about code, design, or ☕.
-                            Shoot me an email and I’ll get right back.
+                        <h2>Software Engineer</h2>
+                        <h3>Choose <br/> Your Engineer</h3>
+                        <p className="preserveWhiteSpace" >
+                            Mouad El Ammari
                         </p>
                     </div>
 
@@ -29,8 +29,7 @@ function Contact() {
                     <div className="contact-right">
                         <div className="contact-right-inner">
                             {/* Placeholder image */}
-                            <img src="/placeholder.png" alt="Drop-me-a-line graphic" />
-                            <p>ss</p>
+                            
                             {/* Text + button */}
                             <div className="contact-right-text">
                                 <p>mouad@example.com</p>
@@ -38,6 +37,7 @@ function Contact() {
                                 <button>Send a Message</button>
                             </div>
                         </div>
+                        <div style={{ height: 480.764, width: 426.788, backgroundColor: 'LightSalmon ' }}></div>
                     </div>
                 </div>
 
@@ -47,3 +47,4 @@ function Contact() {
 }
 
 export default Contact;
+

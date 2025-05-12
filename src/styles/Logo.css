@@ -5,7 +5,7 @@
 /* The logo container is fixed to the viewport so it stays visible as you scroll */
 
 :root{
-    --finalScale: 0.17;
+    --finalScale: 0.225;
 }
 
 .LogoInner > .svgWiggler > svg {

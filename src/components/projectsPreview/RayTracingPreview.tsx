@@ -129,7 +129,7 @@ function RayTracingPreview() {
 
             <div className="ModalActions">
                 <a href="https://github.com/Poider/3D-RayTracer-Engine" className="ModalBtn">
-                    <span className="icon">🔗</span>
+                    <span >🔗 </span>
                     GitHub
                 </a>
             </div>

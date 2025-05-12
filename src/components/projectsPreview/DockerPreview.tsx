@@ -122,7 +122,7 @@ function DockerPreview() {
 
             <div className="ModalActions">
                 <a href="https://github.com/Poider/Inception-Dockerized-Solutions" target="_blank" className="ModalBtn">
-                    <span className="icon">🔗</span>
+                    <span >🔗 </span>
                     GitHub
                 </a>
 
