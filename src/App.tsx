@@ -12,6 +12,7 @@ import Contact from './sections/Contact';
 import Testimonials from './sections/Testimonials';
 import IntroOverlay from './components/IntroOverlay';
 import Divider3 from './components/common/Divider3';
+import Divider4 from './components/common/Divider4';
 
 const App = () => {
     return ( 
@@ -27,8 +28,8 @@ const App = () => {
             <Divider3 />
             <Skills />
             <Contact />
+            <Divider4/>
             <Testimonials />
-
         </div>
     )
 };

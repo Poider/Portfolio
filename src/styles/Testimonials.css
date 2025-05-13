@@ -1,8 +1,92 @@
+
+.testimonialWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-base);
+}
+
+/* src/styles/Testimonials.css */
 .TestimonialsMain {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: min(1834px,87%);
+
+}
+
+/* left-stripe wrapper */
+.singleTestimonialWrapper {
+    background-color: var(--color-sage); /* <-- your stripe color */
+    padding-left: 0.45rem; /* <-- stripe width */
+    border-radius: 16px; /* match inner card if desired */
+}
+
+/* the inner “white” card */
+.testimonialCard {
+    background-color: #fff; /* <-- card bg */
+ 
+    border-radius: 8px;
+    padding: 2rem 3rem 2rem 3rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.testimonialHeader {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: start;
-    height: 550px;
-    background-color: palevioletred
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profileImg {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.75rem;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.profession {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.company {
+    font-size: 0.875rem;
+    color: #333;
+    margin-top: 0.5rem; /* so when it wraps the gap isn’t too tight */
+}
+
+.testimonialText {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.TestimonialIntro {
+    padding: 0;
+    margin: 0;
+    padding-top: 3rem;
+    padding-bottom: 0.4rem;
+    font-size:1.1rem;
 }

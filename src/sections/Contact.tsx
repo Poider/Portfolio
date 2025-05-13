@@ -28,16 +28,16 @@ function Contact() {
                     {/* Right side */}
                     <div className="contact-right">
                         <div className="contact-right-inner">
-                            {/* Placeholder image */}
-                            
+                         
                             {/* Text + button */}
                             <div className="contact-right-text">
+                            <h2> Mouad El Ammari</h2>
+                               <p> put here what I bring</p>
                                 <p>mouad@example.com</p>
-                                <p>+212 6 12 34 56 78</p>
-                                <button>Send a Message</button>
+                               
                             </div>
                         </div>
-                        <div style={{ height: 480.764, width: 426.788, backgroundColor: 'LightSalmon ' }}></div>
+                        <div className="contactImg"></div>
                     </div>
                 </div>
 

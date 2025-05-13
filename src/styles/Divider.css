@@ -61,3 +61,25 @@
 .divider-3 .shape-fill {
     fill: #F3EEE3;
 }
+
+.divider-4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: var(--color-base);
+}
+
+    .divider-4 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 44px;
+    }
+
+    .divider-4 .shape-fill {
+        fill: var(--color-about-bg);
+    }

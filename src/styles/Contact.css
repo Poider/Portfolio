@@ -55,29 +55,38 @@
 
 /* ——— 2nd block ——— */
 .contact-bottom {
-    width:100%;
-    padding:3rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3rem;
     background-color: var(--color-skills-box);
     display: flex;
-    flex-wrap: wrap-reverse; /* right column will wrap underneath on narrow */
+    flex-wrap: wrap; /* right column will wrap underneath on narrow */
     gap: 1.2rem;
+    justify-content: start;
 }
 
 /* left column */
 .contact-left {
-    
+    padding-right: 4rem;
 }
+    .contact-left h2 {
+        font-size: 14px;
+        margin-bottom:24px;
+    }
 
     .contact-left h3 {
         margin: 0 0 1rem;
         font-size: clamp(26px, 17.5492957746px + 1.6901408451vw, 40px);
         font-weight: 700;
-        padding-right:3vw;
+        padding-right: 3vw;
     }
 
     .contact-left p {
-        margin: 0;
+        margin-top:28px;
+        margin-bottom:14px;
         line-height: 1.5;
+        font-size:14px;
+
     }
 
 /* right column */
@@ -86,13 +95,20 @@
     flex-shrink: 0;
     flex-grow: 1;
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap-reverse;
+   
+    width:60%;
+}
 
 .contact-right-inner {
+    width: 5%;
+    min-width: 459px;
+    flex-shrink: 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: wrap-reverse;
+    align-items: start;
+    justify-content: start;
     gap: 1.5rem;
     margin: 1rem 0; /* top & bottom margin */
 }
@@ -117,12 +133,12 @@
         font-size: 0.875rem; /* 14px */
     }
 
-    .contact-right-text button {
-        align-self: flex-start;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-        border: none;
-        background: var(--color-primary);
-        color: #fff;
-        cursor: pointer;
-    }
+
+
+.contactImg {
+    flex: 1 0 320px;
+    min-width: 227px; /* won’t shrink below 427px */
+    max-width: 100%; /* but will scale down with the container */
+    aspect-ratio: 9 / 10; /* height will be calculated from width */
+    background-color: lightSalmon;
+}
