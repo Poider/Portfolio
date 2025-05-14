@@ -3,21 +3,122 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 1000px;
-    padding-top:12rem;
+  
+    padding-top: 6rem;
     background-color: var(--color-skills);
     /*border: 2px solid saddlebrown;*/
-
 }
 
 
 .SkillsBox {
-    height: 612.049px;
-    width: min(1834px,85%);
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
     background: var(--color-skills-box);
+    width: min(1834px,85%);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
-.SkillsBox p{
-    font-size: 30px;
+/* Left column */
+.SkillsLeft {
+    flex: 1;
+    min-width: 35%;
+    flex-shrink: 0;
+}
+
+    .SkillsLeft p {
+        margin-top: 0.5rem;
+    }
+
+    .SkillsLeft h2{
+
+    }
+
+
+.SkillsBlurb {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+/* Right column */
+.SkillsRight {
+    flex: 2;
+    display :flex;
+    flex-direction: column;
+    min-width:55%;
+}
+
+.SkillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.SkillItem {
+    width: 210px;
+    padding: 0;
+    background: var(--color-bg-light);
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.2s;
+    padding-bottom: 4rem;
+    text-align:start
+}
+
+    .SkillItem:hover {
+        transform: translateY(-4px);
+    }
+
+.SkillIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .SkillsBox {
+        flex-direction: column;
+    }
+
+    .SkillItem {
+        width: calc(50% - 1rem);
+    }
+}
+
+/* override for the last “grid” list-item */
+/* replace your .SkillGrid rules with this */
+.SkillGrid {
+    flex: 1 1 100%; /* still take full row as the flex item */
+    display: flex; /* turn it into a flex container */
+    flex-wrap: wrap; /* let children wrap onto new lines */
+    gap: 1rem;
+    background: transparent;
+    margin-top: 1rem;
+    padding: 5rem 0;
+    box-sizing: border-box;
+}
+
+/* each cell now flexes to half the width */
+.SkillPlaceholder {
+    flex: 1 1 260px;
+    background: var(--color-bg-light);
+    border-radius: 4px;
+    text-align: start;
+    padding: 1rem;
+    box-sizing: border-box;
+    word-break: break-word; /* or try break-all */
+    overflow-wrap: anywhere;
+}
+
+/* ensure the grid cell itself doesn’t get the old .SkillItem hover */
+.SkillGrid .SkillPlaceholder:hover {
+   
 }

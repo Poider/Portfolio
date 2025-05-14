@@ -27,8 +27,11 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <div className="testimonialWrapper" >
-        <div className="TestimonialsMain">
-            <h2 className="TestimonialIntro">What Others Say About Mouad</h2>
+            <div className="TestimonialsMain">
+                <div>
+                    <h1>Testimonials</h1>
+                    <h2 className="TestimonialIntro">What Others Say About Mouad</h2>
+                </div>
             {testimonials.map(({ id, name, profession, company, image, text }) => (
                 <div key={id} className="singleTestimonialWrapper">
                     <div className="testimonialCard">

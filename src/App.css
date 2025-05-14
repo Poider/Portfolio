@@ -10,6 +10,8 @@
 
 .BackgroundDiv {
     background-color: #225d6e;
+    overflow: hidden;
+
 }
 
 /* Fade-in keyframes */
