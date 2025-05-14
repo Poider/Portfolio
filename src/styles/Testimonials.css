@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-base);
+    background: var(--color-projects);
+    padding-bottom:5rem;
 }
 
 /* src/styles/Testimonials.css */
@@ -26,8 +27,8 @@
 
 /* the inner “white” card */
 .testimonialCard {
-    background-color: #fff; /* <-- card bg */
- 
+    background-color: var(--color-skills-box); /* <-- card bg */
+
     border-radius: 8px;
     padding: 2rem 3rem 2rem 3rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);

@@ -13,6 +13,7 @@ import Testimonials from './sections/Testimonials';
 import IntroOverlay from './components/IntroOverlay';
 import Divider3 from './components/common/Divider3';
 import Divider4 from './components/common/Divider4';
+import ContactForm from './sections/ContactForm';
 
 const App = () => {
     return ( 
@@ -30,6 +31,7 @@ const App = () => {
             <Contact />
             <Divider4/>
             <Testimonials />
+            <ContactForm/>
         </div>
     )
 };

@@ -70,7 +70,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: var(--color-base);
+    background-color: var(--color-projects);
 }
 
     .divider-4 svg {

@@ -10,7 +10,7 @@ function Contact() {
                 {/* 1st div: heading block */}
                 <div className="contact-top">
                     <h2>Get in Touch</h2>
-                    <h3>Let’s build something amazing together</h3>
+                    <h3>Let’s Build something amazing together</h3>
                     <span>Drop me a line anytime </span>
                 </div>
 
