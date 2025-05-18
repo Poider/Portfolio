@@ -147,7 +147,7 @@
     animation: wiggle-rot 0.6s ease-in-out both;
 }
 
-/* your keyframes, unchanged */
+/*  keyframes, unchanged */
 @keyframes wiggle-rot {
     0%, 100% {
         transform: rotate(0deg);
@@ -236,7 +236,7 @@
         }
 
         100% {
-            top: 20px;
+            top: 25px;
             left: 20%;
             transform: translate(-10%, -5%) scale(0.28);
         }

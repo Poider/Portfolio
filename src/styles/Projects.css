@@ -9,7 +9,7 @@
     flex-direction: column;       /* stack items vertically */
     align-items: center;         /* center them horizontally */
     justify-content: flex-start;  /* stack items from the top */
-    padding-top: 8rem;
+    padding-top: 6rem;
 }
 .ProjectBoxes {
 
@@ -22,14 +22,20 @@
     max-width: 58.5rem;
     flex-wrap: wrap;
 }
-.ProjectsMain> h2 {
+.ProjectsMain > h2 {
     font-family: Comfortaa, cursive;
     font-size: 1.5rem;
-    color: var(--text-warmer-cocoa);               /* Deep Brown */
-    margin-bottom: 10rem;
+    color: var(--text-chocolate); /* Deep Brown */
     text-align: center;
-
-
+    margin: 0;
+}
+.ProjectsMain > h3 {
+    font-family: Comfortaa, cursive;
+    color: var(--text-warmer-cocoa); /* Deep Brown */
+    font-size: 0.9375rem;
+    margin-bottom: 8.5rem;
+    margin-top: 0.9rem;
+    text-align: center;
 }
 /* 1. Make every box a flex item that can both shrink and grow */
 .ProjectBox {

@@ -7,9 +7,9 @@ import woman from '../assets/icons/woman.png'
 const testimonials = [
     {
         id: 1,
-        name: 'Jane Doe',
+        name: 'Nabil Si Hammou',
         profession: 'Creative Director, Interactive Designer & Developer',
-        company: 'Freelancer Inc.',
+        company: 'OCPA SA.',
         image: man,
         text: `Jane Doe is a Creative Director, Interactive Designer & Developer currently based in Amsterdam. As a multidisciplinary freelancer, he pairs a broad range of creative leadership experience in art direction, UI/UX design, front-end development, and motion design to help companies and agencies around the world achieve their goals.`,
     },
@@ -17,7 +17,7 @@ const testimonials = [
         id: 2,
         name: 'Mayssoun Messaoudi',
         profession: 'Senior UX Researcher',
-        company: 'Acme Co.',
+        company: 'OCPA SA.',
         image: woman,
         text: `Mayssoun's user-first mindset helped us triple our task-completion rates. She ran deep research, synthesized insights, and led wireframing sessions that turned into the final polished flows you see in our app today.`,
     },

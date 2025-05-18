@@ -1,17 +1,17 @@
 // 📌 About section: Bio and skills
 
 import "../styles/About.css"
-
+import React from 'react'
 const About = () => {
     return (
             <div className="AboutMain">
-            <div className="AboutText">
-                <p className="whosMouad">Who's Mouad</p>
+                <div className="AboutText">
+                <p className="whosMouad">Who's <span className="link-underline">Mouad</span></p>
           
-                <h3>Memorable UI Design For Interactive Experiences</h3>
+                <h3>Building Interactive Websites: From Pretty Frontends To Scalable Backends.</h3>
                     <p className="MainAboutParagraph">
-                        I’m a software engineer with four years of hands-on experience, two of which were in a corporate environment.
-                    When a web designer receives a creative brief, an entire journey is laid out in front of them. Research, visual strategy, UX/UI design, web building, animation, and more. Without directions, this workflow can become tangled, inefficient, and yield poor results. This course provides a map on how to navigate the wonderful world of web design.
+                    {`Mouad El Ammari is a full-stack developer and data engineer currently based in Casablanca. As a multidisciplinary engineer, he pairs broad range of experiences in building solutions from scratch,  creating scalable systems , and front-end / back-end development to find solutions for challenges from different angles.`}
+
                     </p>
                    
                 </div>

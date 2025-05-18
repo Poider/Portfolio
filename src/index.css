@@ -27,6 +27,7 @@
     --color-skills-box: var(--bare-linen); /* Light Sage */
     --standard-height: clamp(1000px,90vh,1200px);
     scroll-behavior: smooth;
+
 }
 html, body {
     margin: 0;
@@ -49,3 +50,43 @@ html, body {
     white-space: pre;
 }
 
+
+
+/* Global Links Style*/
+.link-underline {
+    display:inline;
+    font-family: 'Comfortaa', cursive;
+    position: relative; /* still needed for ::after */
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(109, 76, 65, 0.3);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    /* ↓ these two are the keys to baseline alignment: */
+    vertical-align: baseline; /* line up with the parent text’s baseline */
+    line-height: inherit; /* use whatever line-height the surrounding text has */
+}
+
+
+    .link-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px; /* sit exactly on top of the base underline */
+        width: 100%;
+        height: 2px;
+        background-color: rgba(109, 76, 65, 0.9); /* hover‐state brown @80% */
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .link-underline:hover::after {
+        transform: scaleX(1);
+    }
+
+.bolderComforta {
+    text-shadow: 0 0 0 rgba(109,76,65,0.7);
+}

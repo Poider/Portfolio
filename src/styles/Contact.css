@@ -1,4 +1,4 @@
-
+ï»¿
 /* src/styles/Contact.css */
 .ContactWrapper {
     display: flex;
@@ -7,7 +7,7 @@
     justify-content: center;
     padding: 2rem 0; /* top & bottom padding */
     background-color: var(--color-skills);
-    height: 2000px;
+    padding:12rem 0 12rem 0;
 
 }
 .ContactMain {
@@ -20,7 +20,7 @@
 
 }
 
-/* ——— 1st block ——— */
+/* â€”â€”â€” 1st block â€”â€”â€” */
 .contact-top {
     padding-bottom: 7rem; /* give some breathing room */
     display:flex;
@@ -31,39 +31,49 @@
     .contact-top h2 {
         font-size: 0.775rem; /* 14px */
         margin: 0;
-        text-align:center;
-        font-weight:500;
+        text-align: center;
+        font-weight: 500;
     }
 
     .contact-top h3 {
         /* fluid from 49px (3.0625rem) up to 170px (10.625rem) */
-        font-size: clamp(3.0625rem, 5.5vw, 10.625rem);
+        font-size: clamp(3.0625rem, 5vw, 10.625rem);
         line-height: clamp(3.0625rem, 8vw, 10.625rem);
         margin: 0.5rem 0;
-        padding:0 3rem 0 3rem;
+        padding:0 7rem 0 7rem;
         text-align: center;
-        font-weight: 700;
+        font-weight: 600;
+        opacity:1;
     }
 
-    .contact-top span {
+    .contact-top a {
         display: block;
         font-size: 1rem; /* 22px */
         margin-top: 0.5rem;
         text-align: center;
         font-weight: 500;
+        text-decoration-color: rgba(109, 76, 65, 0.3); /* base brown @30% */
+        color: var(--text-chocolate);
+        text-underline-offset: 3px;
+        padding-top: 0.5rem;
+        transition: text-decoration-color ease-in-out 0.2s;
     }
+        .contact-top a:hover {
+            text-decoration-color: rgba(109, 76, 65, 1); /* base brown @30% */
+        }
 
-/* ——— 2nd block ——— */
-.contact-bottom {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 3rem;
-    background-color: var(--color-skills-box);
-    display: flex;
-    flex-wrap: wrap; /* right column will wrap underneath on narrow */
-    gap: 1.2rem;
-    justify-content: start;
-}
+
+        /* â€”â€”â€” 2nd block â€”â€”â€” */
+        .contact-bottom {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 3rem;
+            background-color: var(--color-skills-box);
+            display: flex;
+            flex-wrap: wrap; /* right column will wrap underneath on narrow */
+            gap: 1.2rem;
+            justify-content: start;
+        }
 
 /* left column */
 .contact-left {
@@ -111,6 +121,7 @@
     justify-content: start;
     gap: 1.5rem;
     margin: 1rem 0; /* top & bottom margin */
+    flex-direction:column;
 }
 
     /* placeholder img */
@@ -137,8 +148,51 @@
 
 .contactImg {
     flex: 1 0 320px;
-    min-width: 227px; /* won’t shrink below 427px */
+    min-width: 227px; /* wonâ€™t shrink below 427px */
     max-width: 100%; /* but will scale down with the container */
     aspect-ratio: 9 / 10; /* height will be calculated from width */
     background-color: lightSalmon;
+}
+
+
+.what-i-bring-title {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.what-i-bring-list {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding-left: 0.2rem;
+
+}
+
+    .what-i-bring-list li {
+        font-size: 0.875rem;
+        margin: 0.7rem 0;
+        line-height:28px;
+    }
+
+        .what-i-bring-list li::before {
+            content: "âœ“"; /* Unicode for FAâ€™s check */
+            font-weight: 900;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+.download-cv-button {
+    margin-top: 1.5rem;
+    text-decoration-color: rgba(109, 76, 65, 0.4);
+    text-underline-offset: 4px;
+    background-color: var(--color-skills-box); /* same card-bg tone */
+    color: var(--color-text); /* your main text color */
+    font-weight: 600;
+    border-radius: 8px;
+    transition: text-decoration-color ease-in-out 0.2s;
+}
+
+.download-cv-button:hover {
+    text-decoration-color: rgba(109, 76, 65, 1);
 }

@@ -11,47 +11,48 @@ const Hero = () => {
                     <div className="hero-signature">
                         {"</>"}
                     </div>
-
+   
                     {/* 2. Intro text with preserved whitespace */}
-                    <div className="preserveWhiteSpace hero-intro-text">
-                        {`Line one of intro.\nLine two of intro\nLine three of intro.`
-                        }
-                    </div>
+                    <div>
+                        <h2 className=" hero-intro-text">
+                            {`Building Interactive Websites: From Pretty Frontends To Scalable Backends.`
+                            }
+                        </h2>
 
-                    {/* 3. Small text */}
-                    <div className="hero-small-text">
+                        {/* 3. Small text */}
+                        <div className="hero-small-text">
                  
          
-                        <span>Engineered by </span>
-                        <strong><a href="#about" className="HeroLinks">Mouad</a></strong>
-                        <br/>
-                        <span>Coded by </span>
-                        <strong><a href="#about"  className="HeroLinks">Mouad</a></strong>
+                            <span>Designed  by </span>
+                            <strong><a href="#about" className="HeroLinks link-underline" >Mouad El Ammari</a></strong>
+                            <br/>
+                            <span>Developed by </span>
+                            <strong><a href="#about" className="HeroLinks link-underline">Mouad El Ammari</a></strong>
 
+                        </div>
                     </div>
-
                     {/* 4. Grid placeholder */}
                     <ul className="hero-grid">
-                        <li><strong>Placeholder 1aaaaaaaaa</strong></li>
-                        <li><strong>Placeholder aaaaaaaaaaaaaa2</strong></li>
-                        <li><strong>Placeholder 3</strong></li>
-                        <li><strong>Placeholder 4</strong></li>
-                        <li><strong>Placeholder 5</strong></li>
-                        <li><strong>Placeholder 6</strong></li>
-                        <li><strong>Placeholder 7</strong></li>
-                        <li><strong>Placeholder 8</strong></li>
+                        <li><strong className="bolderComforta" >{'Experience'}</strong> 4 years shipping</li>
+                        <li><strong className="bolderComforta">Languages</strong> English/French/Arabic</li>
+                        <li><strong className="bolderComforta">Projects</strong> +20 project delivered</li>
+                        <li><strong className="bolderComforta">Technologies Mastered:</strong> 10+</li>
+                        <li><strong className="bolderComforta">Degrees</strong> BSc Comp Sci + 2 Years 42Network</li>
+                        <li><strong className="bolderComforta">Certifications</strong> Credly Certified Dev</li>
+                        <li style={{ gridColumn: "span 2" }}><strong className="bolderComforta preserveWhiteSpace" >99.9% Debugging Success Rate </strong> Okay, okay—let's say 98% to be modest</li>
+
                     
                     </ul>
 
                     {/* 5. Currently working at label */}
-                    <div className="hero-working-label">
+                    <div className="hero-working-label bolderComforta">
                         <strong>Currently working at:</strong>
                     </div>
 
                     {/* 6. Working details */}
                     <div className="hero-working">
                     
-                        <a className="HeroLinks" href="https://www.ocpgroup.ma/" target="_blank" rel="noopener noreferrer">
+                        <a className="HeroLinks link-underline " href="https://www.ocpgroup.ma/" target="_blank" rel="noopener noreferrer">
                             <strong>OCPA</strong>
                         </a>
                         &nbsp;→ since August 2023
@@ -60,7 +61,8 @@ const Hero = () => {
 
                 <div className="HeroColumn HeroRight">
                     {/* Right column content goes here */}
-                    
+                    <div className="heroImg"></div>
+                   
                 </div>
             </div>
         </div>

@@ -3,36 +3,46 @@
 .HeroWrapper {
     position: relative;
     background-color: var(--color-hero-bg); /* Hero / Intro BG */
-    height: var(--standard-height);
     display: flex;
     justify-content: center; /* horizontal centering */
     align-items: center;
+    padding:0 0 4rem 0;
 }
 
 
 /* Pseudo-element to hold the background image */
-  
 
 
 /*border: 1px solid red;*/
 /**------------*/
 .HeroMain {
-    padding-top: 8rem;
-    width: min(1834px,87%);
-    height: 58rem;
+    padding-top: 6rem;
+    width: min(1834px,94.5%);
     display: flex;
     gap: clamp(40px, 4vw, 80px); /* space between columns */
     margin: 0 auto;
     background-color: transparent;
+    flex-direction: row;
     flex-wrap: wrap-reverse;
 }
 
 .HeroColumn {
-    flex: 1; /* each column takes equal space */
     display: flex;
     gap:2rem;
     flex-direction: column; /* so you can stack items inside */
     justify-content: start; /* vertically center content in each column */
+    flex-grow:1;
+    flex-shrink:1;
+}
+
+.HeroLeft {
+   flex-basis:55%
+}
+
+.HeroRight{
+   flex-basis: 40%;
+   min-width:411px;
+   width:calc(40% - 1rem)
 }
 
 /* 1. Signature font */
@@ -43,6 +53,7 @@
 
 /* 3. Small text (“Architected by” and “Coded by”) */
 .hero-small-text {
+    padding-top:0.875rem;
     font-size :13px;
     font-weight :300;
     height :56px;
@@ -56,32 +67,46 @@
 
 /* 4. Placeholder grid */
 .hero-grid {
-    padding-top:3rem;
+    padding-top:2.4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     padding-left:0;
 }
     .hero-grid > li, .hero-working, .HeroLinks {
         font-size: 13px;
         list-style:  none;
+        line-height: 1.5;
     }
+.HeroLinks{
+    font-weight:700;
+}
 
 /* 5. “Currently working at:” label */
 .hero-working-label {
     font-size: 0.875rem; /* 14px */
-    padding-top:1rem;
+    padding-top:1.9rem;
 }
 
 /* 6. Working details (OCPA → since date) */
 
 
 .hero-intro-text {
+    display: block;
     box-sizing: border-box;
-    font-size: 57.3775px;
+    font-size: clamp(32px, 17.2112676056px + 2.9577464789vw, 57.3775px);
     font-weight: 600;
-    height: 172.125px;
-    line-height: 57.3775px;
+    line-height: clamp(40px, 6vw, 75px);
     text-rendering: optimizeLegibility;
+    margin: 0;
 }
 
+
+.heroImg {
+    flex: 1 0 320px;
+    min-width: 400px; /* won’t shrink below 427px */
+    max-width: 100%; /* but will scale down with the container */
+    aspect-ratio: 9 / 10; /* height will be calculated from width */
+    background-color: lightSalmon;
+    border-radius:1rem;
+}

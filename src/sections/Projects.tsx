@@ -89,7 +89,8 @@ const Projects = () => {
                 </div>
             )}
 
-            <h2>My Projects</h2>
+                <h2 >Featured Projects</h2>
+                <h3 className="ProjectsSubtitle"><i>Handpicked selection of my best work</i></h3>
             <div className="ProjectBoxes">
                 {projectsData.map((proj, idx) => (
                     <div

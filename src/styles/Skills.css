@@ -2,123 +2,123 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-  
     padding-top: 6rem;
     background-color: var(--color-skills);
-    /*border: 2px solid saddlebrown;*/
 }
-
 
 .SkillsBox {
     display: flex;
     gap: 2rem;
     padding: 2rem;
     background: var(--color-skills-box);
-    width: min(1834px,85%);
+    width: min(1834px, 85%);
     border-radius: 8px;
     box-sizing: border-box;
 }
 
-/* Left column */
+/* left column */
 .SkillsLeft {
     flex: 1;
     min-width: 35%;
-    flex-shrink: 0;
 }
+
+    .SkillsLeft h2 {
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 1rem;
+    }
 
     .SkillsLeft p {
         margin-top: 0.5rem;
+        font-size: clamp(20px, 17.55px + 1.69vw, 50px);
+        font-weight: 700;
     }
 
-    .SkillsLeft h2{
-
-    }
-
-
-.SkillsBlurb {
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-}
-
-/* Right column */
+/* right column */
 .SkillsRight {
     flex: 2;
-    display :flex;
-    flex-direction: column;
-    min-width:55%;
+    min-width: 55%;
 }
 
-.SkillsList {
+/* flex-wrapping row of cards */
+.skills-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+/* each tech category card */
+.skill-card {
+    flex: 1 1 200px;
+    min-width: 180px;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+    .skill-card:hover {
+        
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* card header + separator */
+    .skill-card h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+
+.skill-separator {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin: 0.5rem 0 0.75rem;
+}
+
+/* list inside each card */
+.skill-card ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
 }
 
-.SkillItem {
-    width: 210px;
-    padding: 0;
+.skill-card li {
+    font-size: 0.875rem;
+    margin: 0.35rem 0;
+}
+
+/* your last “Extras” card mini-grid */
+.practices-card .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    
+}
+.practices-card{
+    padding-left:1rem;
+}
+
+.practices-item {
     background: var(--color-bg-light);
     border-radius: 4px;
-    text-align: center;
-    transition: transform 0.2s;
-    padding-bottom: 4rem;
-    text-align:start
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    word-break: break-word;
 }
 
-    .SkillItem:hover {
-        transform: translateY(-4px);
-    }
-
-.SkillIcon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-
-/* Responsiveness */
+/* responsive tweaks */
 @media (max-width: 768px) {
     .SkillsBox {
         flex-direction: column;
     }
 
-    .SkillItem {
-        width: calc(50% - 1rem);
+    .skills-flex {
+        justify-content: center;
+    }
+
+    .skill-card {
+        flex: 1 1 140px;
     }
 }
 
-/* override for the last “grid” list-item */
-/* replace your .SkillGrid rules with this */
-.SkillGrid {
-    flex: 1 1 100%; /* still take full row as the flex item */
-    display: flex; /* turn it into a flex container */
-    flex-wrap: wrap; /* let children wrap onto new lines */
-    gap: 1rem;
-    background: transparent;
-    margin-top: 1rem;
-    padding: 5rem 0;
-    box-sizing: border-box;
-}
-
-/* each cell now flexes to half the width */
-.SkillPlaceholder {
-    flex: 1 1 260px;
-    background: var(--color-bg-light);
-    border-radius: 4px;
-    text-align: start;
-    padding: 1rem;
-    box-sizing: border-box;
-    word-break: break-word; /* or try break-all */
-    overflow-wrap: anywhere;
-}
-
-/* ensure the grid cell itself doesn’t get the old .SkillItem hover */
-.SkillGrid .SkillPlaceholder:hover {
-   
-}
