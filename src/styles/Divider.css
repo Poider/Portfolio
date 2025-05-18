@@ -83,3 +83,28 @@
     .divider-4 .shape-fill {
         fill: var(--color-about-bg);
     }
+
+
+
+
+.divider-footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: rgba(45, 45, 45, 0.8);
+  
+}
+
+    .divider-footer svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 144px;
+    }
+
+    .divider-footer .shape-fill {
+        fill: var(--color-projects);
+    }

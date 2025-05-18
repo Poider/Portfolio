@@ -23,7 +23,7 @@ function WebAppPreview() {
             >
                 A Real-Time Multiplayer Experience Built with NestJS & Three.js
               
-                <p className="Approximation">Approx 350h</p>
+                <span className="Approximation">Approx 350h</span>
             </p>
 
             <section className="ModalSection gridPreview">

@@ -18,7 +18,7 @@ function WebServerPreview() {
             <div className="gridSubtitle">
                 <p
                     className="ModalSubtitle">Inspired by Nginx — Built From Scratch
-                    <p className="Approximation">Approx 300h</p>
+                    <span className="Approximation">Approx 300h</span>
                 </p>
             </div>
 

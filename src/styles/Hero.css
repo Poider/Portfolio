@@ -39,10 +39,10 @@
    flex-basis:55%
 }
 
-.HeroRight{
-   flex-basis: 40%;
-   min-width:411px;
-   width:calc(40% - 1rem)
+.HeroRight {
+    flex-basis: 40%;
+    min-width: min(411px, 100%);
+    width: calc(40% - 1rem)
 }
 
 /* 1. Signature font */
@@ -103,10 +103,11 @@
 
 
 .heroImg {
-    flex: 1 0 320px;
-    min-width: 400px; /* won’t shrink below 427px */
-    max-width: 100%; /* but will scale down with the container */
+    place-self:center;
+    min-width: min(400px, 100%); /* won’t shrink below 427px */
+    width:100%;
     aspect-ratio: 9 / 10; /* height will be calculated from width */
-    background-color: lightSalmon;
-    border-radius:1rem;
+    background-color: #C1A38A;
+    border-radius: 1rem;
+    box-sizing:border-box; 
 }

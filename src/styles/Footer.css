@@ -1,0 +1,43 @@
+.FooterWrapper {
+    display: flex;
+    flex-wrap: wrap; /* allow wrapping when space is tight */
+    justify-content: space-around;
+    align-items: center;
+    padding:0 1rem 4rem 1rem;
+    background: rgba(45, 45, 45, 0.8);
+    color: var(--bare-linen);
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+.FooterLeft,
+.FooterRight {
+    margin: 0.5rem 1rem;
+}
+
+/* Right side is a column of two items */
+.FooterRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* push both icons & copy to the right edge */
+
+    gap:3rem;
+}
+.FooterLeft{
+    flex-basis:40%;
+    place-self: start;
+}
+/* Top of right block: icons in a row */
+.FooterIcons {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bottom of right block: copyright text */
+.FooterCopy {
+    margin-top: 0.5rem;
+}

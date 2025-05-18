@@ -1,7 +1,8 @@
 // src/components/Contact.jsx
 import React from 'react';
 import "../styles/Contact.css";
-
+import GithubButton from "../components/common/GithubButton";
+import LinkedInButton from "../components/common/LinkedInButton";
 function Contact() {
     return (
         <div className="ContactWrapper">
@@ -56,14 +57,19 @@ function Contact() {
 
                                
                             </div>
-                            <a
-                                href="/CV - Mouad El Ammari.pdf"
-                                download
-                                className="download-cv-button"
-                            >
-                                Download CV
-                            </a>
+                            <div className="utilities_links">
+                                <a
+                                    href="/CV - Mouad El Ammari.pdf"
+                                    download
+                                    className="download-cv-button"
+                                >
+                                    Download CV
+                                </a>
+                           
 
+                                 <div className="contactSocial"> <GithubButton textSize={1} /></div>  
+                                 <div className="contactSocial"> <LinkedInButton textSize={1} /> </div>
+                            </div>
                         </div>
                         <div className="contactImg"></div>
                     </div>

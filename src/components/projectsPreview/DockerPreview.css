@@ -19,19 +19,7 @@
 
 
 /* Stack to one column on mobile */
-@media (max-width: 768px) {
-    .DockerModalContentInner {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "subtitle"
-            "features"
-            "overview"
-            "tech"
-            "architecture"
-            "background";
-    }
-}
+
 
 /* Area mappings */
 .gridTitle {
@@ -151,3 +139,16 @@
     width: 34.364375rem;
 }
 
+@media (max-width: 768px) {
+    .DockerModalContentInner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "overview"
+            "tech"
+            "architecture"
+            "background";
+    }
+}

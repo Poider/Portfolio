@@ -90,3 +90,7 @@ html, body {
 .bolderComforta {
     text-shadow: 0 0 0 rgba(109,76,65,0.7);
 }
+
+.noDisplay{
+    display: none;
+}

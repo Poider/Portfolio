@@ -282,7 +282,8 @@ strong {
 
 
 .Approximation {
-    padding-top: 0.1rem;
+    display:block;
+    padding-top: 1rem;
     font-style: italic;
     font-size: 0.9rem;
 }

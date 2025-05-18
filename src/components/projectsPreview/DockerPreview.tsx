@@ -16,7 +16,7 @@ function DockerPreview() {
             <div className="gridSubtitle">
                 <p className="ModalSubtitle">
                     Multi-Service Infrastructure with NGINX, MariaDB, Redis & More
-                    <p className="Approximation">Approx 210h</p>
+                    <span className="Approximation">Approx 210h</span>
                 </p>
             </div>
 

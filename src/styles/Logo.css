@@ -8,7 +8,7 @@
     --finalScale: 0.225;
 }
 
-.LogoInner > .svgWiggler > svg {
+.LogoInner svg {
     width: 100%;
     shape-rendering:  geometricPrecision;
 }
@@ -219,7 +219,7 @@
 
 /*tablet*/
 @media (max-width: 1200px) {
-    .LogoInner > .svgWiggler > svg {
+    .LogoInner svg {
         width: 100%;
     }
     @keyframes logoAnimation {
@@ -247,13 +247,14 @@
 
 /*address here no animation and phone pos*/
 @media (max-width: 870px) {
-    .LogoInner > .svgWiggler > svg {
-        min-width: calc(281px / var(--finalScale));
+    .LogoInner  svg {
+        width:284px;
     }
 
     .LogoInner {
         position: fixed;
-        transform: translate(43%, 10%) scale(0.17);
+        left: 50%;
+        transform: translate(-50%,-25%) scale(1);
         animation: none;
         z-index: 12;
     }

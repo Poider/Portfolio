@@ -113,7 +113,7 @@
 
 .contact-right-inner {
     width: 5%;
-    min-width: 459px;
+    min-width: min(100%, 459px);
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -121,7 +121,7 @@
     justify-content: start;
     gap: 1.5rem;
     margin: 1rem 0; /* top & bottom margin */
-    flex-direction:column;
+    flex-direction: column;
 }
 
     /* placeholder img */
@@ -152,6 +152,7 @@
     max-width: 100%; /* but will scale down with the container */
     aspect-ratio: 9 / 10; /* height will be calculated from width */
     background-color: lightSalmon;
+    border-radius: 8px;
 }
 
 
@@ -191,8 +192,28 @@
     font-weight: 600;
     border-radius: 8px;
     transition: text-decoration-color ease-in-out 0.2s;
+
 }
 
 .download-cv-button:hover {
     text-decoration-color: rgba(109, 76, 65, 1);
+}
+
+.utilities_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.contactSocial {
+    margin-top: 1.5rem;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }

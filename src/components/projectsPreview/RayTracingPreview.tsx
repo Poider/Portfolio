@@ -18,7 +18,7 @@ function RayTracingPreview() {
             <div className="gridSubtitle">
                 <p className="ModalSubtitle">
                     One of My Most Complex Creations
-                    <p className="Approximation">Approx 400h</p>
+                    <span className="Approximation">Approx 400h</span>
                 </p>
             </div>
 

@@ -8,15 +8,27 @@ import bar_chart_icon from '../assets/bar_chart_icon.png';
 import portfolio_icon from '../assets/portfolio_icon.png';
 import testimonials_icon from '../assets/testimonials_icon.png';
 import magic_wand_icon from '../assets/magic_wand_icon.png';
+import who from '../assets/who.png';
+import bringwhat from '../assets/bringwhat.png';
+
 
 type DropdownKey = 'portfolio' | 'about' | null;
 
 const NavBar: React.FC = () => {
     const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
+    const [isWide, setIsWide] = useState(() => window.innerWidth > 870);
+
     const portfolioRef = useRef<HTMLAnchorElement>(null);
     const aboutRef = useRef<HTMLAnchorElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const prevDropdownRef = useRef<DropdownKey>(null);
+
+
+    useEffect(() => {
+        const onResize = () => setIsWide(window.innerWidth > 870);
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, []);
 
     // 1) click outside → close
     useEffect(() => {
@@ -100,16 +112,16 @@ const NavBar: React.FC = () => {
             <div className="HeaderWrapper">
                 <Logo />
 
-                <div className="NavBarContainer fadeInAfterLogo">
+                <div className={`NavBarContainer ${isWide ? ' fadeInAfterLogo' : ''}`}>
                     <nav className="NavBar">
                         <ul>
                             {/* Portfolio trigger */}
                             <li
-                                className="fadeTranslateAfterLogo"
+                                className={isWide ? 'fadeTranslateAfterLogo' : 'noDisplay'}
                                 style={{ position: 'relative' }}
                             >
-                                <a
-                                    className="HeaderButtons"
+                                <a 
+                                    className="HeaderButtons  "
                                     href="#portfolio"
                                     ref={portfolioRef}
                                     onClick={(e) => {
@@ -147,7 +159,7 @@ const NavBar: React.FC = () => {
                             </li>
                             {/* About trigger */}
                             <li
-                                className="fadeTranslateAfterLogo"
+                                className={isWide ? 'fadeTranslateAfterLogo' : 'noDisplay'}
                                 style={{ position: 'relative' }}
                             >
                                 <a
@@ -187,12 +199,14 @@ const NavBar: React.FC = () => {
                                 </a>
                             </li>
                             {/* Static links */}
-                            <li className="fadeTranslateAfterLogo">
+                            <li
+                                className={isWide ? 'fadeTranslateAfterLogo' : ''}
+                            >
                                 <a className="HeaderButtons" href="#skills">
                                     Skills
                                 </a>
                             </li>
-                            <li className="fadeTranslateAfterLogo">
+                            <li className={isWide ? 'fadeTranslateAfterLogo' : ''}>
                                 <a className="HeaderButtons" href="#contact">
                                     Contact
                                 </a>
@@ -233,8 +247,8 @@ const NavBar: React.FC = () => {
 
                     {/* Skills menu */}
                     <div className="dropdown-about">
-                        <a href="#intro">🔧 Who's Mouad</a>
-                        <a href="#skill_two">🛠️ What I bring</a>
+                        <a href="#intro"><img src={who} alt="" /> Who's Mouad</a>
+                        <a href="#skill_two"><img src={who} alt="" /> What I bring</a>
                     </div>
                 </div>
             </div>
