@@ -10,7 +10,7 @@ const About = () => {
           
                 <h3>Building Interactive Websites: From Pretty Frontends To Scalable Backends.</h3>
                     <p className="MainAboutParagraph">
-                    {`Mouad El Ammari is a full-stack developer and data engineer currently based in Casablanca. As a multidisciplinary engineer, he pairs broad range of experiences in building solutions from scratch,  creating scalable systems , and front-end / back-end development to find solutions for challenges from different angles.`}
+                    {`Mouad El Ammari is a full-stack developer and data engineer currently based in Casablanca. As a multidisciplinary engineer, he pairs broad range of experiences in building solutions from scratch,  creating scalable systems , and front/back-end development to find solutions for challenges from different angles.`}
 
                     </p>
                    

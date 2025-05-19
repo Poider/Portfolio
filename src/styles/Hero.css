@@ -26,6 +26,8 @@
     flex-wrap: wrap-reverse;
 }
 
+
+
 .HeroColumn {
     display: flex;
     gap:2rem;
@@ -45,11 +47,15 @@
     width: calc(40% - 1rem)
 }
 
-/* 1. Signature font */
-.hero-signature {
-    font-size: 3.586rem; /* ~57.38px based on 16px root */
-    line-height: 1;
-}
+
+    .HeroRight > img::after {
+        content: "";
+        position: relative;
+        inset: 0;
+        background: red; /* light cream wash */
+        pointer-events: none;
+    }/* 1. Signature font */
+        
 
 /* 3. Small text (“Architected by” and “Coded by”) */
 .hero-small-text {

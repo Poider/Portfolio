@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import React from 'react';
 import "../styles/Hero.css";
+import mainImage from "../assets/mainImage.png";
 
 const Hero = () => {
     return (
@@ -61,7 +62,7 @@ const Hero = () => {
 
                 <div className="HeroColumn HeroRight">
                     {/* Right column content goes here */}
-                    <div className="heroImg"></div>
+                    <img alt="mainImage" src={mainImage}/>
                    
                 </div>
             </div>
