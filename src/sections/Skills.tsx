@@ -22,34 +22,34 @@ const skillCategories = [
 
 const practices = [
     {
-        title: 'Prototyping',
-        description: 'Validate ideas fast with clickable MVPs in under 48 hours.'
+        title: 'Debugging Mindset -',
+        description: 'Systematic, patient tracing to find & squash bugs fast.'
     },
     {
-        title: 'Scalable Architecture',
-        description: 'Design systems that handle 10× growth without a rewrite.'
+        title: 'Problem Decomposition -',
+        description: 'Breaking complex problems into clear, manageable tasks.'
     },
     {
-        title: 'Clean Code Standards',
-        description: 'Enforce SOLID principles & consistent style for maintainability.'
+        title: 'User Empathy -',
+        description: 'Consistently putting end-user experience first.'
     },
     {
-        title: 'Performance Tuning',
-        description: 'Profile hotspots & cut load-times by 30%+.'
+        title: 'Code Reviews & Feedback -',
+        description: 'Constructive, detailed feedback to grow the entire team.'
     },
     {
-        title: 'Test-Driven Development',
-        description: 'Write tests first to drive spec-clear, regression-proof code.'
+        title: 'Resourcefulness -',
+        description: 'Finding creative, efficient solutions within constraints.'
     },
     {
-        title: 'Data-Driven Decisions',
-        description: 'Use real metrics & analytics to steer feature priorities.'
-    }
+        title: 'Learning & Curiosity -',
+        description: 'Continuous exploration of new tools & techniques.'
+    },
 ];
 
 export default function Skills() {
     return (
-        <div className="SkillsMain">
+        <div className="SkillsMain" id="mindset">
             <div className="SkillsBox">
                 <div className="SkillsLeft">
                     <h2>Toolbox</h2>
@@ -73,7 +73,7 @@ export default function Skills() {
                        
                         
                         <div className="practices-card">
-                            <h3>Core Practices</h3>
+                            <h3>Core Mindset</h3>
                             <hr className="skill-separator" />
                             <div className="practices-grid">
                             {practices.map(p => (

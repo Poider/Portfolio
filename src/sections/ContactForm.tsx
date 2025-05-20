@@ -4,7 +4,7 @@ import React from 'react';
 
 function ContactForm() {
     return (
-        <div className="ContactFormWrapper">
+        <div className="ContactFormWrapper" id="contactForm">
             <div className="ContactFormMain">
                 <div className="ContactFormTop">
                     <h1>want to chat more?</h1>

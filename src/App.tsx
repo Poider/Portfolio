@@ -19,7 +19,7 @@ import DividerFooter from './components/common/DividerFooter';
 
 const App = () => {
     return ( 
-        <div className="BackgroundDiv">
+        <div className="BackgroundDiv" id="experience">
             <div className="navSpacer"/>
             <IntroOverlay />
             <NavBar />

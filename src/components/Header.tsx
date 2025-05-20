@@ -207,7 +207,7 @@ const NavBar: React.FC = () => {
                                 </a>
                             </li>
                             <li className={isWide ? 'fadeTranslateAfterLogo' : ''}>
-                                <a className="HeaderButtons" href="#contact">
+                                <a className="HeaderButtons" href="#contactForm">
                                     Contact
                                 </a>
                             </li>
@@ -231,24 +231,26 @@ const NavBar: React.FC = () => {
                         <a href="#experience">
                             <img src={portfolio_icon} alt="" /> Experience
                         </a>
-                        <a href="#stats">
-                            <img src={bar_chart_icon} alt="" /> Stats & Outcomes
-                        </a>
+                      
                         <a href="#testimonials">
                             <img src={testimonials_icon} alt="" /> Testimonials
                         </a>
-                        <a href="#mentorship">
-                            <img src={mentorship_icon} alt="" /> Mentorship
+                       
+                        <a href="#mindset">
+                            <img src={bar_chart_icon} alt="" /> Mindset
+                        </a>
+                        <a href="#resume">
+                            <img src={mentorship_icon} alt="" /> Resume
                         </a>
                         <a href="#creamy-bits">
                             <img src={magic_wand_icon} alt="" /> <i>Creamy Bits</i>
                         </a>
                     </div>
 
-                    {/* Skills menu */}
+                    {/* About menu */}
                     <div className="dropdown-about">
-                        <a href="#intro"><img src={who} alt="" /> Who's Mouad</a>
-                        <a href="#skill_two"><img src={who} alt="" /> What I bring</a>
+                        <a href="#who"><img src={who} alt="" /> Who's Mouad</a>
+                        <a href="#bringwhat"><img src={bringwhat} alt="" /> What I bring</a>
                     </div>
                 </div>
             </div>

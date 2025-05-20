@@ -124,5 +124,11 @@
     .skill-card {
         flex: 1 1 140px;
     }
+  
 }
 
+@media (max-width: 1128px) {
+    .practices-card .practices-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,27 +3,28 @@ import React from 'react';
 import "../styles/Contact.css";
 import GithubButton from "../components/common/GithubButton";
 import LinkedInButton from "../components/common/LinkedInButton";
+import secondImg from "../assets/secondImg.png";
 function Contact() {
     return (
-        <div className="ContactWrapper">
+        <div className="ContactWrapper" id="bringwhat">
             <div className="ContactMain">
 
                 {/* 1st div: heading block */}
-                <div className="contact-top">
-                    <h2>Get in Touch</h2>
+                <div className="contact-top" id="resume">
+                    <h2 >Get in Touch</h2>
                     <h3>Let’s Build Something Amazing Together</h3>
-                    <a href="mailto:mouad@example.com">Drop me a line anytime</a>
+                    <a href="#contactForm">Drop me a line anytime</a>
                 </div>
 
                 {/* 2nd div: two-column flex, wraps in reverse */}
-                <div className="contact-bottom">
+                <div className="contact-bottom" >
                     {/* Left side */}
                     <div className="contact-left">
                         <h2>Software Engineer</h2>
                         <h3>Choose <br /> Your Engineer</h3>
-                        <p className="preserveWhiteSpace link-underline">
+                        <a href="#who" className="preserveWhiteSpace link-underline">
                             Mouad El Ammari
-                        </p>
+                        </a>
                     </div>
 
                     {/* Right side */}
@@ -71,7 +72,9 @@ function Contact() {
                                  <div className="contactSocial"> <LinkedInButton textSize={1} /> </div>
                             </div>
                         </div>
-                        <div className="contactImg"></div>
+                        <div className="contact-right-inner"><img alt="secondImg" src={secondImg} /></div>
+                      
+                        
                     </div>
                 </div>
 

@@ -4,9 +4,9 @@ import "../styles/About.css"
 import React from 'react'
 const About = () => {
     return (
-            <div className="AboutMain">
+        <div className="AboutMain" >
                 <div className="AboutText">
-                <p className="whosMouad">Who's <span className="link-underline">Mouad</span></p>
+                <p className="whosMouad">Who's <a href="#bringwhat" className="link-underline">Mouad</a></p>
           
                 <h3>Building Interactive Websites: From Pretty Frontends To Scalable Backends.</h3>
                     <p className="MainAboutParagraph">

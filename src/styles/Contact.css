@@ -91,7 +91,7 @@
         padding-right: 3vw;
     }
 
-    .contact-left p {
+    .contact-left a {
         margin-top:28px;
         margin-bottom:14px;
         line-height: 1.5;
@@ -112,7 +112,7 @@
 }
 
 .contact-right-inner {
-    width: 5%;
+    width: 41%;
     min-width: min(100%, 459px);
     flex-shrink: 0;
     display: flex;

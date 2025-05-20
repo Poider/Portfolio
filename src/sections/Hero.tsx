@@ -25,10 +25,10 @@ const Hero = () => {
                  
          
                             <span>Designed  by </span>
-                            <strong><a href="#about" className="HeroLinks link-underline" >Mouad El Ammari</a></strong>
+                            <strong><a href="#who" className="HeroLinks link-underline" >Mouad El Ammari</a></strong>
                             <br/>
                             <span>Developed by </span>
-                            <strong><a href="#about" className="HeroLinks link-underline">Mouad El Ammari</a></strong>
+                            <strong><a href="#who" className="HeroLinks link-underline">Mouad El Ammari</a></strong>
 
                         </div>
                     </div>
