@@ -158,3 +158,19 @@
 #RefractionCaption{
     text-align:left;
 }
+
+@media (max-width: 768px) {
+    .RayTracerModalContentInner {
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "explanation"
+            "screenshots"
+            "tech"
+            "run"
+            "background"
+            "actions";
+    }
+}

@@ -18,7 +18,7 @@
     padding: 2rem;
     border-radius: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
     grid-auto-rows: auto;
     gap: 2rem;
     grid-template-areas:
@@ -286,4 +286,57 @@ strong {
     padding-top: 1rem;
     font-style: italic;
     font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .webAppModalContentInner {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        padding: 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
+        grid-auto-rows: auto;
+        gap: 2rem;
+        grid-template-areas:
+            "title    title"
+            "subtitle subtitle"
+            "features preview"
+            "features tech"
+            "screenshots security"
+            "screenshots ."
+            "run      run"
+            "background background"
+            "actions  actions";
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .webAppModalScreenshots {
+      
+        grid-template-columns:1fr;
+        justify-items:left;
+        margin-left:1rem;
+       
+    }
+}
+
+@media (max-width: 768px) {
+    .webAppModalContentInner {
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "preview"
+            "screenshots"
+            "tech"
+            "security"
+            "run"
+            "background"
+            "actions";
+    }
 }

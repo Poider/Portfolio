@@ -141,7 +141,7 @@
 /* 9) Responsive */
 @media (max-width: 768px) {
     .WebServerModalContentInner {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(200px,1fr);
         grid-template-areas:
             "title"
             "subtitle"
@@ -149,7 +149,9 @@
             "explanation"
             "tech"
             "screenshots"
-            "background";
+            "run"
+            "background"
+            "actions";
     }
 }
 

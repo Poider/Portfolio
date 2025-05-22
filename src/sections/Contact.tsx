@@ -22,7 +22,7 @@ function Contact() {
                     <div className="contact-left">
                         <h2>Software Engineer</h2>
                         <h3>Choose <br /> Your Engineer</h3>
-                        <a href="#who" className="preserveWhiteSpace link-underline">
+                        <a href="#contactForm" className="preserveWhiteSpace link-underline">
                             Mouad El Ammari
                         </a>
                     </div>

@@ -3,8 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import '../styles/Header.css';
 import Logo from './Logo';
 import projects_icon from '../assets/project_icon.png';
-import mentorship_icon from '../assets/mentorship_icon.png';
-import bar_chart_icon from '../assets/bar_chart_icon.png';
+import resume from '../assets/resume.png';
+import mindset from '../assets/mindset.png';
 import portfolio_icon from '../assets/portfolio_icon.png';
 import testimonials_icon from '../assets/testimonials_icon.png';
 import magic_wand_icon from '../assets/magic_wand_icon.png';
@@ -237,12 +237,12 @@ const NavBar: React.FC = () => {
                         </a>
                        
                         <a href="#mindset">
-                            <img src={bar_chart_icon} alt="" /> Mindset
+                            <img src={mindset} alt="" /> Mindset
                         </a>
                         <a href="#resume">
-                            <img src={mentorship_icon} alt="" /> Resume
+                            <img src={resume} alt="" /> Resume
                         </a>
-                        <a href="#creamy-bits">
+                        <a href="#creamy-bits" style={{opacity:0.5}}>
                             <img src={magic_wand_icon} alt="" /> <i>Creamy Bits</i>
                         </a>
                     </div>

@@ -34,7 +34,8 @@ function WebAppPreview() {
                 <img
                     src={pingpongGIF}
                     alt="Ping pong animation"
-                    width={400}
+                    width="100%"
+                    maxWidth={400}
                     height="auto"
                     loading="lazy"
                     

@@ -1,7 +1,6 @@
 ﻿import React from 'react'
 import "./HttpHover.css"
 import concurrency from '../../assets/project-images/http/concurrency.png'
-import terminal from '../../assets/project-images/http/terminal.png'
 import big_arrow from '../../assets/project-images/http/big_arrow.png'
 import small_arrow from '../../assets/project-images/http/small_arrow.png'
 import configfile from '../../assets/project-images/http/configfile.png'

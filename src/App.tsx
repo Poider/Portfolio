@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Logo from './components/Logo';
 import Hero from './sections/Hero';
 import Projects from './sections/Projects';
@@ -16,29 +16,39 @@ import Divider4 from './components/common/Divider4';
 import ContactForm from './sections/ContactForm';
 import Footer from './sections/Footer';
 import DividerFooter from './components/common/DividerFooter';
+// import your new ThankYou page:
+import ThankYou from './sections/ThankYou';
+
+const MainPage = () => (
+    <div className="BackgroundDiv" id="experience">
+        <div className="navSpacer" />
+        <IntroOverlay />
+        <NavBar />
+        <Hero />
+        <Divider1 />
+        <About />
+        <Divider2 />
+        <Projects />
+        <Divider3 />
+        <Skills />
+        <Contact />
+        <Divider4 />
+        <Testimonials />
+        <ContactForm />
+        <DividerFooter />
+        <Footer />
+    </div>
+);
 
 const App = () => {
-    return ( 
-        <div className="BackgroundDiv" id="experience">
-            <div className="navSpacer"/>
-            <IntroOverlay />
-            <NavBar />
-            <Hero />    
-            <Divider1 />
-            <About/>
-            <Divider2 />
-            <Projects />
-            <Divider3 />
-            <Skills />
-            <Contact />
-            <Divider4/>
-            <Testimonials />
-            <ContactForm />
-            <DividerFooter />
-            <Footer />
-
-        </div>
-    )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;

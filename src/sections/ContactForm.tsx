@@ -15,14 +15,22 @@ function ContactForm() {
                         to your team
                     </p>
                 </div>
-
                 <div className="ContactFormBottom">
-                    <form className="ContactForm">
+                    <form
+                        className="ContactForm"
+                        action="https://formsubmit.co/1a2cc62ea165052e652e4ef169f02b44"
+                        method="POST"
+                    >
+                        {/* Optionally, redirect to your own thank you page after submit */}
+                   
+                   
+
                         <div className="fieldGroup">
                             <label htmlFor="fullName">FULL NAME</label>
                             <input
                                 id="fullName"
                                 type="text"
+                                name="name"
                                 placeholder="Type Your Name"
                                 required
                             />
@@ -33,6 +41,7 @@ function ContactForm() {
                             <input
                                 id="email"
                                 type="email"
+                                name="email"
                                 placeholder="Type Your Email"
                                 required
                             />
@@ -43,6 +52,7 @@ function ContactForm() {
                             <input
                                 id="company"
                                 type="text"
+                                name="company"
                                 placeholder="Type Your Company Name"
                                 required
                             />
@@ -52,11 +62,18 @@ function ContactForm() {
                             <label htmlFor="message">MESSAGE*</label>
                             <textarea
                                 id="message"
+                                name="message"
                                 placeholder="Drop Me A Line </>"
                                 required
                             ></textarea>
                         </div>
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="http://localhost:5173/thank-you"
+                        />
 
+                        <input type="hidden" name="_captcha" value="false"/>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>

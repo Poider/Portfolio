@@ -139,9 +139,9 @@
     width: 34.364375rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1084px) {
     .DockerModalContentInner {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(200px,1fr);
         grid-template-areas:
             "title"
             "subtitle"
@@ -149,6 +149,24 @@
             "overview"
             "tech"
             "architecture"
-            "background";
+            "run"
+            "background"
+            "actions";
+    }
+     .ModalArchitectureImage,
+    .DockerImage,
+    .webAppModalScreenshots img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .ModalTechTags, .DockerTechTags {
+        width: 100%;
+    }
+    .DockerModalSection,
+    .ModalSection {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
+
