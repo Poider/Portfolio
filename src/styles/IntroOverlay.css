@@ -2,7 +2,7 @@
 .intro-overlay {
     position: fixed;
     inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
-    z-index: 9; /* above everything */
+    z-index: 10; /* above everything */
     background: var(--color-base); /* can be your background color if you want a fade */
     /* intercept pointer events until the animation finishes */
     pointer-events: all;

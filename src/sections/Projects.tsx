@@ -1,7 +1,7 @@
 // src/components/Projects.jsx
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import "../styles/Projects.css";
-import Modal from "../components/ProjectsModal.tsx";
+import Modal from "../components/ProjectsModal";
 import compose from "../assets/project-icons/compose.png";
 import pingpong from "../assets/project-icons/pingpong.png";
 import raytracing from "../assets/project-icons/raytracing.png";

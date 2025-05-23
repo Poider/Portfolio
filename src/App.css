@@ -1,16 +1,7 @@
-.divider-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-
 .BackgroundDiv {
     background-color: #225d6e;
     overflow: hidden;
+
 
 }
 
@@ -20,7 +11,7 @@
     to { opacity: 1; }
 }
 
-/* Container for everything that should fade in after the logo animation */
+/* Container for everything that     should fade in after the logo animation */
 .fadeInAfterLogo {
     opacity: 0; /* Start hidden */
     animation: fadeIn 2s forwards; /* Fade in over 1 second */

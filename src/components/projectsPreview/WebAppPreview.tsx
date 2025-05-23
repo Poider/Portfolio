@@ -35,11 +35,11 @@ function WebAppPreview() {
                     src={pingpongGIF}
                     alt="Ping pong animation"
                     width="100%"
-                    maxWidth={400}
+                  
                     height="auto"
                     loading="lazy"
                     
-                    style={{ display: 'block', marginLeft: '0.2rem' }}
+                    style={{ display: 'block', marginLeft: '0.2rem', maxWidth: "400px" }}
                 />
             </section>
 

@@ -30,16 +30,16 @@ const practices = [
         description: 'Breaking complex problems into clear, manageable tasks.'
     },
     {
-        title: 'User Empathy -',
-        description: 'Consistently putting end-user experience first.'
+        title: 'Resourcefulness -',
+        description: 'Finding creative, efficient solutions within constraints.'
     },
     {
         title: 'Code Reviews & Feedback -',
         description: 'Constructive, detailed feedback to grow the entire team.'
     },
     {
-        title: 'Resourcefulness -',
-        description: 'Finding creative, efficient solutions within constraints.'
+        title: 'User Empathy -',
+        description: 'Consistently putting end-user experience first.'
     },
     {
         title: 'Learning & Curiosity -',

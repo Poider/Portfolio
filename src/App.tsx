@@ -18,6 +18,7 @@ import Footer from './sections/Footer';
 import DividerFooter from './components/common/DividerFooter';
 // import your new ThankYou page:
 import ThankYou from './sections/ThankYou';
+import './App.css'
 
 const MainPage = () => (
     <div className="BackgroundDiv" id="experience">

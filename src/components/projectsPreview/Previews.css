@@ -242,7 +242,7 @@ strong {
 
     .webAppModalScreenshots figure img {
         display: block;
-        width: 12.75rem;
+        width: min(100%,12.75rem);
         height: 9.75rem;
     }
 
