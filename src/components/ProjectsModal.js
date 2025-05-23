@@ -1,6 +1,6 @@
 // src/components/Modal.jsx
 import React from 'react';
-import "../styles/ProjectsModal.css";
+import "../styles/projectsModal.css";
 const ProjectsModal = ({ isOpen, onClose, children }) => {
     if (!isOpen)
         return null;
