@@ -11,15 +11,15 @@ const testimonials = [
         profession: 'Creative Director, Interactive Designer & Developer',
         company: 'OCPA SA.',
         image: man,
-        text: `Jane Doe is a Creative Director, Interactive Designer & Developer currently based in Amsterdam. As a multidisciplinary freelancer, he pairs a broad range of creative leadership experience in art direction, UI/UX design, front-end development, and motion design to help companies and agencies around the world achieve their goals.`,
+        text: `Mouad's reliability and versatility were critical during tight deadlines. His innovative backend, DevOps, and AI solutions consistently surpassed our expectations.`,
     },
     {
         id: 2,
         name: 'Mayssoun Messaoudi',
-        profession: 'Senior UX Researcher',
+        profession: 'Business Analysis Lead',
         company: 'OCPA SA.',
         image: woman,
-        text: `Mayssoun's user-first mindset helped us triple our task-completion rates. She ran deep research, synthesized insights, and led wireframing sessions that turned into the final polished flows you see in our app today.`,
+        text: `Working with Mouad El Ammari has been exceptionally rewarding. His innovative use of overlooked data transformed our ETL and backend automation, significantly enhancing operational efficiency. His creativity and proactive problem-solving consistently delivered impressive results.`,
     },
     // …add more testimonials here
 ]
