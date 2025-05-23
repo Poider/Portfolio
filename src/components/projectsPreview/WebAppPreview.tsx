@@ -138,7 +138,7 @@ function WebAppPreview() {
                     How to Run
                 </h3>
                 <pre className="ModalCode">
-                    <code classname="preserveWhiteSpace">
+                    <code className="preserveWhiteSpace">
                         git clone https://github.com/Poider/pingpong-web-app.git
                         && npm install
                         && ./init_docker.sh

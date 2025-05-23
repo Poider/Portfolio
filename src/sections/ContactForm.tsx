@@ -70,7 +70,7 @@ function ContactForm() {
                         <input
                             type="hidden"
                             name="_next"
-                            value="http://localhost:5173/thank-you"
+                            value="https://mouadJs.dev/thank-you"
                         />
 
                         <input type="hidden" name="_captcha" value="false"/>
