@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)", // catch everything
+      "destination": "/" // serve your SPA entrypoint
+    }
+  ]
+}
