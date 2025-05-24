@@ -61,3 +61,14 @@
         right: 9%;
     }
 }
+
+@media (max-width: 500px) {
+    .ModalContent {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 91%;
+        max-width: 65rem;
+        height: 96%;
+    }
+
+}

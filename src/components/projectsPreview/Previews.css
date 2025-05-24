@@ -326,6 +326,8 @@ strong {
 
 @media (max-width: 768px) {
     .webAppModalContentInner {
+        padding-left: 0rem;
+        padding-right: 0rem;
         grid-template-columns: minmax(200px,1fr);
         grid-template-areas:
             "title"
