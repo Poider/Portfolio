@@ -44,13 +44,15 @@ const MainPage = () => (
 
 const App = () => {
     return (
+        <>
         <Router>
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
-            <Analytics />    
         </Router>
+        <Analytics />    
+        </>
     );
 };
 
