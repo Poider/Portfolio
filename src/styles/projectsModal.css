@@ -50,4 +50,14 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    z-index:5
+}
+
+
+@media (max-width: 1200px) {
+    .ModalClose {
+        position:fixed;
+        top: 3%;
+        right: 9%;
+    }
 }

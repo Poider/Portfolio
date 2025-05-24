@@ -168,3 +168,8 @@
         width:100%;
     }
 
+@media (max-width: 1165px) {
+    .ModalScreenshots {
+        grid-template-columns: minmax(20px, 1fr);
+    }
+}
