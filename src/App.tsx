@@ -18,10 +18,12 @@ import DividerFooter from './components/common/DividerFooter';
 // import your new ThankYou page:
 import ThankYou from './sections/ThankYou';
 import './App.css'
+import { Analytics } from '@vercel/analytics/react';
 
 const MainPage = () => (
     <div className="BackgroundDiv" id="experience">
         <div className="navSpacer" />
+
         <IntroOverlay />
         <NavBar />
         <Hero />
@@ -47,6 +49,7 @@ const App = () => {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
+            <Analytics />    
         </Router>
     );
 };
