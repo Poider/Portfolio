@@ -29,6 +29,9 @@
     scroll-behavior: smooth;
 
 }
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 html, body {
     margin: 0;
     padding: 0;
