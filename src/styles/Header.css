@@ -230,7 +230,7 @@
     }
 
     .NavBarContainer {
-        height: 13rem;
+        height: 7rem;
         position: relative;
         display: flex;
         justify-content: center;
@@ -253,7 +253,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 0;
-        padding-top:7rem;
+        padding-top:5rem;
     }
         .NavBar ul li {
             position: relative;

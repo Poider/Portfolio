@@ -69,8 +69,9 @@ const Logo = () => {
               setWiggleActive(true);
           }}
       >
-          <div className={wiggleActive ? 'svgWiggler' : ''}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1124" height="141" viewBox="0 0 1124 141" fill="none">
+      <a href="">
+          <div  className={wiggleActive ? 'svgWiggler' : ''}>
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1124 141" fill="none">
 
                   <g xmlns="http://www.w3.org/2000/svg" clipPath="url(#clip0_999_36)">
                       <path ref={ref_U}
@@ -155,7 +156,8 @@ const Logo = () => {
             <rect width="93.6667" height="93.6667" fill="white" transform="translate(733.722 23.6113)" />
         </clipPath>
         </svg>
-      </div>
+              </div>
+          </a>
     </div>
   );
 };

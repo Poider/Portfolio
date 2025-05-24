@@ -10,7 +10,9 @@
 
 .LogoInner svg {
     width: 100%;
-    shape-rendering:  geometricPrecision;
+    height:141px;
+        
+    shape-rendering: geometricPrecision;
 }
 
 
@@ -142,14 +144,16 @@
     }
 }
 
+
+
 /* trigger the wiggle on the fixed element */
 .svgWiggler:hover {
     animation: wiggle-rot 0.6s ease-in-out both;
 }
 
-/*  keyframes, unchanged */
-@keyframes wiggle-rot {
-    0%, 100% {
+    /*  keyframes, unchanged */
+    @keyframes wiggle-rot {
+        0%, 100% {
         transform: rotate(0deg);
     }
 
@@ -247,14 +251,15 @@
 
 /*address here no animation and phone pos*/
 @media (max-width: 870px) {
-    .LogoInner  svg {
-        width:284px;
+    .LogoInner svg {
+        width: 284px;
+        height: 70px;
     }
 
     .LogoInner {
         position: fixed;
         left: 50%;
-        transform: translate(-50%,-25%) scale(1);
+        transform: translate(-50%,-27%) scale(1);
         animation: none;
         z-index: 12;
     }
