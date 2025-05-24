@@ -122,3 +122,10 @@
     border-radius: 1rem;
     box-sizing:border-box; 
 }
+
+@media (max-width: 768px) {
+    .HeroMain {
+        padding-top: 3rem;
+    }
+   
+}
