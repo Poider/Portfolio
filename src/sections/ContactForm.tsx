@@ -32,7 +32,7 @@ function ContactForm() {
                                 type="text"
                                 name="name"
                                 placeholder="Type Your Name"
-                                required
+                                
                             />
                         </div>
 
