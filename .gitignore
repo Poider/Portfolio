@@ -1,0 +1,9 @@
+# ignore everything
+*
+
+# but keep .gitignore itself
+!.gitignore
+
+# and the two folders you care about
+!/src/
+!/public/
