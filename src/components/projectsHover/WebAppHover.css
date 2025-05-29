@@ -1,0 +1,171 @@
+.webAppHoverWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 6.5536rem;
+}
+
+
+.webAppHoverDivs {
+    width: 25.5rem;
+    background: var(--color-project-box);
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    animation: fadeInTranslateUp 0.3s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    position: relative;
+
+
+    flex-shrink: 0;
+
+}
+
+
+@keyframes fadeInTranslateUp {
+    0% {
+        opacity: 0;
+       
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.webAppHoverImg {
+    height: auto;
+    opacity: 0.9;
+    object-fit: cover;
+    object-position: center;
+    width: 181px;
+    mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 90%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 90%);
+}
+
+.webAppHoverImgWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 8rem;
+    /* remove or reset justify-content: center; */
+    /* justify-content: stretch;  / default, lets 1fr tracks fill the full width */
+    /* center your images/text within each 1fr cell: */
+    justify-items: center;
+    align-items: start;
+   
+    overflow: hidden;
+}
+
+
+.WebAppTitles {
+    margin: 0.5rem 0; /* tweak vertical spacing if you like */
+    text-decoration: underline;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    color: var(--text-warmer-cocoa);
+}
+
+#chatImg{
+    margin-left:0.9rem;
+}
+
+#pingpongImg{
+    margin-right:0.9rem;
+}
+
+.TechImgs, #title3 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+
+.TechImgsWrapper, MetricsWrapper {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+#ReactImg {
+    top: 8.0875rem;
+    left: 8.6875rem;
+    filter: contrast(70%) saturate(200%) brightness(85%);
+}
+
+#DockerImg {
+    top: 6.9rem;
+    left: 15.75rem;
+}
+
+#nestJs {
+    top: 5.6375rem;
+    left: 1.5rem;
+}
+
+#webSockets {
+    top: 10.025rem;
+    left: 10.8125rem;
+}
+
+#title3{
+    
+    top: 1.9rem;
+    left: 9.8875rem;
+}
+
+#title4 {
+    position: absolute;
+    top: 1.9rem;
+    left: 10.2875rem;
+}
+
+#metricText1 {
+    color: #8D6E63;
+}
+
+#metricText2 {
+    color: #A3B18A;
+}
+#metricText3 {
+    color: #F0C2A0;
+}
+#metricText4 {
+    color: #D9A3A2;
+}
+
+.MetricValue, .MetricLabel {
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+    font-size: 1.1rem;
+}
+.MetricsDiv {
+    margin-top:4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.MetricItem {
+    margin: 0.3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.MetricIcon{
+    margin-right: 0.5rem;
+}
+
+.MetricValue{
+    margin-right: 2.5rem;
+}

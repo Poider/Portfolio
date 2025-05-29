@@ -1,0 +1,182 @@
+
+
+.RayTracerModalContentInner {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        "title       title"
+        "subtitle    subtitle"
+        "features    explanation"
+        "features    explanation"
+        "screenshots explanation"
+        "screenshots tech"
+        "run         run"
+        "background  background"
+        "actions     actions";
+}
+
+.gridTitle {
+  grid-area: title;
+  text-align: center;
+}
+
+.gridSubtitle {
+  grid-area: subtitle;
+  text-align: center;
+}
+
+.gridFeatures {
+  grid-area: features;
+}
+
+
+
+.gridExplanation {
+    grid-area: explanation;
+    background-color: var(--color-project-box);
+}
+
+.gridScreenshots {
+  grid-area: screenshots;
+}
+
+.gridTech {
+  grid-area: tech;
+}
+
+.gridRun {
+  grid-area: run;
+}
+
+.gridBackground {
+  grid-area: background;
+}
+
+.ModalActions {
+    grid-area: actions;
+    text-align: center;
+}
+
+
+.RayTracerFeatureList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.RayTracerFeatureList li {
+  margin-bottom: 0.6rem;
+}
+
+.RayTracerGroupedImage {
+  width: 100%;
+  max-width: 640px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  border-radius: 0.5rem;
+}
+
+.RayTracerImage {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-top: 1rem;
+}
+
+.RayTracerCaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.RayTracerParagraph {
+  font-size: 0.95rem;
+  line-height: 1.5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.RayTracerSceneConfig {
+  background-color: #f9f5ee;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.RayTracerTitle {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.RayTracerSubtitle {
+  font-size: 1rem;
+  color: #7a6551;
+  margin-bottom: 2rem;
+}
+
+.RayTracerTechTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.RayTracerTechTags span {
+  background: #f1ebe3;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.RayTracerBtn {
+  background: #7a6551;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+
+#diagram{
+    mix-blend-mode: darken;
+
+}
+
+.ModalGroupedImage {
+    margin: 1.5rem 0 1rem;
+    width:min(352.003px, 100%);
+}
+.ModalCaption {
+
+    font-size: 0.9rem;
+    margin: 0.5rem 1rem 0;
+}
+
+#RefractionCaption{
+    text-align:left;
+}
+
+@media (max-width: 768px) {
+    .RayTracerModalContentInner {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "explanation"
+            "screenshots"
+            "tech"
+            "run"
+            "background"
+            "actions";
+    }
+
+
+    
+}

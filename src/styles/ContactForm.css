@@ -1,0 +1,121 @@
+﻿/* ContactForm.css */
+
+.ContactFormWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-projects);
+}
+
+.ContactFormMain {
+    width: min(1630px, 82%);
+    display: flex;
+    align-items: start; /* align left & right columns at top */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem; /* space between columns */
+    margin: 4rem 0 4rem 0;
+    padding : 4rem 2rem;
+    box-sizing: border-box;
+
+}
+
+/* ─── LEFT COLUMN ───────────────────────────────────────────────────────── */
+
+.ContactFormTop {
+    flex: 1;
+    max-width: 600px;
+    min-width:50%;
+}
+
+    .ContactFormTop h1 {
+        font-size: 0.875rem; /* 14px */
+        text-transform: uppercase;
+        font-weight: 500;
+    
+        margin-bottom: 0.85rem;
+    }
+
+    .ContactFormTop h2 {
+        font-size: clamp(1rem,10vw,2.5rem);
+        font-weight: 700;
+
+        line-height: 1.2;
+        margin: 0 0 2rem;
+    }
+
+    .ContactFormTop p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width:600px;
+        margin-bottom: 1rem;
+    }
+
+/* ─── RIGHT COLUMN ──────────────────────────────────────────────────────── */
+
+.ContactFormBottom {
+    min-width: min(400px,100%);
+    flex: 1;
+    max-width: 500px;
+}
+
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+    .ContactForm input,
+    .ContactForm textarea {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 4px;
+        background: var(--color-skills-box);
+        box-sizing: border-box;
+        color: var(--text-chocolate);
+        font-family: 'Comfortaa', cursive;
+       
+    }
+
+    .ContactForm textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+    .ContactForm label {
+        display: block;
+        font-size: 0.7rem; /* 14px */
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .ContactForm button {
+        align-self: flex-start;
+        padding: 1.5rem 2.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 1px solid var(--text-chocolate);
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+        .ContactForm button:hover {
+            background: var(--text-warmer-cocoa);
+            color: #fff;
+        }
+    .ContactForm input:focus,
+    .ContactForm textarea:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    .ContactForm input::placeholder,
+    .ContactForm textarea::placeholder {
+        /* 50% opacity black—tweak to your brand color */
+        color: rgba(0, 0, 0, 0.5);
+        opacity: 0.5; /* some browsers need this too */
+        font-size:0.85rem;
+    }

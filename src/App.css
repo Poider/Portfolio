@@ -1,0 +1,58 @@
+.BackgroundDiv {
+    background-color: #225d6e;
+    overflow: hidden;
+
+
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container for everything that     should fade in after the logo animation */
+.fadeInAfterLogo {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s forwards; /* Fade in over 1 second */
+    animation-delay: 3.5s; /* Adjust this delay to match logo animation duration */
+}
+
+
+
+/* Combined fade and translate keyframes */
+@keyframes fadeInTranslate {
+    from {
+        opacity: 0;
+        transform: translateY(5px); /* starts 10px below its final position */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container for elements to fade and translate in after the logo animation */
+.fadeTranslateAfterLogo {
+    opacity: 0; /* Start hidden */
+    animation: fadeInTranslate 1s forwards; /* Animate over 2 seconds */
+    animation-delay: 3.5s; /* Delay starts 3.5 seconds in to sync with logo animation */
+}
+
+
+.navSpacer{
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-base);
+    position: relative;
+    z-index: 2;
+
+}
+
+@media (max-width: 870px) {
+
+    .navSpacer{
+        height: 7rem;
+    }
+}

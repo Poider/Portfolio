@@ -1,0 +1,45 @@
+
+.RayTracerHoverImage {
+    mix-blend-mode: darken;
+    animation: fadeIn 0.3s ease-out forwards;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+        mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,1) 80%);
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,1) 80%);
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#RT {
+    transform: rotate(3.52deg) translateY(-50%);
+   
+    right: 65%;
+}
+
+#squaresCornel {
+    left:65%;
+    transform: translateY(-50%) rotate(-8deg);
+}
+
+#cornelBox {
+    left: 70%;
+    transform: translateY(-20%) rotate(-4.78deg);
+}
+
+
+#minecraft {
+    transform: translateY(-40%) rotate(3.16deg);
+    right: 65%;
+}

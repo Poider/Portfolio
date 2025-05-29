@@ -1,3 +1,4 @@
+
 # ignore everything
 *
 
@@ -7,3 +8,10 @@
 # and the two folders you care about
 !/src/
 !/public/
+dist
+
+
+
+# environment variables
+.env
+

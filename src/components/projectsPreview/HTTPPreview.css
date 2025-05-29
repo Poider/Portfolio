@@ -1,0 +1,177 @@
+/* 1) Grid container */
+.WebServerModalContentInner {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        "title       title"
+        "subtitle    subtitle"
+        "features    explanation"
+        "features    tech"
+        "features    tech"
+        "screenshots screenshots"
+        "run         run"
+        "background  background"
+        "actions  actions";
+    
+}
+
+/* 2) Area assignments */
+.gridTitle {
+    grid-area: title;
+}
+
+.gridSubtitle {
+    grid-area: subtitle;
+}
+
+.gridFeatures {
+    grid-area: features;
+}
+
+.gridExplanation {
+    grid-area: explanation;
+}
+
+.gridTech {
+    grid-area: tech;
+}
+
+.gridScreenshots {
+    grid-area: screenshots;
+}
+
+.gridBackground {
+    grid-area: background;
+}
+
+.gridRun{
+    grid-area: run;
+
+}
+
+.ModalActions {
+    grid-area: actions;
+    text-align: center;
+}
+
+/* 3) Section common */
+.ModalSection {
+    margin-bottom: 1.5rem;
+}
+
+/* 4) Headings */
+.ModalTitle {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ModalSubtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+/* 5) Feature list */
+.ModalFeatureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .ModalFeatureList li {
+        margin-bottom: 0.6rem;
+    }
+
+        .ModalFeatureList li strong {
+            color: var(--accent);
+        }
+
+/* 6) Paragraph */
+.HTTPModalParagraph {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--text);
+}
+
+/* 7) Tech tags */
+.ModalTechTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+    .ModalTechTags span {
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+/* 8) Screenshots grid */
+.ModalScreenshots {
+    margin-left: -3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 0rem;
+}
+
+    .ModalScreenshots img {
+        width: 287px;
+        height: 233px;
+        border-radius: 0.5rem;
+        
+    }
+
+.ModalCaption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1.3rem;
+    color: var(--text-light);
+}
+
+
+
+/* 9) Responsive */
+@media (max-width: 768px) {
+    .WebServerModalContentInner {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "explanation"
+            "tech"
+            "screenshots"
+            "run"
+            "background"
+            "actions";
+    }
+}
+
+
+.WebServerModalContentInner, .ModalSection, #HTTPScreenshots, figure, #HTTPScreenshots figure {
+    background-color: var(--color-project-box);
+}
+
+#HTTPScreenshots img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    #HTTPScreenshots figcaption{
+        width:100%;
+    }
+
+@media (max-width: 1165px) {
+    .ModalScreenshots {
+        grid-template-columns: minmax(20px, 1fr);
+    }
+}

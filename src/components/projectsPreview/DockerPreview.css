@@ -1,0 +1,174 @@
+.DockerModalContentInner {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        "title        title"
+        "subtitle     subtitle"
+        "features     overview"
+        "features     tech"
+        "features     tech"
+        "architecture architecture"
+        "run         run"
+        "background   background"
+        "actions     actions";
+}
+
+
+/* Stack to one column on mobile */
+
+
+/* Area mappings */
+.gridTitle {
+    grid-area: title;
+    text-align: center;
+}
+
+.gridSubtitle {
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.gridFeatures {
+    grid-area: features;
+}
+
+.gridOverview {
+    grid-area: overview;
+}
+
+.gridTech {
+    grid-area: tech;
+}
+
+.gridArchitecture {
+    grid-area: architecture;
+    display:flex;
+    flex-direction:column;
+
+    background: var(--color-project-box);)
+}
+
+.gridBackground {
+    grid-area: background;
+}
+
+.ModalActions {
+    grid-area: actions;
+    text-align: center;
+}
+
+.gridRun{
+    
+    grid-area: run;
+
+}
+
+/* Section spacing */
+.DockerModalSection {
+    margin-bottom: 1.5rem;
+}
+
+/* Feature list */
+.DockerFeatureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .DockerFeatureList li {
+        margin-bottom: 0.6rem;
+        line-height: 1.5;
+    }
+
+    .DockerFeatureList strong {
+        color: var(--accent);
+    }
+
+/* Overview & background text */
+.DockerParagraph {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Tech tags */
+.DockerTechTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+    .DockerTechTags span {
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+/* Architecture diagram */
+.DockerImage {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+/* Titles & subtitles */
+.DockerTitle {
+    font-size: 2rem;
+    margin: 0;
+    font-family: var(--font);
+}
+
+.DockerSubtitle {
+    font-size: 1rem;
+    margin: 0 0 2rem;
+    color: var(--text-light);
+}
+
+.ModalArchitectureImage {
+    mix-blend-mode: darken;
+    justify-self: center;
+    align-self: center;
+    width: 34.364375rem;
+}
+
+@media (max-width: 1084px) {
+    .DockerModalContentInner {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "overview"
+            "tech"
+            "architecture"
+            "run"
+            "background"
+            "actions";
+    }
+     .ModalArchitectureImage,
+    .DockerImage,
+    .webAppModalScreenshots img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .ModalTechTags, .DockerTechTags {
+        width: 100%;
+    }
+    .DockerModalSection,
+    .ModalSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

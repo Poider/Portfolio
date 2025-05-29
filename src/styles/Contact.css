@@ -1,0 +1,219 @@
+﻿
+/* src/styles/Contact.css */
+.ContactWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0; /* top & bottom padding */
+    background-color: var(--color-skills);
+    padding:12rem 0 12rem 0;
+
+}
+.ContactMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: min(1650px,92%);
+    
+
+}
+
+/* ——— 1st block ——— */
+.contact-top {
+    padding-bottom: 7rem; /* give some breathing room */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .contact-top h2 {
+        font-size: 0.775rem; /* 14px */
+        margin: 0;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .contact-top h3 {
+        /* fluid from 49px (3.0625rem) up to 170px (10.625rem) */
+        font-size: clamp(3.0625rem, 5vw, 10.625rem);
+        line-height: clamp(3.0625rem, 8vw, 10.625rem);
+        margin: 0.5rem 0;
+        padding:0 7rem 0 7rem;
+        text-align: center;
+        font-weight: 600;
+        opacity:1;
+    }
+
+    .contact-top a {
+        display: block;
+        font-size: 1rem; /* 22px */
+        margin-top: 0.5rem;
+        text-align: center;
+        font-weight: 500;
+        text-decoration-color: rgba(109, 76, 65, 0.3); /* base brown @30% */
+        color: var(--text-chocolate);
+        text-underline-offset: 3px;
+        padding-top: 0.5rem;
+        transition: text-decoration-color ease-in-out 0.2s;
+    }
+        .contact-top a:hover {
+            text-decoration-color: rgba(109, 76, 65, 1); /* base brown @30% */
+        }
+
+
+        /* ——— 2nd block ——— */
+        .contact-bottom {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 3rem;
+            background-color: var(--color-skills-box);
+            display: flex;
+            flex-wrap: wrap; /* right column will wrap underneath on narrow */
+            gap: 1.2rem;
+            justify-content: start;
+        }
+
+/* left column */
+.contact-left {
+    padding-right: 4rem;
+}
+    .contact-left h2 {
+        font-size: 14px;
+        margin-bottom:24px;
+    }
+
+    .contact-left h3 {
+        margin: 0 0 1rem;
+        font-size: clamp(26px, 17.5492957746px + 1.6901408451vw, 40px);
+        font-weight: 700;
+        padding-right: 3vw;
+    }
+
+    .contact-left a {
+        margin-top:28px;
+        margin-bottom:14px;
+        line-height: 1.5;
+        font-size:14px;
+
+    }
+
+/* right column */
+.contact-right {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+   
+    width:60%;
+}
+
+.contact-right-inner {
+    width: 41%;
+    min-width: min(100%, 459px);
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+    margin: 1rem 0; /* top & bottom margin */
+    flex-direction: column;
+}
+
+    /* placeholder img */
+    .contact-right-inner img {
+        flex: 1 1 150px;
+        max-width: 100%;
+        height: auto;
+    }
+
+/* the p, p, button block */
+.contact-right-text {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .contact-right-text p {
+        margin: 0;
+        font-size: 0.875rem; /* 14px */
+    }
+
+
+
+.contactImg {
+    flex: 1 0 320px;
+    min-width: 227px; /* won’t shrink below 427px */
+    max-width: 100%; /* but will scale down with the container */
+    aspect-ratio: 9 / 10; /* height will be calculated from width */
+    background-color: lightSalmon;
+    border-radius: 8px;
+}
+
+
+.what-i-bring-title {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.what-i-bring-list {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding-left: 0.2rem;
+
+}
+
+    .what-i-bring-list li {
+        font-size: 0.875rem;
+        margin: 0.7rem 0;
+        line-height:28px;
+    }
+
+        .what-i-bring-list li::before {
+            content: "✓"; /* Unicode for FA’s check */
+            font-weight: 900;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+.download-cv-button {
+    margin-top: 1.5rem;
+    text-decoration-color: rgba(109, 76, 65, 0.4);
+    text-underline-offset: 4px;
+    background-color: var(--color-skills-box); /* same card-bg tone */
+    color: var(--color-text); /* your main text color */
+    font-weight: 600;
+    border-radius: 8px;
+    transition: text-decoration-color ease-in-out 0.2s;
+
+}
+
+.download-cv-button:hover {
+    text-decoration-color: rgba(109, 76, 65, 1);
+}
+
+.utilities_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.contactSocial {
+    margin-top: 1.5rem;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}

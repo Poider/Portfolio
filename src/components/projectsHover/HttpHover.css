@@ -1,0 +1,330 @@
+﻿
+
+/* 1) Make the wrapper position:relative so children stack in normal flow */
+.HttpHoverWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* or flex-start / space-around as you like */
+    align-items: center;
+    /* you can give this a fixed width if you never want it to shrink/grow */
+    width: 100%; /* example */
+ 
+}
+
+/* 2) Change each hover‐div to position:relative and size them */
+.HttpHoverDivs {
+    position: relative;
+    background: #F4F2EB;
+    border-radius: 1rem;
+    border: 1px solid rgba(109,76,65,0.3);
+    flex-shrink: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+
+}
+
+/* individual sizes (no left/right needed) */
+#http1 {
+    width: 17.25rem;
+    height: 22.5rem;
+    z-index: 2;
+    left: 12rem;
+    --start-x: 12rem;
+    --start-y: 0;
+    --anim-delay: 0s;
+}
+
+#http2 {
+    width: 26.43rem;
+    height: 13.68rem;
+    z-index: 1;
+    left: 6rem;
+    top: 6.05rem;
+    --start-x: 6rem;
+    --start-y: 4rem;
+    --anim-delay: 0.3s;
+}
+
+#http3 {
+    width: 27.09rem;
+    height: 21.75rem;
+    z-index: 3;
+    --start-x: 0;
+    --start-y: 6rem;
+    --anim-delay: 0s;
+}
+
+#http4 {
+    width: 15rem;
+    height: 16.28rem;
+    z-index: 1;
+    left: -3rem;
+    top: -6rem;
+    --start-x: -3rem;
+    --start-y: -6rem;
+    --anim-delay: 0.3s;
+}
+
+#http5 {
+    width: 16.87rem;
+    height: 17.9rem;
+    z-index: 2;
+    left: -8rem;
+    top: 4rem;
+    --start-x: -8rem;
+    --start-y: 4rem;
+    --anim-delay: 0.2s;
+}
+
+/* 3) Overlap by pulling each one left a bit */
+
+
+/* if you want non‐uniform overlaps you can target each one: */
+
+/* 4) Define fadeIn & slideIn keyframes */
+
+@keyframes slideIn {
+  from { transform: translate(var(--start-x), var(--start-y)); }
+  to   { transform: translate(0, 0); }
+}
+
+/* 5) Layer slideIn onto your existing fadeIn */
+.HttpHoverDivs {
+  /* keeps your original fadeIn, then runs slideIn with per-card delay */
+  animation:
+    fadeIn 0.3s ease-out both,
+    slideIn 0.5s ease-out var(--anim-delay, 0s) both;
+}
+
+/* 6) Per-card start-offsets & delays */
+
+
+
+/* hover specifics ------------------------------------------------------------------------ */
+
+
+
+
+#ReactorPattern {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark-chocolate);
+    position: absolute;
+    top: 3.75rem;
+    left: 1.8125rem;
+    margin : 0;
+}
+
+
+#concurrency {
+    position:absolute;
+    width: 72px;
+    height: auto;
+}
+
+.eventLoop {
+    position: absolute;
+    width: 12.8125rem;
+    height: 11.8125rem;
+    
+    top: 8.6875rem;
+    left: 0.875rem;
+}
+
+    .eventLoop > * {
+        position: absolute;
+    }
+
+        .eventLoop > *:nth-child(1) {
+            top: 0.4375rem;
+            left: 0.3125rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            width: 5.75rem;
+            height: 2.3125rem;
+            color: var(--color-project-box);
+            background-color: var(--chocolate-http-hover);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .eventLoop > *:nth-child(2) {
+            top: 1.175rem;
+            left: 6.625rem;
+
+        }
+        .eventLoop > *:nth-child(3) { /* select*/
+            top: 1.075rem;
+            left: 8.625rem;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .eventLoop > *:nth-child(4) { /* bigarrows*/
+
+            top: 2.75rem;
+            left: 0.3125rem;
+            width: auto;
+        }
+        .eventLoop > *:nth-child(5) { /* bigarrows*/
+            top: 5.53rem;
+            left: 0.3125rem;
+            width: auto;
+        }
+
+        .eventLoop > *:nth-child(6) { /* bigarrows*/
+            top: 8.065625rem;
+            left: 0.3125rem;
+            width: auto;
+        }
+        .eventLoop > *:nth-child(7) {
+     
+            top: 5.115rem;
+            left: 2.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .eventLoop > *:nth-child(8) {
+            top: 7.85rem;
+            left: 2.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .eventLoop > *:nth-child(9) {
+            top: 10.415rem;
+            left: 2.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+
+#concurrency {
+    top: 3.375rem;
+    right: 1.5625rem;
+}
+
+#http4 > *:nth-child(1) {
+    position: absolute;
+    top: 0.8125rem;
+    left: 7.46875rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark-chocolate);
+}
+
+#http4 > *:nth-child(2) {
+    position: absolute;
+    top: 2.6875rem;
+    left: 7.21875rem;
+}
+
+
+#http4 > *:nth-child(3) {
+    position: absolute;
+    top: 8.3125rem;
+    left: 5.0625rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark-chocolate);
+}
+
+
+#http4 > *:nth-child(4) {
+    position: absolute;
+    top: 10.875rem;
+    left: 5.063125rem;
+}
+
+
+#http5 > *:nth-child(1) {
+    position: absolute;
+    top: 2.625rem;
+    left: 0.9375rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark-chocolate);
+}
+#http5 > *:nth-child(2) {
+    position: absolute;
+    top: 4.5rem;
+    left: 1.3125rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-chocolate);
+}
+
+#http5 > *:nth-child(3) {
+    position: absolute;
+    top: 10.5rem;
+    left: 1.1875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark-chocolate);
+}
+
+
+#TerminalClients {
+    width: 14.75rem;
+    height: 8.25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #463630;
+    border-radius: 1rem;
+    gap: 0.3rem;
+    padding: 0.7rem;
+    box-sizing: border-box;
+}
+
+
+
+.TerminalText {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #FFFAED;
+    margin: 0;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+
+#http3 > *:nth-child(1) {
+    position: absolute;
+    top: 2.5625rem;
+    left: 1.625rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5C453A;
+
+}
+
+#http3 > *:nth-child(2) {
+
+    position: absolute;
+    top: 9rem;
+    left: 0.5rem;
+}
+
+#http3 > *:nth-child(3) {
+    position: absolute;
+    top: 1.25rem;
+    left: 11.0625rem;
+}
+#http3 > *:nth-child(4) {
+    position: absolute;
+    top: 12.5625rem;
+    left: 16.3125rem;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #5C453A;
+    text-align:right;
+}
+
+#http3 > *:nth-child(5) {
+    position: absolute;
+    top: 18.125rem;
+    left: 20.3125rem;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #5C453A;
+    text-decoration:underline;
+}

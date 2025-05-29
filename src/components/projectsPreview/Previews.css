@@ -1,0 +1,344 @@
+﻿/* WebAppPreview.css */
+
+:root {
+    --bg: #F4F2EB;
+    --text: #624A3B;
+    --accent: #8C6C4E;
+    --text-light: #7F6A5E;
+    --code-bg: #E8DECf;
+    --tag-bg: #FCF8F4;
+    --tag-border: #E0D3C5;
+    --font: 'Comfortaa', sans-serif;
+}
+
+.webAppModalContentInner {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
+    grid-auto-rows: auto;
+    gap: 2rem;
+    grid-template-areas:
+        "title    title"
+        "subtitle subtitle"
+        "features preview"
+        "features preview"
+        "screenshots tech"
+        "screenshots security"
+        "run      run"
+        "background background"
+        "actions  actions";
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Header areas */
+.ModalTitle {
+    grid-area: title;
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.ModalSubtitle {
+    grid-area: subtitle;
+    margin: -1rem 0 2rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-light);
+
+}
+
+/* Grid area assignments */
+.gridPreview {
+    grid-area: preview;
+}
+
+.gridFeatures {
+    grid-area: features;
+}
+
+.gridTech {
+    grid-area: tech;
+}
+
+.gridScreenshots {
+    grid-area: screenshots;
+}
+
+.gridSecurity {
+    grid-area: security;
+}
+
+.gridRun {
+    grid-area: run;
+}
+
+.gridBackground {
+    grid-area: background;
+}
+
+.ModalActions {
+    grid-area: actions;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.ModalSection h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+    color: var(--accent);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Lists */
+
+.ModalFeatureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.webAppModalSecurityList {
+    margin-left: -1rem;
+}
+
+    .ModalFeatureList li,
+    .webAppModalSecurityList li {
+        margin-bottom: 0.5rem;
+        line-height: 2;
+        font-size: 1rem;
+    }
+
+
+        .ModalFeatureList li strong,
+        .webAppModalSecurityList li strong {
+            color: var(--accent);
+        }
+
+/* Tech tags */
+.ModalTechTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+    .ModalTechTags span {
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+/* Screenshots */
+.webAppModalScreenshots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-right: 1rem;
+    align-content: center;
+    justify-items: center;
+    margin-left: -0.5rem;
+    margin-top: 1.5rem;
+}
+
+    .webAppModalScreenshots img {
+        width: 180px;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        display: block;
+   
+    }
+    .webAppModalScreenshots figure {
+      margin: 0;
+    }
+
+
+.webAppModalScreenshots figcaption {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Code block */
+.ModalCode {
+    background: var(--ivory-dust);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: Menlo, Monaco, monospace;
+    font-size: 0.875rem;
+    overflow-x: auto;
+}
+
+/* Paragraphs */
+.ModalParagraph {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.ModalBtn {
+    background: #333;
+    color: white;
+    padding: 0.7rem 1rem 0.7rem 0.7rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+/* Fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.01s;
+}
+
+strong {
+    font-weight: 700;
+}
+.icon {
+    display: inline-block; /* ensure vertical-align applies */
+    vertical-align: middle;
+    font-size: 1em; /* make icon same size as text */
+    margin-right: 0.3em; /* small spacing */
+    margin-bottom:0.7rem;
+}
+.featureIcon {
+    display: inline-flex; /* make it a flex‐container */
+    align-items: center; /* vertically center the emoji inside the padding */
+    justify-content: center; /* horizontally center (if you ever have wider content) */
+    padding: 0.05rem;
+    vertical-align: bottom; /* align the span itself with the text line */
+    margin-right:0.3rem;
+}
+
+.webAppModalScreenshots figure {
+  position: relative;
+}
+
+.webAppModalScreenshots figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(244, 242, 235, 0.15);      /* light cream wash */
+  pointer-events: none;
+}
+
+    .webAppModalScreenshots figure img {
+        display: block;
+        width: min(100%,12.75rem);
+        height: 9.75rem;
+    }
+
+.webAppModalScreenshots figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6f5e4e;                            /* a darker cocoa for contrast */
+}
+
+/* Just the extra bits not already in Previews.css */
+
+.DockerArchitectureImage {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: contain;
+}
+
+.ModalHint {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    font-size: 0.875rem; /* a bit smaller */
+    line-height: 1.4;
+    color: #6c7a89; /* lighter, “hint” color */
+}
+
+    .ModalHint a {
+        color: #3498db; /* match your theme’s link color */
+        text-decoration: underline;
+    }
+
+.ParagraphBoxShadowing {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.Approximation {
+    display:block;
+    padding-top: 1rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .webAppModalContentInner {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        padding: 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: minmax(200px,1fr) minmax(200px,1fr);
+        grid-auto-rows: auto;
+        gap: 2rem;
+        grid-template-areas:
+            "title    title"
+            "subtitle subtitle"
+            "features preview"
+            "features tech"
+            "screenshots security"
+            "screenshots ."
+            "run      run"
+            "background background"
+            "actions  actions";
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .webAppModalScreenshots {
+      
+        grid-template-columns:1fr;
+        justify-items:left;
+        margin-left:1rem;
+       
+    }
+}
+
+@media (max-width: 768px) {
+    .webAppModalContentInner {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-template-columns: minmax(200px,1fr);
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "features"
+            "preview"
+            "screenshots"
+            "tech"
+            "security"
+            "run"
+            "background"
+            "actions";
+    }
+}

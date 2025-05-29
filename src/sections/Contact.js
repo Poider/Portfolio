@@ -1,0 +1,55 @@
+// src/components/Contact.jsx
+import React from 'react';
+import "../styles/Contact.css";
+import GithubButton from "../components/common/GithubButton";
+import LinkedInButton from "../components/common/LinkedInButton";
+import secondImg from "../assets/secondImg.png";
+function Contact() {
+    return (React.createElement("div", { className: "ContactWrapper", id: "bringwhat" },
+        React.createElement("div", { className: "ContactMain" },
+            React.createElement("div", { className: "contact-top", id: "resume" },
+                React.createElement("h2", null, "Get in Touch"),
+                React.createElement("h3", null, "Let\u2019s Build Something Amazing Together"),
+                React.createElement("a", { href: "#contactForm" }, "Drop me a line anytime")),
+            React.createElement("div", { className: "contact-bottom" },
+                React.createElement("div", { className: "contact-left" },
+                    React.createElement("h2", null, "Software Engineer"),
+                    React.createElement("h3", null,
+                        "Choose ",
+                        React.createElement("br", null),
+                        " Your Engineer"),
+                    React.createElement("a", { href: "#contactForm", className: "preserveWhiteSpace link-underline" }, "Mouad El Ammari")),
+                React.createElement("div", { className: "contact-right" },
+                    React.createElement("div", { className: "contact-right-inner" },
+                        React.createElement("div", { className: "contact-right-text" },
+                            React.createElement("h2", null, "Mouad El Ammari"),
+                            React.createElement("h4", { className: "what-i-bring-title" }, "What I bring"),
+                            React.createElement("ul", { className: "what-i-bring-list" },
+                                React.createElement("li", null,
+                                    React.createElement("strong", null, "Accelerate time-to-market"),
+                                    " with rapid prototyping & MVP delivery."),
+                                React.createElement("li", null,
+                                    React.createElement("strong", null, "Scale confidently"),
+                                    " by architecting applications that grow with your user base."),
+                                React.createElement("li", null,
+                                    React.createElement("strong", null, "Reduce friction"),
+                                    " via clean, maintainable code standards."),
+                                React.createElement("li", null,
+                                    React.createElement("strong", null, "Maximize performance"),
+                                    " through low-level optimizations."),
+                                React.createElement("li", null,
+                                    React.createElement("strong", null, "Protect quality"),
+                                    " with test-driven development."))),
+                        React.createElement("div", { className: "utilities_links" },
+                            React.createElement("a", { href: "/CV - Mouad El Ammari.pdf", download: true, className: "download-cv-button" }, "Download CV"),
+                            React.createElement("div", { className: "contactSocial" },
+                                " ",
+                                React.createElement(GithubButton, { textSize: 1 })),
+                            React.createElement("div", { className: "contactSocial" },
+                                " ",
+                                React.createElement(LinkedInButton, { textSize: 1 }),
+                                " "))),
+                    React.createElement("div", { className: "contact-right-inner" },
+                        React.createElement("img", { alt: "secondImg", src: secondImg })))))));
+}
+export default Contact;

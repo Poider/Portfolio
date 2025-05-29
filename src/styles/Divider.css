@@ -1,0 +1,110 @@
+.divider-1 .shape-fill {
+    fill:var(--color-hero-bg);
+}
+
+.divider-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-about-bg);
+}
+
+    .divider-1 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 9vh;
+    }
+
+.divider-2 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-projects);
+
+}
+
+.divider-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1px);
+    height: 91px;
+}
+
+.divider-2 .shape-fill {
+    fill: var(--color-about-bg);
+}
+
+.divider-3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-skills);
+}
+
+.divider-3 svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1000.3px);
+    height: 64px;
+}
+
+.divider-3 .shape-fill {
+    fill: #F3EEE3;
+}
+
+.divider-4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: var(--color-projects);
+}
+
+    .divider-4 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 44px;
+    }
+
+    .divider-4 .shape-fill {
+        fill: var(--color-about-bg);
+    }
+
+
+
+
+.divider-footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: rgba(45, 45, 45, 0.8);
+  
+}
+
+    .divider-footer svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 144px;
+    }
+
+    .divider-footer .shape-fill {
+        fill: var(--color-projects);
+    }
