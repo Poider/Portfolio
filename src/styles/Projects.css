@@ -103,18 +103,19 @@
         margin-top: auto;
     }
 
-    .CodeButton, .PreviewButton {
-        font-family: 'Comfortaa', cursive;
-        padding: 0.6rem 1rem;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 0.9rem;
-        display: block;
-        text-align: center;
-        font-weight: 500;
-        color: var(--text-chocolate);
-        border: 1px solid rgba(109,76,65,0.1);
-    }
+.CodeButton, .PreviewButton {
+    font-family: 'Comfortaa', cursive;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-chocolate);
+    border: 1px solid rgba(109,76,65,0.1);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
 
     .CodeButton {
         flex-basis: 0.5rem;
@@ -123,11 +124,11 @@
         text-decoration: none;
     }
 
-    .PreviewButton {
-        flex-basis: 5.24rem;
-        flex-grow: 2;
-        background-color: var(--color-base);
-    }
+.PreviewButton {
+    flex-basis: 5.24rem;
+    flex-grow: 2;
+    background-color: var(--color-base);
+}
 
         .CodeButton:active,
         .PreviewButton:active {
@@ -224,3 +225,36 @@
     }
 }
 
+.HoverMe {
+    position: absolute;
+    transform-origin: 0 0;
+    transform: scale(0.22);
+    top: 4%;
+    left: 9%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+    .HoverMe.hidden {
+        opacity: 0;
+    }
+
+
+@media screen and (max-width: 1030px) {
+    .HoverMe {
+        display: none;
+    }
+}
+
+.PreviewButton:hover {
+    text-shadow: 0 0 6px var(--ivory-dust);
+    background-color: var(--text-chocolate); /* dark brown */
+    color: var(--ivory-dust); /* light ivory */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.CodeButton:hover {
+    text-shadow: 0 0 6px var(--ivory-dust);
+    background-color: var(--text-chocolate); /* dark brown */
+    color: var(--ivory-dust); /* light ivory */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

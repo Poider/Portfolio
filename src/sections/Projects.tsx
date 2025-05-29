@@ -6,6 +6,7 @@ import compose from "../assets/project-icons/compose.png";
 import pingpong from "../assets/project-icons/pingpong.png";
 import raytracing from "../assets/project-icons/raytracing.png";
 import webserver from "../assets/project-icons/web-server.png";
+import HoverMe from "../assets/HoverMe.png";
 
 import RayTracerHoverTop from "../components/projectsHover/RayTracerHoverTop";
 import RayTracerHoverBottom from "../components/projectsHover/RayTracerHoverBottom";
@@ -87,8 +88,12 @@ const Projects = () => {
                    
                     {hovered.detailsUpper && <hovered.detailsUpper />}
                 </div>
-            )}
-
+                )}
+                <img
+                    src={HoverMe}
+                    className={`HoverMe ${hoveredIdx !== null ? 'hidden' : ''}`}
+                    alt="Hover over a project to see details"
+                />
                 <h2 >Featured Projects</h2>
                 <h3 className="ProjectsSubtitle"><i>Handpicked selection of my best work</i></h3>
             <div className="ProjectBoxes">
