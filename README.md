@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# 💼 Poider Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated developer portfolio built with React 19, TypeScript, and Vite.  
+This single-page application (SPA) showcases full-stack engineering projects with interactive modals, smooth transitions, and seamless integration of external services.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit the Portfolio](https://www.mouadjs.dev/)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React 19.0.0** – UI framework and component system  
+- **TypeScript 5.7.2** – Type safety and developer tooling  
+- **Vite 6.2.0** – Build tool and development server  
+- **React Router DOM 7.6.0** – Client-side routing  
+- **Vercel Analytics 1.5.0** – User behavior tracking  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧱 Architecture Overview
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Component-Based Structure**: Utilizes a layered approach with navigation, content sections, and interactive overlays.
+- **Routing**: Implemented using `BrowserRouter` with primary routes for the main portfolio page and a thank-you confirmation page.
+- **State Management**: Managed through React's built-in hooks and context API.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🎨 Styling & Animations
+
+- **CSS Custom Properties**: For consistent theming and responsive design.
+- **Animations**: Smooth transitions and interactive elements using CSS animations and transitions.
+
+## 🧩 Features
+
+- **Interactive Project Showcase**: Hover and click interactions reveal detailed project information in modals.
+- **Responsive Design**: Optimized for various screen sizes and devices.
+- **External Integrations**: Includes analytics tracking and form handling through third-party services.
+
+## 📁 Project Structure
+
+
+![Screenshot 2025-06-03 170759](https://github.com/user-attachments/assets/01cde2b5-fac1-406e-971e-475d6cc55da5)
+
+
+## 📦 Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/poider/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+
+   ```bash
+   npm run build
+   ```
+
+## 📬 Contact
+
+For inquiries or feedback, please reach out via the contact form on the [LinkedIn](https://www.linkedin.com/in/mouadelammari/)
