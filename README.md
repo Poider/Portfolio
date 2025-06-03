@@ -1,4 +1,4 @@
-# 💼 Poider Portfolio
+# 💼 Mouad's Portfolio
 
 A modern, responsive, and animated developer portfolio built with React 19, TypeScript, and Vite.  
 This single-page application (SPA) showcases full-stack engineering projects with interactive modals, smooth transitions, and seamless integration of external services.
