@@ -4,7 +4,7 @@ import "../styles/Skills.css";
 const skillCategories = [
     {
         title: 'Languages',
-        items: ['TypeScript', 'JavaScript (ES6+)', 'C++', 'Python']
+        items: ['TypeScript', 'JavaScript (ES6+)', 'C++', 'PHP', 'Python' ]
     },
     {
         title: 'Front-End',
