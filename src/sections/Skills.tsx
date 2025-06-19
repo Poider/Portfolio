@@ -4,7 +4,7 @@ import "../styles/Skills.css";
 const skillCategories = [
     {
         title: 'Languages',
-        items: ['TypeScript', 'JavaScript (ES6+)', 'C++', 'PHP', 'Python' ]
+        items: ['PHP (OOP)', 'TypeScript', 'JavaScript (ES6+)', 'C++', 'Python' ]
     },
     {
         title: 'Front-End',
@@ -12,11 +12,11 @@ const skillCategories = [
     },
     {
         title: 'Back-End',
-        items: ['NestJS / Node.js', 'Express.js', 'GraphQL & REST', 'Socket.IO']
+        items: ['NestJS / Node.js', 'Slim','GraphQL & REST', 'Socket.IO']
     },
     {
         title: 'Data & DevOps',
-        items: ['PostgreSQL', 'MongoDB', 'Docker & CI/CD', 'Git / GitHub Actions']
+        items: ['PostgreSQL / MySQL', 'MongoDB', 'Docker & CI/CD', 'Git / GitHub Actions', 'Redis']
     },
 ];
 
@@ -68,7 +68,7 @@ export default function Skills() {
                             </div>
                         ))}
 
-                        {/* your “last item” with 6 practicess */}
+                   
                         </div>
                        
                         
