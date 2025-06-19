@@ -8,7 +8,7 @@ const testimonials = [
     {
         id: 1,
         name: 'Nabil Si Hammou',
-        profession: 'Creative Director, Interactive Designer & Developer',
+        profession: 'Chief Innovation Officer',
         company: 'OCPA SA.',
         image: man,
         text: `Mouad's reliability and versatility were critical during tight deadlines. His innovative backend, DevOps, and AI solutions consistently surpassed our expectations.`,
