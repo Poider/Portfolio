@@ -16,7 +16,7 @@ const skillCategories = [
     },
     {
         title: 'Data & DevOps',
-        items: ['PostgreSQL / MySQL', 'MongoDB', 'Docker & CI/CD', 'Git / GitHub Actions', 'Redis']
+        items: ['PostgreSQL / MySQL', 'MongoDB', 'Docker & CI/CD', 'Git / Gitlab CI', 'Redis', 'AWS EC2']
     },
 ];
 
