@@ -4,6 +4,7 @@ import '../styles/Testimonials.css'
 import man from '../assets/icons/man.png'
 import woman from '../assets/icons/woman.png'
 
+//placeholder
 const testimonials = [
     {
         id: 1,
@@ -21,7 +22,7 @@ const testimonials = [
         image: woman,
         text: `Working with Mouad El Ammari has been exceptionally rewarding. His innovative use of overlooked data transformed our ETL and backend automation, significantly enhancing operational efficiency. His creativity and proactive problem-solving consistently delivered impressive results.`,
     },
-    // …add more testimonials here
+    // â€¦add more testimonials here
 ]
 
 export default function Testimonials() {
