@@ -12,7 +12,7 @@ const testimonials = [
         profession: 'Chief Innovation Officer',
         company: 'OCPA SA.',
         image: man,
-        text: `Mouad's reliability and versatility were critical during tight deadlines. His innovative backend, DevOps, and AI solutions consistently surpassed our expectations.`,
+        text: `PlaceHolder --`,
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const testimonials = [
         profession: 'Business Analysis Lead',
         company: 'OCPA SA.',
         image: woman,
-        text: `Working with Mouad El Ammari has been exceptionally rewarding. His innovative use of overlooked data transformed our ETL and backend automation, significantly enhancing operational efficiency. His creativity and proactive problem-solving consistently delivered impressive results.`,
+        text: `PlaceHolder --`,
     },
     // …add more testimonials here
 ]
