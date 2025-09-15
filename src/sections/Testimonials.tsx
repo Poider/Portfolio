@@ -4,7 +4,7 @@ import '../styles/Testimonials.css'
 import man from '../assets/icons/man.png'
 import woman from '../assets/icons/woman.png'
 
-//placeholder
+//placeholder 
 const testimonials = [
     {
         id: 1,
